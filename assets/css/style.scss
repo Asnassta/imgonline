@@ -648,21 +648,12 @@ h4 {
 	.showing {
 		&-slider {
 			&-left {
-				margin-bottom: 0;
-				.slick-slide {
-					>div {
-						margin-bottom: 20px;
-						&:nth-child(2) {
-							margin-left: -30px;
-							padding-right: 30px;
-						}
-					}
-				}
+				margin-bottom: 20px;
 			}
 			&-right {
 				.slick-list {
-					margin-left: -10%;
-    				padding-right: 40%;
+					margin-left: -5%;
+    				padding-right: 35%;
 				}
 			}
 		}
@@ -679,13 +670,11 @@ h4 {
 			margin-right: -30px;
 			padding-left: 10px;
 		}
-		&-slider-left {
-			.slick-slide {
-				>div {
-					&:nth-child(2) {
-						margin-left: -20px;
-						padding-right: 20px;
-					}
+		&-slider {
+			&-right {
+				.slick-list {
+					margin-left: -30px;
+    				padding-right: 20px;
 				}
 			}
 		}

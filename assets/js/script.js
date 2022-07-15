@@ -41,24 +41,11 @@ scroll_speed = 2000;
       arrows: false,
       slidesToShow: 2,
       slidesToScroll: 1,
-      slidesPerRow: 1,
        speed: scroll_speed,
-    
-      rows: 1,
       responsive: [
       {
         breakpoint: 766,
         settings: {
-          slidesPerRow: 1,
-          rows: 1,
-          slidesToShow: 1,
-        }
-      },
-      {
-        breakpoint: 547,
-        settings: {
-          slidesPerRow: 1,
-          rows: 2,
           slidesToShow: 1,
         }
       },
@@ -70,23 +57,11 @@ scroll_speed = 2000;
       arrows: false,
       slidesToShow: 2,
       slidesToScroll: 1,
-      slidesPerRow: 1,
-      rows: 1,
       speed: scroll_speed,
       responsive: [
       {
         breakpoint: 766,
         settings: {
-          slidesPerRow: 1,
-          rows: 1,
-          slidesToShow: 1,
-        }
-      },
-      {
-        breakpoint: 547,
-        settings: {
-          slidesPerRow: 1,
-          rows: 1,
           slidesToShow: 1,
         }
       },
