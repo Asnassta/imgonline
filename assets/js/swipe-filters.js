@@ -80,6 +80,7 @@ class Swipe {
       $('.filters__content').slideDown(555);
       $('.filters__foot').slideDown(555);
       $('.help').slideDown(555);
+      $('body').addClass("hidden");
     }
   });
   swiper.onDown(function() { 
@@ -88,6 +89,7 @@ class Swipe {
       $('.filters__content').slideUp(555);
       $('.filters__foot').slideUp(555);
       $('.help').slideUp(555);
+      $('body').removeClass("hidden");
     }
   });
   swiper.run();
