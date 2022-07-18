@@ -698,7 +698,7 @@
   .add-file label {
     font-size: 16px; } }
 
-@media (max-height: 800px) {
+@media (max-height: 800px) and (max-width: 600px) {
   .processing__filters {
     width: 100%;
     position: fixed;
@@ -1058,7 +1058,7 @@
     justify-content: center;
     border-radius: 10px; } }
 
-@media (max-height: 800px) {
+@media (max-height: 800px) and (max-width: 600px) {
   .filters__content {
     max-height: calc(100vh - 325px); } }
 

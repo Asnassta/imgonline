@@ -453,7 +453,7 @@
 	}
 }
 
-@media(max-height: 800px) {
+@media(max-height: 800px) and (max-width: 600px) {
 	.processing {
 		&__filters {
 			width: 100%;

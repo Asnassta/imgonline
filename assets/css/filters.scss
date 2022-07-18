@@ -383,7 +383,7 @@
 	}
 }
 
-@media(max-height: 800px) {
+@media(max-height: 800px) and (max-width: 600px) {
 	.filters {
 		&__content {
 			max-height: calc(100vh - 325px);
