@@ -5,6 +5,10 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	z-index: 1000;
+	&.fixed {
+		position: fixed;
+	}
 	&__inner {
 		display: flex;
 		align-items: center;
@@ -46,6 +50,9 @@
 			margin-right: 0;
 		}
 		&:hover {
+			color: $blue;
+		}
+		&.active {
 			color: $blue;
 		}
 	}
@@ -131,6 +138,9 @@
 .footer {
 	background-color: $lblue;
 	padding: 16px 0 20px;
+	&.none {
+		display: none;
+	}
 	&__inner {
 		display: flex;
 		align-items: center;
@@ -203,6 +213,9 @@
       	&::-webkit-scrollbar {
       		width: 0;
       		height: 0;
+      	}
+      	&.none {
+      		display: none;
       	}
 		&__link {
 			white-space: nowrap;

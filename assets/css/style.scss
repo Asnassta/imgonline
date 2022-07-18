@@ -1,6 +1,9 @@
 @import 'fonts.scss';
 @import 'variables.scss';
 @import 'page.scss';
+@import 'pages.scss';
+@import 'filters.scss';
+@import 'popup.scss';
 
 
 /*Reset
@@ -62,7 +65,12 @@ body.hidden {
 .wrapper {
 	position: relative;
 	overflow: hidden;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
+
 
 h1 {
 	font-family: $ff;
@@ -81,6 +89,9 @@ h4 {
 	&.title {
 		font-size: 20px;
 		text-align: left;
+		&_center {
+			text-align: center;
+		}
 	}
 }
 
@@ -101,6 +112,18 @@ h4 {
 	line-height: $lh;
 	margin-top: 10px;
 	text-align: center;
+	span {
+		color: $orange;
+	}
+	&-gray {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: #ACACAC;
+		line-height: $lh;
+		margin-top: 5px;
+		text-align: center;
+	}
 }
 
 .text {
@@ -146,6 +169,28 @@ h4 {
 	}
 }
 
+.btn-orange {
+	display: inline-flex;
+	align-items: center;
+	background-color: $orange;
+	border-radius: 15px;
+	padding: 14px 32px;
+	transition: all .2s linear;
+	span {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 600;
+		color: $wh;
+		line-height: $lh;
+	}
+	img {
+		margin-right: 12px;
+	}
+	&:hover {
+		background-color: $d-orange;
+	}
+}
+
 .bg-color {
 	background: url("../images/bg-color.png") top -80px center no-repeat;
 	background-size: cover;
@@ -173,6 +218,7 @@ h4 {
 			}
 		}
 }
+
 
 /*========Intro=========*/
 .intro {

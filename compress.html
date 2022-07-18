@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link href="assets/css/jquery.formstyler.css" rel="stylesheet" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>IMGonline</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="close-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M18 6L12 12M12 12L6 18M12 12L6 6M12 12L18 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="help-icon" viewBox="0 0 20 20">
+			<g>
+				<path d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10 14.5H10.009" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M7.38086 7.3C7.59245 6.6985 8.0101 6.1913 8.55982 5.86822C9.10954 5.54514 9.75587 5.42704 10.3843 5.53484C11.0128 5.64264 11.5828 5.96937 11.9934 6.45718C12.4041 6.94498 12.6288 7.56237 12.6279 8.2C12.6279 10.3192 9.99986 9.98362 9.99986 11.8"  stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="tg-icon" viewBox="0 0 15 14">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M10.6678 12.942C11.5065 13.309 11.8211 12.5401 11.8211 12.5401L14.0403 1.39168C14.0228 0.640292 13.0093 1.09462 13.0093 1.09462L0.585255 5.96988C0.585255 5.96988 -0.00886325 6.17957 0.0435589 6.54653C0.0959811 6.91348 0.567781 7.08822 0.567781 7.08822L3.69564 8.13667C3.69564 8.13667 4.63924 11.2296 4.83145 11.8237C5.00619 12.4003 5.16346 12.4178 5.16346 12.4178C5.3382 12.4877 5.49547 12.3654 5.49547 12.3654L7.52246 10.5306L10.6678 12.942ZM11.2093 3.36622C11.2093 3.36622 11.6461 3.10411 11.6286 3.36622C11.6286 3.36622 11.6985 3.40117 11.4714 3.64581C11.2617 3.8555 6.31653 8.29391 5.65252 8.88803C5.60009 8.92298 5.56515 8.9754 5.56515 9.04529L5.37293 10.6879C5.33798 10.8626 5.11082 10.8801 5.0584 10.7228L4.23712 8.0318C4.20217 7.92695 4.23712 7.80464 4.34196 7.73474L11.2093 3.36622Z"/>
+			</g>
+		</symbol>
+		<symbol id="account" viewBox="0 0 14 16">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M7 9C4.09641 9 2 11.1517 2 13.5V14H12V13.5C12 11.1517 9.90359 9 7 9ZM0 16V13.5C0 9.91015 3.13401 7 7 7C10.866 7 14 9.91015 14 13.5V16H0Z"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M7 6C8.10457 6 9 5.10457 9 4C9 2.89543 8.10457 2 7 2C5.89543 2 5 2.89543 5 4C5 5.10457 5.89543 6 7 6ZM7 8C9.20914 8 11 6.20914 11 4C11 1.79086 9.20914 0 7 0C4.79086 0 3 1.79086 3 4C3 6.20914 4.79086 8 7 8Z"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<a href="#" class="logo">
+						<img src="assets/images/logo.svg" alt="">
+						<span>IMGonline.com.ua</span>
+					</a>
+					<nav class="nav none">
+						<a href="#" class="nav__link active">Сжать</a>
+						<a href="#" class="nav__link">Изменить размер</a>
+						<a href="#" class="nav__link">Конвертер</a>
+						<a href="#" class="nav__link">Редактор EXIF</a>
+						<a href="#" class="nav__link">Эффекты</a>
+						<a href="#" class="nav__link">Улучшить</a>
+						<a href="#" class="nav__link">Инструменты</a>
+					</nav>
+					<div class="account">
+						<a href="#" class="account__btn">
+							<span class="account__name">Личный кабинет</span>
+							<span class="account__icon">
+								<svg>
+									<use xlink:href="#account"></use>
+								</svg>
+							</span>
+						</a>
+						<div class="dropdown-box">
+							<ul>
+								<li>
+									<a href="#">Регистрация</a>
+								</li>
+								<li>
+									<a href="#">Войти</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header><!--/header-->
+		<main class="main page page-pt_min page_compress">
+			<div class="processing">
+				<div class="container">
+					<div class="processing__inner">
+						<div class="processing__filters">
+							<form action="#" class="filters">
+								<h3 class="filters__title">
+									<span>Параметры сжатия<br> JPG файла </span>
+									<a href="#" class="help">
+										<svg>
+											<use xlink:href="#help-icon"></use>
+										</svg>
+										<span>инструкция по настройкам</span>
+									</a>
+								</h3>
+								<div class="filters__content">
+									<div class="filters__item">
+										<div class="filters__name">Уменьшение размера в мегапикселях</div>
+										<div class="filters-select">
+											<select>
+												<option value="0">Уменьшение отключено</option>
+												<option value="1">уменьшить на 10%</option>
+												<option value="2">Уменьшить на 20%</option>
+												<option value="3">Уменьшить на 30%</option>
+												<option value="4">Уменьшить на 40%</option>
+												<option value="5">Уменьшить на 50%</option>
+												<option value="6">Уменьшить на 60%</option>
+												<option value="7">Уменьшить на 80%</option>
+												<option value="8">Сделать не более 0,5 Мп (≈943x530)</option>
+												<option value="9">Сделать не более 1 Мп (≈1366x768)</option>
+												<option value="10">Сделать не более 2 Мп (≈1880x1060)</option>
+												<option value="11">Сделать не более 3 Мп (≈2300x1300)</option>
+												<option value="12">Сделать не более 5 Мп (≈2980x1670)</option>
+												<option value="13">Сделать не более 10 Мп (≈4220x2370)</option>
+												<option value="14" selected>Сделать не более 20 Мп (≈5960x3350)</option>
+											</select>
+										</div>
+										<div class="filters__description">Уменьшение размера на 20-30% в пикселях или мегапикселях хорошо уменьшает размер файла</div>
+									</div><!--/filters__item-->
+									<div class="filters__item">
+										<div class="filters__name">Субвыборка</div>
+										<div class="filters-select">
+											<select>
+												<option value="0">1x1 (лучшее качество)</option>
+												<option value="1" selected>2x1 (среднее качество)</option>
+												<option value="2">1x2 (среднее качество)</option>
+												<option value="3">2x2 (низкое качество)</option>
+												<option value="4">Не изменять</option>
+											</select>
+										</div>
+										<div class="filters__description">Прореживание, усреднение резких цветовых переходов</div>
+									</div><!--/filters__item-->
+									<div class="filters__item">
+										<div class="filters-radio">
+											<input type="radio" id="type-radio_standard" name="type-radio">
+											<label for="type-radio_standard">
+												<span></span>
+												<i>Стандартный <strong>JPEG</strong></i>
+											</label>
+										</div>
+										<div class="filters-radio">
+											<input type="radio" id="type-radio_progressive" name="type-radio" checked>
+											<label for="type-radio_progressive">
+												<span></span>
+												<i>Прогрессивный <strong>JPEG</strong></i>
+											</label>
+										</div>
+										<div class="filters__description">Прогрессивный jpeg-файл практически всегда занимает места на 2-3% меньше обычного с таким же качеством</div>
+									</div><!--/filters__item-->
+									<div class="filters__item">
+										<div class="filters__name">Копировать EXIF и другие метаданные?</div>
+										<div class="filters-radio">
+											<input type="radio" id="copy-radio_yes" name="copy-radio">
+											<label for="copy-radio_yes">
+												<span></span>
+												<i>Да</i>
+											</label>
+										</div>
+										<div class="filters-radio">
+											<input type="radio" id="copy-radio_no" name="copy-radio" checked>
+											<label for="copy-radio_no">
+												<span></span>
+												<i>Нет</i>
+											</label>
+										</div>
+										<div class="filters__description">«Нет» может ещё уменьшить размер файла, но будет стёрта вся дополнительная информация, перечисленная <a href="#">здесь</a></div>
+									</div><!--/filters__item-->
+									<div class="filters__item">
+										<div class="filters__name">Качество (от 1 до 100)</div>
+										<div class="filters-input">
+											<input type="text">
+										</div>
+										<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла. Посмотрите на примере <a href="#">уровень качества JPEG</a>.</div>
+									</div><!--/filters__item-->
+								</div>
+								<button class="btn-orange" type="submit">
+									<img src="assets/images/check.svg" alt="">
+									<span>Преобразовать</span>
+								</button>
+								<div class="filters__foot">
+									<div class="filters__description">Обработка обычно длится 0.5-20 секунд..</div>
+								</div>
+							</form>
+						</div>
+						<div class="processing__content">
+							<div class="file">
+								<div class="file-box">
+									<a href="#" class="trashcan">
+										<img src="assets/images/trashcan.svg" alt="">
+									</a>
+									<div class="file-photo">
+										<img src="assets/images/showing-photo_4.jpg" alt="">
+									</div>
+									<div class="file-info">
+										<div class="file-settings">
+											<div class="file-settings-original">1920 х 666</div>
+											<div class="file-settings-result">1920 х 666</div>
+										</div>
+										<div class="file-name">1625.jpg</div>
+									</div>
+								</div><!--file-box-->
+								<div class="file-box">
+									<a href="#" class="trashcan">
+										<img src="assets/images/trashcan.svg" alt="">
+									</a>
+									<div class="file-photo">
+										<img src="assets/images/showing-photo_2.jpg" alt="">
+									</div>
+									<div class="file-info">
+										<div class="file-settings">
+											<div class="file-settings-original">1920 х 666</div>
+											<div class="file-settings-result">1920 х 666</div>
+										</div>
+										<div class="file-name">mgonline.com.uahexagonalp8473ixelifgstjasadeegstjst</div>
+									</div>
+								</div><!--file-box-->
+								<div class="file-box">
+									<a href="#" class="trashcan">
+										<img src="assets/images/trashcan.svg" alt="">
+									</a>
+									<div class="file-photo">
+										<img src="assets/images/showing-photo_10.jpg" alt="">
+									</div>
+									<div class="file-info">
+										<div class="file-settings">
+											<div class="file-settings-original">1920 х 666</div>
+											<div class="file-settings-result">1920 х 666</div>
+										</div>
+										<div class="file-name">Квадратная пикселизация.jpg</div>
+									</div>
+								</div><!--file-box-->
+								<div class="add-btn">
+									<div>
+										<input type="file" id="add-btn">
+										<label for="add-btn">
+											<img src="assets/images/plus.svg" alt="">
+										</label>
+									</div>
+									<span class="add-btn-qt">3</span>
+								</div><!--/add-btn-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/processing-->
+		</main>
+		<footer class="footer none">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="lang">
+						<div class="lang__open">
+							<span>Русский</span>
+							<img src="assets/images/arrow-small.svg" alt="">
+						</div>
+						<div class="dropdown-box">
+							<ul>
+								<li>
+									<a href="#">Русский</a>
+								</li>
+								<li>
+									<a href="#">Английский</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="copyright">© 2018 www.imgonline.com.ua</div>
+						<div class="social">
+							<a href="#" target="blank">
+								<svg>
+									<use xlink:href="#tg-icon"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="popup popup-help">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="compress-help">
+						<h4 class="title title_center">Как максимально сжать JPEG файл</h4>
+						<div class="subtitle-gray"> Больше информации о возможностях  и методах сжатия. </div>
+						<div class="text">
+							<p>Главное нужно указать изображение на вашем компьютере или телефоне, указать качество от 1 до 100, нажать кнопку “Обработать” внизу страницы. Остальные настройки выставлены по умолчанию. Чем больше указано «качество» в настройках (80-100), тем больше получится размер файла. И наоборот, меньшее качество (50-75) даст меньший размер JPEG файла. При необходимости уровень качества (сжатия), с которым был создан jpeg-файл, можно узнать <a href="#">здесь.</a></p>
+							<p>Если после сжатия размер jpeg файла стал наоборот больше, чем оригинал, то значит нужно понизить уровень качества с 80 на более меньшее число, например, установить 60. Размеры в пикселях и мегабайтах до и после сжатия можно будет увидеть после обработки или нажатия кнопки OK. Если при уровне качества в 40-50 размер всё равно больше оригинала, то сжимать картинку нет смысла – она и так была хорошо сжата. Можно разве что попробовать <a href="#">удалить метаданные</a>, встроенные в jpg файл или <a href="#">удалить exif + сделать jpg прогрессивным</a> без потери качества.</p>
+							<p>В настройках есть возможность выбрать тип субдискретизации (прореживания), что позволяет добиться бо́льшего сжатия jpg файла с минимальными потерями. Субвыборка 1x1 даёт наилучшее качество изображения, яркие цветовые переходы сохраняются, в основном подходит для качественных превью или маленьких картинок для предпросмотра. Субвыборка 2x1 – это наиболее распространённый метод, используется практически во всех цифровых фотокамерах, сжатие резких цветовых переходов происходит по горизонтали, позволяет добиться меньшего размера файла без особых потерь, отлично подходит для больших изображений. 1x2 – тоже самое, что и 2x1, но только усреднение резких цветовых переходов будет по вертикали. Субвыборка 2x2 усредняет резкие цветовые переходы по горизонтали и по вертикали, позволяет добиться наименьшего размера файла, подходит для размытых картинок.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+						</div>
+						<div class="gallery-show">
+							<h4 class="title">На фотографиях "Красного перчика после дождя" указан уровень качества JPEG для сравнения:</h4>
+							<div class="gallery-show__inner">
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="text">
+							<p>Размеры этой jpg картинки в зависимости от уровня качества (Q - качество, KB - это размер в килобайтах): <br>Q 10 = 2 KB; Q 15 = 2,7 KB; Q 30 = 4,3 KB; Q 50 = 5,9 KB; Q 60 = 6,7 KB; Q 70 = 7,9 KB; Q 80 = 9,8 KB; Q 90 = 14,1 KB; Q 100 = 46,5 KB.</p>
+							<p>Из вышеуказанных примеров можно сделать вывод, что наилучшим соотношением размер-качество может быть уровень качества от 75 до 95. А для того, чтобы картинка занимала наименьший размер и была в тоже время более и менее нормальной, подойдёт качество 60-70. Если качество не имеет значения, а нужен маленький размер файла, то подойдёт процент качества от 30 до 50.</p>
+							<p>Обратите внимание, что размер файла прогрессивной JPEG картинки обычно меньше стандартной на 2-3% с таким же качеством изображения, да и ещё будет красиво открываться при её загрузке в интернет браузере, как это обычно делают в фильмах! Пример стандартной и прогрессивной JPEG картинки можно посмотреть <a href="#">здесь.</a></p>
+							<p>Ещё можно сжать JPG указав <a href="#">желаемый размер в Кбайтах</a>, а также уменьшить размер фото или картинки в килобайтах или мегабайтах за счёт уменьшения количества <a href="#">пикселей</a> или <a href="#">мегапикселей</a>.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/slick.min.js"></script>
+	<script src="assets/js/jquery.formstyler.min.js"></script>
+	<script src="assets/js/swipe-filters.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>

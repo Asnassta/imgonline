@@ -12,129 +12,126 @@ $(document).ready(function() {
   });
   /*==========/lang (dropdown)=========*/
 
-  /*========Showing======*/
-  	/*let scrollOffset = $(window).scrollTop();
+  /*=====Add-file=======*/
+  var dropZone = $('.add-container');
 
-	checkScrollAnimate(scrollOffset);
-
-	$(window).on("scroll", function() {
-		scrollOffset = $(this).scrollTop();
-
-		checkScrollAnimate(scrollOffset);
-	});
-
-	function checkScrollAnimate(scrollOffset) {
-		if( scrollOffset >= $("#animate-showing").offset().top + 300) {
-			$(".showing-slider-left").addClass("transform-left ");
-			$(".showing-slider-right").addClass("transform-right ");
-		} else {
-			$(".showing-slider-left").removeClass("transform-left ");
-			$(".showing-slider-right").removeClass("transform-right ");
-		}
-	};*/
-  /*========/showing======*/
-
-scroll_speed = 2000;
-      /*==Showing-slider==*/
-  $('.showing-slider-left').slick({
-      infinite: true,
-      arrows: false,
-      slidesToShow: 2,
-      slidesToScroll: 1,
-       speed: scroll_speed,
-      responsive: [
-      {
-        breakpoint: 766,
-        settings: {
-          slidesToShow: 1,
-        }
-      },
-      ]
+  dropZone.on('drag dragstart dragend dragover dragenter dragleave drop', function(){
+     return false;
   });
 
-    $('.showing-slider-right').slick({
-      infinite: true,
-      arrows: false,
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      speed: scroll_speed,
-      responsive: [
-      {
-        breakpoint: 766,
-        settings: {
-          slidesToShow: 1,
-        }
-      },
-      ]
+  dropZone.on('dragover dragenter', function() {
+     dropZone.addClass('dragover');
   });
-  /*==/showing-slider==*/
-});
 
-var lastScrollTop = 0;
-$(window).scroll(function(event){
-    st = $(this).scrollTop();
-    fs1 = '.showing .subtitle';
-    if (st > lastScrollTop)
-    {
+  dropZone.on('dragleave', function(e) {
+     dropZone.removeClass('dragover');
+  });
 
-      var hT = $(fs1).offset().top,
-            hH = $(fs1).outerHeight(),
-            wH = $(window).height(),
-            wS = $(this).scrollTop();
-        if (wS > (hT+hH-wH)){
-          if($(fs1).hasClass('down') == false &&  $(fs1).hasClass('worked') == false)
-          {
-            $(fs1).removeClass('up');
-            $(fs1).addClass('down');
-            $(fs1).addClass('worked');
-            $('.showing-slider-left').slick('slickNext');
-            $('.showing-slider-right').slick('slickPrev');
+  dropZone.on('dragleave', function(e) {
+     let dx = e.pageX - dropZone.offset().left;
+     let dy = e.pageY - dropZone.offset().top;
+     if ((dx < 0) || (dx > dropZone.width()) || (dy < 0) || (dy > dropZone.height())) {
+          dropZone.removeClass('dragover');
+     };
+  });
 
-            setTimeout(function() 
-            {
-              $(fs1).removeClass('worked');
-            }, scroll_speed);
-            
+  dropZone.on('drop', function(e) {
+     dropZone.removeClass('dragover');
+     let files = e.originalEvent.dataTransfer.files;
+     sendFiles(files);
+  });
+
+  $('#file-input').change(function() {
+     let files = this.files;
+     sendFiles(files);
+  });
+
+  function sendFiles(files) {
+     let maxFileSize = 5242880;
+     let Data = new FormData();
+     $(files).each(function(index, file) {
+          if ((file.size <= maxFileSize) && ((file.type == 'image/png') || (file.type == 'image/jpeg'))) {
+               Data.append('images[]', file);
           }
+     });
+};
+  /*=====/add-file=======*/
+
+  /*=======File-box (number)======*/
+  $('.file').removeClass('one').addClass(function(){
+    return ["none", "one"]
+       [$(this).children('.file-box').length];
+  });
+/*=======/file-box (number)======*/
+
+    /*===============Popup-help=================*/
+    $(".help").on("click", function (event) {
+        event.preventDefault();
+        $(".popup-help").fadeIn(333);
+        $(".popup-help .popup__inner").fadeIn(333);
+        $('body').addClass("hidden");
+        $('.header').addClass("fixed");
+    });
+    $(".popup__close,  .closex").on("click", function (event) {
+        event.preventDefault();
+        $(".popup-help").fadeOut('333');
+        $(".popup-help .popup__inner").fadeOut(333);
+        $('body').removeClass("hidden");
+        $('.header').removeClass("fixed");
+    });
+    /*==============/popup-help=================*/
+
+  /*=================Sliders==========================*/
+  /*===========Slider-advertising============*/
+  $('.advertising__content').slick({
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+     {
+       breakpoint: 1301,
+        settings: {
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
         }
-     
-     } 
-   
-   else {
-
-    
-      
-      if($(fs1).hasClass('down') == true &&  $(fs1).hasClass('worked') == false)
+      },
       {
-  
-        $(fs1).removeClass('down');
-        $(fs1).addClass('up');
-        $(fs1).addClass('worked');
-        $('.showing-slider-left').slick('slickPrev');
-        $('.showing-slider-right').slick('slickNext');
+       breakpoint: 992,
+        settings: {
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+        }
+      },
+      {
+       breakpoint: 766,
+        settings: {
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+        }
+      },
+      {
+       breakpoint: 415,
+        settings: {
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        }
+      },
+    ]
+  });
+  /*===========/slider-advertising============*/
 
-        setTimeout(function() 
-            {
-              $(fs1).removeClass('worked');
-            }, scroll_speed);
-      }
+  /*=========/sliders==========*/
 
+  /*======Select-styler=============*/
+  $(function() {
+    $('select').styler();
+  });
+  /*======/select-styler=============*/
 
-
-
-    // if ($(this).scrollTop() > lastScrollTop)
-    // {
-
-    //   var hT = $(fs1).offset().top,
-    //         hH = $(fs1).outerHeight(),
-    //         wH = $(window).height(),
-    //         wS = $(this).scrollTop();
-    //     if (wS > (hT+hH-wH)){
-       
-    //     }
-     
-    //  } 
-
-   }
-   lastScrollTop = st;
 });
+
