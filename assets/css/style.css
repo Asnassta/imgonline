@@ -1060,7 +1060,7 @@
 
 @media (max-height: 800px) and (max-width: 600px) {
   .filters__content {
-    max-height: calc(100vh - 340px); } }
+    max-height: calc(100vh - 350px); } }
 
 /*============/adaptive==========*/
 /*============Popup==========*/
