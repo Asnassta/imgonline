@@ -372,4 +372,22 @@
 		}
 	}
 }
+
+@media(max-width: 414px) {
+	.filters {
+		.btn-orange {
+			width: 100%;
+			justify-content: center;
+			border-radius: 10px;
+		}
+	}
+}
+
+@media(max-height: 800px) {
+	.filters {
+		&__content {
+			max-height: calc(100vh - 325px);
+		}
+	}
+}
 /*============/adaptive==========*/

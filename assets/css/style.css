@@ -32,10 +32,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 1000; }
+  width: 100%; }
   .header.fixed {
-    position: fixed; }
+    position: fixed;
+    z-index: 1000; }
   .header__inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -647,7 +647,12 @@
     width: 100%; }
   .file {
     max-height: 100%;
-    margin-left: -20px; }
+    margin-left: -20px;
+    /*&-box {
+			.trashcan {
+				opacity: 1;
+			}
+		}*/ }
     .file .add-btn {
       position: fixed;
       top: 74px;
@@ -692,6 +697,15 @@
 @media (max-width: 360px) {
   .add-file label {
     font-size: 16px; } }
+
+@media (max-height: 800px) {
+  .processing__filters {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    max-height: calc(100vh - 100px); } }
 
 /*==========/adaptive============*/
 .help {
@@ -1035,6 +1049,18 @@
       display: block; }
     .filters.show .filters__foot {
       display: block; } }
+
+@media (max-width: 414px) {
+  .filters .btn-orange {
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 10px; } }
+
+@media (max-height: 800px) {
+  .filters__content {
+    max-height: calc(100vh - 325px); } }
 
 /*============/adaptive==========*/
 /*============Popup==========*/

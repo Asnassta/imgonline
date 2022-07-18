@@ -87,8 +87,8 @@ class Swipe {
     if($(window).width() <= 860)
     {
       $('.filters__content').slideUp(555);
-      $('.filters__foot').slideUp(555);
-      $('.help').slideUp(555);
+      $('.filters__foot').slideUp(333);
+      $('.help').slideUp(111);
       $('body').removeClass("hidden");
     }
   });
