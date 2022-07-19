@@ -226,7 +226,7 @@
 				font-weight: 600;
 			}
 		}
-		input {
+		>input {
 			display: none;
 			&:checked + label {
 				span {

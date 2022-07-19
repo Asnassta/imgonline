@@ -971,9 +971,9 @@
         line-height: 1.21; }
       .filters-radio label strong {
         font-weight: 600; }
-    .filters-radio input {
+    .filters-radio > input {
       display: none; }
-      .filters-radio input:checked + label span:after {
+      .filters-radio > input:checked + label span:after {
         opacity: 1; }
     .filters-radio.checked .filters-subitem {
       display: block; }
