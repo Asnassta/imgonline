@@ -318,6 +318,7 @@
 		cursor: pointer;
 	}
 	&__dropdown {
+		top: 100%;
 		width: 100%;
 		background-color: $wh;
 		border-bottom-left-radius: 15px;

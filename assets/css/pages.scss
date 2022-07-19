@@ -306,7 +306,9 @@
 		>div {
 			border-radius: 10px;
 			background-color: $purple-gray;
-			padding: 5px 15px;
+			padding: 6px 15px;
+			min-width: 105px;
+			text-align: center;
 			&.file-settings-result {
 				background-color: #8183FF;
 				color: $wh;
