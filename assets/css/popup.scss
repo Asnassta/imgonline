@@ -13,7 +13,7 @@
 	&__inner {
 		opacity: 1;
 		width: 95%;
-		max-width: 1000px;
+		max-width: 1015px;
 		top: 100px;
 		left: 50%;
 		transform: translateX(-50%);
@@ -48,6 +48,7 @@
 	}
 	&__box {
 		max-height: calc(100vh - 160px);
+		min-height: 70vh;
 		background-color: $wh; 
 		border-radius: 20px;
 		padding: 30px 50px 40px;
@@ -77,11 +78,36 @@
 			}
 		}
 	}
+	&__content {
+		* {
+	  		scrollbar-width: thin;
+	  		scrollbar-color: #CDCDDD #F0F0F5;
+		}
+		*::-webkit-scrollbar {
+		  height: 7px;
+		  width: 46px;
+		}
+		*::-webkit-scrollbar-track {
+		  background: #F0F0F5;
+		}
+		*::-webkit-scrollbar-thumb {
+		  background-color: #CDCDDD;
+		  border-radius: 27px;
+		  border: 3px solid #CDCDDD;
+		}
+	}
+	.title {
+		max-width: 630px;
+		margin: 0 auto;
+	}
 	.text {
 		margin-top: 30px;
 	}
 	.gallery-show {
 		margin: 80px 0 40px;
+	}
+	.table {
+		margin: 35px 0;
 	}
 }
 /*========/popup============*/

@@ -12,6 +12,35 @@ $(document).ready(function() {
   });
   /*==========/lang (dropdown)=========*/
 
+  /*===========Filter-varianrs=======*/
+    $('select[name="type_size"]').change(function() {
+      $('.filters-version').slideUp(222);
+      $('.filters-version.'+$(this).val()).slideDown(222);
+      $('.filters__title .help').attr('data-popup', $(this).val());
+    });
+  /*===========/filter-varianrs=======*/
+
+
+  /*=======Filters-input (subitem)============*/
+  $('.filters-radio input[type="radio"]').each(function() { //проверка после перезагрузки
+    if($(this).prop("checked")){
+      $(this).parent('.filters-radio').addClass('checked');
+    } else {
+      $(this).parent('.filters-radio').removeClass('checked');
+    }
+  });
+   $('.filters-radio input[type="radio"]').change(function() {
+      $(this).parent().parent().find('.filters-subitem').slideUp(222);
+      $(this).parent().find('.filters-subitem').slideDown(222);
+    });
+
+
+   $(".filters-reset").on("click", function() {
+    $(".filters-radio.checked").find('.filters-subitem').slideDown(222);
+    $(".filters-radio").not(".filters-radio.checked").find('.filters-subitem').slideUp(222);
+  });
+  /*==========/filters-input (subitem)=========*/
+
   /*=====Add-file=======*/
   var dropZone = $('.add-container');
 
@@ -66,9 +95,10 @@ $(document).ready(function() {
 
     /*===============Popup-help=================*/
     $(".help").on("click", function (event) {
+        name_pop = $(this).attr('data-popup');
         event.preventDefault();
-        $(".popup-help").fadeIn(333);
-        $(".popup-help .popup__inner").fadeIn(333);
+        $(".popup-help."+name_pop).fadeIn(333);
+        $(".popup-help."+name_pop+" .popup__inner").fadeIn(333);
         $('body').addClass("hidden");
         $('.header').addClass("fixed");
     });

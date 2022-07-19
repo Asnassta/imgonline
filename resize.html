@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link href="assets/css/jquery.formstyler.css" rel="stylesheet" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>IMGonline</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="close-small" viewBox="0 0 16 16">
+			<g>
+				<path d="M7.99998 14.6667C11.6819 14.6667 14.6666 11.6819 14.6666 8.00001C14.6666 4.31811 11.6819 1.33334 7.99998 1.33334C4.31808 1.33334 1.33331 4.31811 1.33331 8.00001C1.33331 11.6819 4.31808 14.6667 7.99998 14.6667Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M6 6L8 8M8 8L10 10M8 8L10 6M8 8L6 10" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="close-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M18 6L12 12M12 12L6 18M12 12L6 6M12 12L18 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="help-icon" viewBox="0 0 20 20">
+			<g>
+				<path d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10 14.5H10.009" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M7.38086 7.3C7.59245 6.6985 8.0101 6.1913 8.55982 5.86822C9.10954 5.54514 9.75587 5.42704 10.3843 5.53484C11.0128 5.64264 11.5828 5.96937 11.9934 6.45718C12.4041 6.94498 12.6288 7.56237 12.6279 8.2C12.6279 10.3192 9.99986 9.98362 9.99986 11.8"  stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="tg-icon" viewBox="0 0 15 14">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M10.6678 12.942C11.5065 13.309 11.8211 12.5401 11.8211 12.5401L14.0403 1.39168C14.0228 0.640292 13.0093 1.09462 13.0093 1.09462L0.585255 5.96988C0.585255 5.96988 -0.00886325 6.17957 0.0435589 6.54653C0.0959811 6.91348 0.567781 7.08822 0.567781 7.08822L3.69564 8.13667C3.69564 8.13667 4.63924 11.2296 4.83145 11.8237C5.00619 12.4003 5.16346 12.4178 5.16346 12.4178C5.3382 12.4877 5.49547 12.3654 5.49547 12.3654L7.52246 10.5306L10.6678 12.942ZM11.2093 3.36622C11.2093 3.36622 11.6461 3.10411 11.6286 3.36622C11.6286 3.36622 11.6985 3.40117 11.4714 3.64581C11.2617 3.8555 6.31653 8.29391 5.65252 8.88803C5.60009 8.92298 5.56515 8.9754 5.56515 9.04529L5.37293 10.6879C5.33798 10.8626 5.11082 10.8801 5.0584 10.7228L4.23712 8.0318C4.20217 7.92695 4.23712 7.80464 4.34196 7.73474L11.2093 3.36622Z"/>
+			</g>
+		</symbol>
+		<symbol id="account" viewBox="0 0 14 16">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M7 9C4.09641 9 2 11.1517 2 13.5V14H12V13.5C12 11.1517 9.90359 9 7 9ZM0 16V13.5C0 9.91015 3.13401 7 7 7C10.866 7 14 9.91015 14 13.5V16H0Z"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M7 6C8.10457 6 9 5.10457 9 4C9 2.89543 8.10457 2 7 2C5.89543 2 5 2.89543 5 4C5 5.10457 5.89543 6 7 6ZM7 8C9.20914 8 11 6.20914 11 4C11 1.79086 9.20914 0 7 0C4.79086 0 3 1.79086 3 4C3 6.20914 4.79086 8 7 8Z"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<a href="#" class="logo">
+						<img src="assets/images/logo.svg" alt="">
+						<span>IMGonline.com.ua</span>
+					</a>
+					<nav class="nav none">
+						<a href="#" class="nav__link">Сжать</a>
+						<a href="#" class="nav__link active">Изменить размер</a>
+						<a href="#" class="nav__link">Конвертер</a>
+						<a href="#" class="nav__link">Редактор EXIF</a>
+						<a href="#" class="nav__link">Эффекты</a>
+						<a href="#" class="nav__link">Улучшить</a>
+						<a href="#" class="nav__link">Инструменты</a>
+					</nav>
+					<div class="account">
+						<a href="#" class="account__btn">
+							<span class="account__name">Личный кабинет</span>
+							<span class="account__icon">
+								<svg>
+									<use xlink:href="#account"></use>
+								</svg>
+							</span>
+						</a>
+						<div class="dropdown-box">
+							<ul>
+								<li>
+									<a href="#">Регистрация</a>
+								</li>
+								<li>
+									<a href="#">Войти</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header><!--/header-->
+		<main class="main page page-pt_min page_resize">
+			<div class="processing">
+				<div class="container">
+					<div class="processing__inner">
+						<div class="processing__filters">
+							<form action="#" class="filters">
+								<h3 class="filters__title">
+									<span>Параметры конвертирования</span>
+									<a href="#" data-popup="megapixel" class="help">
+										<svg>
+											<use xlink:href="#help-icon"></use>
+										</svg>
+										<span>инструкция по настройкам</span>
+									</a>
+								</h3>
+								<div class="filters__content">
+									<div class="filters__item">
+										<div class="filters__name">Изменить размер в:</div>
+										<div class="filters-select filters-change">
+											<select name="type_size">
+												<option value="pixel">Пикселях </option>
+												<option value="megapixel" selected>Мегапикселях</option>
+												<option value="megabytes">Мегабайтах</option>
+												<option value="centimeters">Сантиметрах для печати</option>
+												<option value="percent">Процентах</option>
+											</select>
+										</div>
+									</div><!--/filters__item-->
+									<div class="filters-version megapixel">
+										<div class="filters__item">
+											<div class="filters__name">Параметры сжатия</div>
+											<div class="filters-radio">
+												<input type="radio" id="type-radio_standard" name="type-radio" checked>
+												<label for="type-radio_standard">
+													<span></span>
+													<i>Стандартный <strong>JPEG</strong></i>
+												</label>
+											</div>
+											<div class="filters-radio">
+												<input type="radio" id="type-radio_progressive" name="type-radio">
+												<label for="type-radio_progressive">
+													<span></span>
+													<i>Прогрессивный <strong>JPEG</strong></i>
+												</label>
+											</div>
+											<div class="filters__description">Прогрессивный jpeg-файл практически всегда занимает места на 2-3% меньше обычного с таким же качеством</div>
+										</div><!--/filters__item-->
+										<div class="filters__item">
+											<div class="filters__name">Копировать EXIF и другие метаданные?</div>
+											<div class="filters__row">
+												<div class="filters-radio">
+													<input type="radio" id="copy-radio_yes_megapixel" name="copy-radio_megapixel">
+													<label for="copy-radio_yes_megapixel">
+														<span></span>
+														<i>Да</i>
+													</label>
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="copy-radio_no_megapixel" name="copy-radio_megapixel" checked>
+													<label for="copy-radio_no_megapixel">
+														<span></span>
+														<i>Нет</i>
+													</label>
+												</div>
+											</div>
+										</div><!--/filters__item-->
+										<div class="filters__item">
+											<div class="filters__name">Качество (от 1 до 100)</div>
+											<div class="filters-input">
+												<input type="text">
+											</div>
+											<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+										</div><!--/filters__item-->
+									</div><!--/filters-version megapixel-->
+									<div class="filters-version pixel">
+										<div class="filters-block">
+											<div class="filters-block__title">Введите нужную ширину и высоту в пикселях</div>
+											<div class="filters__item">
+												<div class="filters__name">Ширина:</div>
+												<div class="filters-input">
+													<input type="text" placeholder="Укажите ширину в PX">
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Высота:</div>
+												<div class="filters-input">
+													<input type="text" placeholder="Укажите высоту в PX">
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Тип изменения размера:</div>
+												<div class="filters-radio">
+													<input type="radio" id="type_size-pixel_1" name="type_size-pixel" checked>
+													<label for="type_size-pixel_1">
+														<span></span>
+														<i>С соблюдением пропорций</i>
+													</label>
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="type_size-pixel_2" name="type_size-pixel">
+													<label for="type_size-pixel_2">
+														<span></span>
+														<i>Резиновое, точно до указанных размеров</i>
+													</label>
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="type_size-pixel_3" name="type_size-pixel">
+													<label for="type_size-pixel_3">
+														<span></span>
+														<i>Обрезка лишних краев, точно до указанных размеров</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Дополнительные настройки</div>
+											<div class="filters__item">
+												<div class="filters__name">Интерполяция:</div>
+												<div class="filters__description">Алгоритм распределения пикселей</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">Автоматическая</option>
+														<option value="1">Ланцош (Lanczos)</option>
+														<option value="2">Митчелл (Mitchell)</option>
+														<option value="3">Кубическая (Cubic)</option>
+														<option value="4">Нет (метод ближайшего соседа)</option>
+													</select>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Размер в DPI:</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">Точек на дюйм, 0=не изменять, подробнее <a href="#">узнать здесь</a></div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Тип изменения размера:</div>
+												<div class="filters-radio">
+													<input type="radio" id="type_size-radio2_1" name="type_size-radio2" checked>
+													<label for="type_size-radio2_1">
+														<span></span>
+														<i>С соблюдением пропорций</i>
+													</label>
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="type_size-radio2_2" name="type_size-radio2">
+													<label for="type_size-radio2_2">
+														<span></span>
+														<i>Резиновое, точно до указанных размеров</i>
+													</label>
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="type_size-radio2_3" name="type_size-radio">
+													<label for="type_size-radio2_3">
+														<span></span>
+														<i>Обрезка лишних краев, точно до указанных размеров</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters__name">Тип изменения размера:</div>
+												<div class="filters__description">Прогрессивный jpeg-файл практически всегда занимает места на 2-3% меньше обычного с таким же качеством</div>
+												<div class="filters-radio">
+													<input type="radio" id="format-radio_1" name="format-radio" checked>
+													<label for="format-radio_1">
+														<span></span>
+														<i>Без изменений, как у исходного изображения</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="format-radio_2" name="format-radio">
+													<label for="format-radio_2">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="format-radio_3" name="format-radio">
+													<label for="format-radio_3">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="format-radio_4" name="format-radio">
+													<label for="format-radio_4">
+														<span></span>
+														<i>PNG-24- без сжатия, с поддержкой прозрачности</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Копировать EXIF и другие метаданные?</div>
+												<div class="filters__row">
+													<div class="filters-radio">
+														<input type="radio" id="copy-radio2_yes" name="copy-radio">
+														<label for="copy-radio2_yes">
+															<span></span>
+															<i>Да</i>
+														</label>
+													</div>
+													<div class="filters-radio">
+														<input type="radio" id="copy-radio2_no" name="copy-radio" checked>
+														<label for="copy-radio2_no">
+															<span></span>
+															<i>Нет</i>
+														</label>
+													</div>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div><!--/filters-version pixel-->
+									<div class="filters-version megabytes">
+										<div class="filters__item">
+											<div class="filters__name">Уменьшение размера в мегапикселях</div>
+											<div class="filters-select">
+												<select>
+													<option value="0">Уменьшение отключено</option>
+													<option value="1">уменьшить на 10%</option>
+													<option value="2">Уменьшить на 20%</option>
+													<option value="3">Уменьшить на 30%</option>
+													<option value="4">Уменьшить на 40%</option>
+													<option value="5">Уменьшить на 50%</option>
+													<option value="6">Уменьшить на 60%</option>
+													<option value="7">Уменьшить на 80%</option>
+													<option value="8">Сделать не более 0,5 Мп (≈943x530)</option>
+													<option value="9">Сделать не более 1 Мп (≈1366x768)</option>
+													<option value="10">Сделать не более 2 Мп (≈1880x1060)</option>
+													<option value="11">Сделать не более 3 Мп (≈2300x1300)</option>
+													<option value="12">Сделать не более 5 Мп (≈2980x1670)</option>
+													<option value="13">Сделать не более 10 Мп (≈4220x2370)</option>
+													<option value="14" selected>Сделать не более 20 Мп (≈5960x3350)</option>
+												</select>
+											</div>
+											<div class="filters__description">Уменьшение размера на 20-30% в пикселях или мегапикселях хорошо уменьшает размер файла</div>
+										</div><!--/filters__item-->
+										<div class="filters__item">
+											<div class="filters__name">Субвыборка</div>
+											<div class="filters__description">Прореживание, усреднение резких цветовых переходов</div>
+											<div class="filters-select">
+												<select>
+													<option value="0" selected>1x1 (лучшее качество)</option>
+													<option value="1">2x1 (среднее качество)</option>
+													<option value="2">1x2 (среднее качество)</option>
+													<option value="3">2x2 (низкое качество)</option>
+													<option value="4">Не изменять</option>
+												</select>
+											</div>
+										</div><!--/filters__item-->
+										<div class="filters__item">
+											<div class="filters-radio">
+												<input type="radio" id="type-megabytes_standard" name="type-megabytes">
+												<label for="type-megabytes_standard">
+													<span></span>
+													<i>Стандартный <strong>JPEG</strong></i>
+												</label>
+											</div>
+											<div class="filters-radio">
+												<input type="radio" id="type-megabytes_progressive" name="type-megabytes" checked>
+												<label for="type-megabytes_progressive">
+													<span></span>
+													<i>Прогрессивный <strong>JPEG</strong></i>
+												</label>
+											</div>
+											<div class="filters__description">Прогрессивный jpeg-файл практически всегда занимает места на 2-3% меньше обычного с таким же качеством</div>
+										</div><!--/filters__item-->
+										<div class="filters__item">
+											<div class="filters__name">Копировать EXIF и другие метаданные?</div>
+											<div class="filters-radio">
+												<input type="radio" id="copy-radio_yes_megabytes" name="copy-radio_megabytes">
+												<label for="copy-radio_yes_megabytes">
+													<span></span>
+													<i>Да</i>
+												</label>
+											</div>
+											<div class="filters-radio">
+												<input type="radio" id="copy-radio_no_megabytes" name="copy-radio_megabytes" checked>
+												<label for="copy-radio_no_megabytes">
+													<span></span>
+													<i>Нет</i>
+												</label>
+											</div>
+											<div class="filters__description">«Нет» может ещё уменьшить размер файла, но будет стёрта вся дополнительная информация, <a href="#">перечисленная здесь</a></div>
+										</div><!--/filters__item-->
+										<div class="filters__item">
+											<div class="filters__name">Качество (от 1 до 100)</div>
+											<div class="filters-input">
+												<input type="text">
+											</div>
+											<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла.</div>
+										</div><!--/filters__item-->
+									</div><!--/filters-version megabytes-->
+									<div class="filters-version centimeters">
+										<div class="filters-block">
+											<div class="filters-block__title">Введите нужную ширину и высоту в пикселях</div>
+											<div class="filters__item">
+												<div class="filters__name">Ширина:</div>
+												<div class="filters-input">
+													<input type="text" placeholder="Укажите ширину в PX">
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Высота:</div>
+												<div class="filters-input">
+													<input type="text" placeholder="Укажите высоту в PX">
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Единицы измерения</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">Миллиметры (mm)</option>
+														<option value="1" selected>Сантиметры (cm)</option>
+														<option value="2">Дюймы (inches)</option>
+													</select>
+												</div>
+												<div class="filters__description">По умолчанию указан формат 15x10, который подходит для альбомной (горизонтальной) фотографии, для портретной (вертикальной) фотографии эти значения нужно поменять местами, то есть указать 10x15, как и указано в <a href="#">таблице стандартных размеров</a></div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Размер в DPI:</div>
+												<div class="filters__description">0 = "не учитывать DPI, сделать по пропорции на основе указанного формата"</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">Размер исходной jpg-картинки в DPI можно <a href="#">узнать здесь</a>, считав метаданные</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Тип изменения размера:</div>
+												<div class="filters-radio">
+													<input type="radio" id="type_size-centimeters_1" name="type_size-centimeters" checked>
+													<label for="type_size-centimeters_1">
+														<span></span>
+														<i>С соблюдением пропорций</i>
+													</label>
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="type_size-centimeters_2" name="type_size-centimeters">
+													<label for="type_size-centimeters_2">
+														<span></span>
+														<i>Резиновое, точно до указанных размеров</i>
+													</label>
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="type_size-centimeters_3" name="type_size-centimeters">
+													<label for="type_size-centimeters_3">
+														<span></span>
+														<i>Без обрезки, с добавлением фона</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Привязаться к части изображения</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">Верхней</option>
+														<option value="1">Левой</option>
+														<option value="2" selected>Центральной</option>
+														<option value="3">Правой</option>
+														<option value="4">Нижней</option>
+													</select>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Дополнительные настройки</div>
+											<div class="filters__item">
+												<div class="filters__name">Интерполяция:</div>
+												<div class="filters__description">Алгоритм распределения пикселей</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">Автоматическая</option>
+														<option value="1">Ланцош (Lanczos)</option>
+														<option value="2">Митчелл (Mitchell)</option>
+														<option value="3">Кубическая (Cubic)</option>
+														<option value="4">Нет (метод ближайшего соседа)</option>
+													</select>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters__name">Тип изменения размера:</div>
+												<div class="filters-radio">
+													<input type="radio" id="format_result-radio_1" name="format_result-radio" checked>
+													<label for="format_result-radio_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="format_result-radio_2" name="format_result-radio">
+													<label for="format_result-radio_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="format_result-radio_3" name="format_result-radio">
+													<label for="format_result-radio_3">
+														<span></span>
+														<i>PNG-24-  без сжатия, прозрачный фон будет заменён на белый цвет</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Копировать EXIF и другие метаданные?</div>
+												<div class="filters__row">
+													<div class="filters-radio">
+														<input type="radio" id="copy-radio_yes_centimeters" name="copy-radio_centimeters">
+														<label for="copy-radio_yes_centimeters">
+															<span></span>
+															<i>Да</i>
+														</label>
+													</div>
+													<div class="filters-radio">
+														<input type="radio" id="copy-radio_no_centimeters" name="copy-radio_centimeters" checked>
+														<label for="copy-radio_no_centimeters">
+															<span></span>
+															<i>Нет</i>
+														</label>
+													</div>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div><!--/filters-version centimeters-->
+									<div class="filters-version percent">
+										<div class="filters-block">
+											<div class="filters-block__title">Проценты для увеличения или уменьшения изображения</div>
+											<div class="filters__item">
+												<div class="filters__name">Процент:</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 1 до 10000, 100=оставить размер без изменений, 120=увеличить на 20%</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Параметры сжатия</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="format-percent_1" name="format-percent" checked>
+													<label for="format-percent_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="format-percent_2" name="format-percent">
+													<label for="format-percent_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Копировать EXIF и другие метаданные?</div>
+												<div class="filters__row">
+													<div class="filters-radio">
+														<input type="radio" id="copy-radio2_yes" name="copy-radio">
+														<label for="copy-radio2_yes">
+															<span></span>
+															<i>Да</i>
+														</label>
+													</div>
+													<div class="filters-radio">
+														<input type="radio" id="copy-radio2_no" name="copy-radio" checked>
+														<label for="copy-radio2_no">
+															<span></span>
+															<i>Нет</i>
+														</label>
+													</div>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+										<div class="filters__name">Качество</div>
+										<div class="filters__description">Укажите значение от 1 до 100</div>
+										<div class="filters-input">
+											<input type="text">
+										</div>
+										<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла.</div>
+									</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div><!--/filters-version percent-->
+								</div>
+								<button class="btn-orange" type="submit">
+									<img src="assets/images/check.svg" alt="">
+									<span>Преобразовать</span>
+								</button>
+								<div class="filters__foot">
+									<button type="reset" class="filters-reset">
+										<svg>
+											<use xlink:href="#close-small"></use>
+										</svg>
+										<span>вернуться к настройкам по умолчанию</span>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="processing__content">
+							<div class="file">
+								<div class="file-box">
+									<a href="#" class="trashcan">
+										<img src="assets/images/trashcan.svg" alt="">
+									</a>
+									<div class="file-photo">
+										<img src="assets/images/showing-photo_4.jpg" alt="">
+									</div>
+									<div class="file-info">
+										<div class="file-settings">
+											<div class="file-settings-original">1920 х 666</div>
+											<div class="file-settings-result">1920 х 666</div>
+										</div>
+										<div class="file-name">1625.jpg</div>
+									</div>
+								</div><!--file-box-->
+								<div class="file-box">
+									<a href="#" class="trashcan">
+										<img src="assets/images/trashcan.svg" alt="">
+									</a>
+									<div class="file-photo">
+										<img src="assets/images/showing-photo_2.jpg" alt="">
+									</div>
+									<div class="file-info">
+										<div class="file-settings">
+											<div class="file-settings-original">1920 х 666</div>
+											<div class="file-settings-result">1920 х 666</div>
+										</div>
+										<div class="file-name">mgonline.com.uahexagonalp8473ixelifgstjasadeegstjst</div>
+									</div>
+								</div><!--file-box-->
+								<div class="file-box">
+									<a href="#" class="trashcan">
+										<img src="assets/images/trashcan.svg" alt="">
+									</a>
+									<div class="file-photo">
+										<img src="assets/images/showing-photo_10.jpg" alt="">
+									</div>
+									<div class="file-info">
+										<div class="file-settings">
+											<div class="file-settings-original">1920 х 666</div>
+											<div class="file-settings-result">1920 х 666</div>
+										</div>
+										<div class="file-name">Квадратная пикселизация.jpg</div>
+									</div>
+								</div><!--file-box-->
+								<div class="file-box">
+									<a href="#" class="trashcan">
+										<img src="assets/images/trashcan.svg" alt="">
+									</a>
+									<div class="file-photo">
+										<img src="assets/images/showing-photo_8.jpg" alt="">
+									</div>
+									<div class="file-info">
+										<div class="file-settings">
+											<div class="file-settings-original">1920 х 666</div>
+											<div class="file-settings-result">1920 х 666</div>
+										</div>
+										<div class="file-name">1625.jpg</div>
+									</div>
+								</div><!--file-box-->
+								<div class="file-box">
+									<a href="#" class="trashcan">
+										<img src="assets/images/trashcan.svg" alt="">
+									</a>
+									<div class="file-photo">
+										<img src="assets/images/showing-photo_12.jpg" alt="">
+									</div>
+									<div class="file-info">
+										<div class="file-settings">
+											<div class="file-settings-original">1920 х 666</div>
+											<div class="file-settings-result">1920 х 666</div>
+										</div>
+										<div class="file-name">mgonline.com.uahexagonalp8473ixelifgstjasadeegstjst</div>
+									</div>
+								</div><!--file-box-->
+								<div class="file-box">
+									<a href="#" class="trashcan">
+										<img src="assets/images/trashcan.svg" alt="">
+									</a>
+									<div class="file-photo">
+										<img src="assets/images/showing-photo_5.jpg" alt="">
+									</div>
+									<div class="file-info">
+										<div class="file-settings">
+											<div class="file-settings-original">1920 х 666</div>
+											<div class="file-settings-result">1920 х 666</div>
+										</div>
+										<div class="file-name">Квадратная пикселизация.jpg</div>
+									</div>
+								</div><!--file-box-->
+								<div class="file-box">
+									<a href="#" class="trashcan">
+										<img src="assets/images/trashcan.svg" alt="">
+									</a>
+									<div class="file-photo">
+										<img src="assets/images/showing-photo_4.jpg" alt="">
+									</div>
+									<div class="file-info">
+										<div class="file-settings">
+											<div class="file-settings-original">1920 х 666</div>
+											<div class="file-settings-result">1920 х 666</div>
+										</div>
+										<div class="file-name">1625.jpg</div>
+									</div>
+								</div><!--file-box-->
+								<div class="file-box">
+									<a href="#" class="trashcan">
+										<img src="assets/images/trashcan.svg" alt="">
+									</a>
+									<div class="file-photo">
+										<img src="assets/images/showing-photo_2.jpg" alt="">
+									</div>
+									<div class="file-info">
+										<div class="file-settings">
+											<div class="file-settings-original">1920 х 666</div>
+											<div class="file-settings-result">1920 х 666</div>
+										</div>
+										<div class="file-name">mgonline.com.uahexagonalp8473ixelifgstjasadeegstjst</div>
+									</div>
+								</div><!--file-box-->
+								<div class="file-box">
+									<a href="#" class="trashcan">
+										<img src="assets/images/trashcan.svg" alt="">
+									</a>
+									<div class="file-photo">
+										<img src="assets/images/showing-photo_10.jpg" alt="">
+									</div>
+									<div class="file-info">
+										<div class="file-settings">
+											<div class="file-settings-original">1920 х 666</div>
+											<div class="file-settings-result">1920 х 666</div>
+										</div>
+										<div class="file-name">Квадратная пикселизация.jpg</div>
+									</div>
+								</div><!--file-box-->
+
+								<div class="add-btn">
+									<div>
+										<input type="file" id="add-btn">
+										<label for="add-btn">
+											<img src="assets/images/plus.svg" alt="">
+										</label>
+									</div>
+									<span class="add-btn-qt">12</span>
+								</div><!--/add-btn-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/processing-->
+		</main>
+		<footer class="footer none">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="lang">
+						<div class="lang__open">
+							<span>Русский</span>
+							<img src="assets/images/arrow-small.svg" alt="">
+						</div>
+						<div class="dropdown-box">
+							<ul>
+								<li>
+									<a href="#">Русский</a>
+								</li>
+								<li>
+									<a href="#">Английский</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="copyright">© 2018 www.imgonline.com.ua</div>
+						<div class="social">
+							<a href="#" target="blank">
+								<svg>
+									<use xlink:href="#tg-icon"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="popup popup-help megapixel">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Изменение размера фотографии в мегапикселях онлайн</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help pixel">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Изменение размера изображения в пикселях онлайн</h4>
+						<div class="text">
+							<p>Главное нужно указать файл на вашем компьютере или телефоне, ввести размеры в пикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию. Ещё можно изменить размер фото в: <a href="#">Сантиметрах для печати</a> , <a href="#">Мегапикселях</a> , <a href="#">Процентах</a> , <a href="#">Мегабайтах (сжать)</a>, а также качественно <a href="#">Увеличить маленькую картинку</a>.</p>
+							<p>Для изменения размера «С соблюдением пропорций» можно указывать не только обе стороны (ширину и высоту), но и одну из этих сторон, например, ширину указать 1366 пикселей, а поле для ввода высоты можно оставить пустым или наоборот. Таким образом второй параметр автоматически подстроится под нужное значение.</p>
+							<p>Для сужения или растягивания картинки в высоту или ширину необходимо выбрать такой тип изменения размера: «Резиновое, точно до указанных размеров».</p>
+							<p>Чтобы сделать квадратную картинку, нужно указать одинаковую ширину и высоту в пикселях, например, 1080x1080 (такой размер используется на сайте Instagram.com) и выбрать в настройках «Обрезка лишних краев, точно до указанных размеров», при необходимости можно указать ту часть картинки, которую обрезать не нужно.</p>
+							<p>Здесь также можно уменьшить и автоматически обрезать обои или картинку точно под размер своего рабочего стола. Для этого нужно ввести ширину и высоту своего монитора в пикселях 2560 x 1440 и выбрать тип изменения размера «Обрезка лишних краев, точно до указанных размеров», для более точного позиционирования можно предварительно <a href="#">обрезать картинку</a>, примерно как нужно в итоге, и уже после этого обработать на этой странице.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка, а также её размеры в пикселях и мегабайтах до и после обработки.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help centimeters">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Изменение размера фотографии в сантиметрах для печати на бумаге, с учётом DPI онлайн</h4>
+						<div class="text">
+							<p>Главное нужно указать фото на вашем компьютере или телефоне, ввести нужный размер в <a href="#">сантиметрах</a>, <a href="#">миллиметрах</a> или <a href="#">дюймах</a>, нажать кнопку ОК внизу страницы, подождать пару секунд и скачать готовый результат. Остальные настройки выставлены по умолчанию. На этом сайте ещё можно изменить размер в: <a href="#">пикселях</a>, <a href="#">мегапикселях</a>, <a href="#">процентах</a>, <a href="#">мегабайтах</a>, увеличить маленькую картинку, а также предварительно <a href="#">обрезать</a> или <a href="#">повернуть</a> с учётом Exif.</p>
+							<p>Размер фотографии будет изменён с учётом указанного размера в сантиметрах (миллиметрах, дюймах), а также с учётом указанного размера в DPI, согласно стандартам бумажной печати. Размеры в см, мм и дюймах можно указывать с точностью до тысячных, например, вместо формата 15x10 можно выставить 15,201x10,203 см.</p>
+						</div>
+						<div class="table">
+							<div class="table__inner">
+								<div class="table__head table__row">
+									<div>Формат фото в сантиметрах </div>
+									<div>Размер в миллиметрах </div>
+									<div>Размер в пикселях <span>(для печати 300 dpi)</span></div>
+									<div>Соотношение сторон <span>(при альбомной ориентации)</span></div>
+								</div>
+								<div class="table__content">
+									<div class="table__row">
+										<div>3х4 <span>(после ручной обрезки)</span></div>
+										<div>30x40</div>
+										<div>354x472</div>
+										<div>354x472</div>
+									</div>
+									<div class="table__row">
+										<div>3,5х4,5 <span>(после ручной обрезки)</span>	</div>
+										<div>35x45</div>
+										<div>413x531</div>
+										<div>4:3 (1.33)</div>
+									</div>
+									<div class="table__row">
+										<div>9x13	</div>
+										<div>89х127</div>
+										<div>1063x1535</div>
+										<div>10:7 (1.43)</div>
+									</div>
+									<div class="table__row">
+										<div>10x15	</div>
+										<div>102х152</div>
+										<div>1181x1772	</div>
+										<div>3:2 (1.5)</div>
+									</div>
+									<div class="table__row">
+										<div>13x18</div>
+										<div>127х178</div>
+										<div>1535x2126</div>
+										<div>7:5 (1.4)</div>
+									</div>
+									<div class="table__row">
+										<div>15x20 (≈A5)	</div>
+										<div>152х203</div>
+										<div>1772x2362</div>
+										<div>4:3 (1.33)</div>
+									</div>
+									<div class="table__row">
+										<div>15x21	</div>
+										<div>152х216</div>
+										<div>1772x2480	</div>
+										<div>4:3 (1.33)</div>
+									</div>
+									<div class="table__row">
+										<div>18x24</div>
+										<div>178x240</div>
+										<div>2126x2835</div>
+										<div>19:14 (1.36)</div>
+									</div>
+									<div class="table__row">
+										<div>20x25	</div>
+										<div>203x254</div>
+										<div>2362x2953</div>
+										<div>5:4 (1.25)</div>
+									</div>
+									<div class="table__row">
+										<div>20x30 (≈A4)</div>
+										<div>203х305	</div>
+										<div>2362x3543</div>
+										<div>3:2 (1.5)</div>
+									</div>
+									<div class="table__row">
+										<div>30x40</div>
+										<div>305x406</div>
+										<div>3543x4724</div>
+										<div>4:3 (1.33)</div>
+									</div>
+									<div class="table__row">
+										<div>30x45</div>
+										<div>305x457</div>
+										<div>3543x5315</div>
+										<div>3:2 (1.5)</div>
+									</div>
+								</div>
+							</div>
+						</div><!--/table-->
+						<div class="text">
+							<p>Стандартный размер бумажного листа формата A4 – 21x29,7 см или 2480x3508 пикселей при 300 dpi. Размеры других форматов листов можно увидеть на странице в Википедии, но только не забывайте, что там перечислены размеры в миллиметрах и дюймах, т.е. в настройках на этой странице нужно выбрать соответствующую величину</p>
+							<p>Если нужно изменить размер фотографии без учёта DPI (точек на дюйм), то есть только соблюдая пропорции указанного формата, то для этого нужно установить параметр "Размер в DPI" на "0" в настройках.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/slick.min.js"></script>
+	<script src="assets/js/jquery.formstyler.min.js"></script>
+	<script src="assets/js/swipe-filters.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>

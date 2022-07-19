@@ -12,6 +12,12 @@
 <body>
 	<!--Sprite-->
 	<svg style="display: none;">
+		<symbol id="close-small" viewBox="0 0 16 16">
+			<g>
+				<path d="M7.99998 14.6667C11.6819 14.6667 14.6666 11.6819 14.6666 8.00001C14.6666 4.31811 11.6819 1.33334 7.99998 1.33334C4.31808 1.33334 1.33331 4.31811 1.33331 8.00001C1.33331 11.6819 4.31808 14.6667 7.99998 14.6667Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M6 6L8 8M8 8L10 10M8 8L10 6M8 8L6 10" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
 		<symbol id="close-icon" viewBox="0 0 24 24">
 			<g>
 				<path d="M18 6L12 12M12 12L6 18M12 12L6 6M12 12L18 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -85,7 +91,7 @@
 							<form action="#" class="filters">
 								<h3 class="filters__title">
 									<span>Параметры сжатия<br> JPG файла </span>
-									<a href="#" class="help">
+									<a href="#" class="help" data-popup="popup-compress">
 										<svg>
 											<use xlink:href="#help-icon"></use>
 										</svg>
@@ -277,7 +283,7 @@
 		</footer>
 	</div>
 
-	<div class="popup popup-help">
+	<div class="popup popup-help popup-compress">
 		<div class="closex"></div>
 		<div class="popup__inner">
 			<div class="popup__box">
