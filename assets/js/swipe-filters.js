@@ -72,12 +72,12 @@ class Swipe {
   }
 }
  
- 
-  var swiper = new Swipe('.filters__title');
+
+  var swiper = new Swipe('.swipe-open');
   swiper.onUp(function() { 
     if($(window).width() <= 860)
     {
-      $('.filters__content').slideDown(555);
+      $('.swipe-content').slideDown(555);
       $('.filters__foot').slideDown(555);
       $('.help').slideDown(555);
       $('body').addClass("hidden");
@@ -86,10 +86,11 @@ class Swipe {
   swiper.onDown(function() { 
     if($(window).width() <= 860)
     {
-      $('.filters__content').slideUp(555);
+      $('.swipe-content').slideUp(555);
       $('.filters__foot').slideUp(333);
       $('.help').slideUp(111);
       $('body').removeClass("hidden");
     }
   });
   swiper.run();
+

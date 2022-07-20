@@ -56,11 +56,11 @@
 						<img src="assets/images/logo.svg" alt="">
 						<span>IMGonline.com.ua</span>
 					</a>
-					<nav class="nav">
-						<a href="#" class="nav__link active">Сжать</a>
+					<nav class="nav none">
+						<a href="#" class="nav__link">Сжать</a>
 						<a href="#" class="nav__link">Изменить размер</a>
 						<a href="#" class="nav__link">Конвертер</a>
-						<a href="#" class="nav__link">Редактор EXIF</a>
+						<a href="#" class="nav__link active">Редактор EXIF</a>
 						<a href="#" class="nav__link">Эффекты</a>
 						<a href="#" class="nav__link">Улучшить</a>
 						<a href="#" class="nav__link">Инструменты</a>
@@ -88,43 +88,53 @@
 				</div>
 			</div>
 		</header><!--/header-->
-		<main class="main page page_full page_compress-add">
-			<section class="add add_compress">
+		<main class="main page page-pt_min page_identify-compress">
+			<div class="identify identify-compress">
 				<div class="container">
-					<h1 class="title">Сжатие JPEG файла онлайн</h1>
-					<div class="subtitle">Изменить размер <span>JPЕG</span> за счет параметра качества (сжатие) от 1 до 100. </div>
-					<form action="#" class="add-container">
-						<div class="add-file">
-							<input id="file-input" type="file" name="file" multiple>
-              				 <label for="file-input">Выбрать изображение</label>
-               				<span>или перетащите изображения сюда</span>
-						</div>	
-					</form>
-				</div>
-			</section><!--/add-->
-			<div class="advertising">
-				<div class="container">
-					<div class="advertising__content">
-						<a href="#" class="advertising-box">
-							<img src="assets/images/advertising_1.jpg" alt="">
+					<div class="file-box">
+						<div class="file-photo">
+							<img src="assets/images/colors.jpg" alt="">
+						</div>
+						<div class="file-info">
+							<div class="file-name">1625.jpg</div>
+						</div>
+					</div><!--file-box-->
+					<div class="identify-panel">
+						<a href="#" class="btn-orange">
+							<img src="assets/images/check.svg" alt="">
+							<span>Определить</span>
 						</a>
-						<a href="#" class="advertising-box">
-							<img src="assets/images/advertising_2.jpg" alt="">
-						</a>
-						<a href="#" class="advertising-box">
-							<img src="assets/images/advertising_3.jpg" alt="">
-						</a>
-						<a href="#" class="advertising-box">
-							<img src="assets/images/advertising_4.jpg" alt="">
-						</a>
-						<a href="#" class="advertising-box">
-							<img src="assets/images/advertising_5.jpg" alt="">
+						<div class="popup popup-panel swipe-content">
+							<div class="closex"></div>
+							<div class="popup__inner">
+								<div class="popup__box">
+									<span class="popup__close">
+										<svg>
+											<use xlink:href="#close-icon"></use>
+										</svg>
+									</span>
+									<div class="popup__content">
+										<h4 class="title title_center">Определить уровень сжатия JPEG картинки онлайн</h4>
+										<div class="text">
+											<p>Главное нужно указать JPEG файл (фото или картинку) на вашем компьютере или телефоне, нажать кнопку OK внизу. После этого будет получена информация об уровне качества, с которым был создан jpeg файл. Все стандартные jpg картинки имеют уровень качества от 1 до 100. Уровень качества или сжатия JPEG от 90 до 100 означает, что JPG картинка была сохранена с максимально возможным качеством и с низким уровнем сжатия. На этом сайте ещё можно узнать подробную <a href="#">EXIF информацию</a>, а также определить, что это <a href="#">прогрессивная jpeg картинка или нет</a>.</p>
+											<p>Например, большие картинки на сайте вконтакте сохраняются с качеством 87, а превьюхи (маленькие картинки для предпросмотра результата) в поиске гугла по картинкам – с качеством jpg 74.</p>
+											<p>Исходное изображение никак не изменяется. Вам будет показан только уровень качества (сжатия) JPEG от 1 до 100.</p>
+										</div>
+									</div>
+    						       </div>
+							</div>
+						</div><!--/popup-panel-->
+						<a href="#" class="identify-panel-open swipe-open">
+							<span>Параметры инструмента</span>
+							<svg>
+								<use xlink:href="#help-icon"></use>
+							</svg>
 						</a>
 					</div>
 				</div>
-			</div><!--/advertising-->
+			</div><!--/identify-->
 		</main>
-		<footer class="footer">
+		<footer class="footer none">
 			<div class="container">
 				<div class="footer__inner">
 					<div class="lang">
@@ -158,9 +168,11 @@
 		</footer>
 	</div>
 
+
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
 	<script src="assets/js/slick.min.js"></script>
 	<script src="assets/js/jquery.formstyler.min.js"></script>
+	<script src="assets/js/swipe-filters.js"></script>
 	<script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -111,6 +111,34 @@ $(document).ready(function() {
     });
     /*==============/popup-help=================*/
 
+        /*===============Popup-panel=================*/
+    $(".identify-panel-open").on("click", function (event) {
+      if($(window).width() > 860)
+      {
+        event.preventDefault();
+        $(".popup-panel").fadeIn(333);
+        $(".popup-panel .popup__inner").fadeIn(333);
+        $('body').addClass("hidden");
+      }
+    });
+    $(".popup__close,  .closex").on("click", function (event) {
+      if($(window).width() > 860)
+      {
+        event.preventDefault();
+        $(".popup-panel").fadeOut('333');
+        $(".popup-panel .popup__inner").fadeOut(333);
+        $('body').removeClass("hidden");
+      }
+    });
+    /*==============/popup-help=================*/
+
+      /*=======Table-result (number)======*/
+  $('.table-result__inner').removeClass('one').addClass(function(){
+    return ["none", "one"]
+       [$(this).children('.table-result__row').length];
+  });
+/*=======/table-result (number)======*/
+
   /*=================Sliders==========================*/
   /*===========Slider-advertising============*/
   $('.advertising__content').slick({

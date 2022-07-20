@@ -12,6 +12,11 @@
 <body>
 	<!--Sprite-->
 	<svg style="display: none;">
+		<symbol id="arrow-big" viewBox="0 0 16 16">
+			<g>
+				<path d="M15 8H1M1 8L8 15M1 8L8 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
 		<symbol id="close-small" viewBox="0 0 16 16">
 			<g>
 				<path d="M7.99998 14.6667C11.6819 14.6667 14.6666 11.6819 14.6666 8.00001C14.6666 4.31811 11.6819 1.33334 7.99998 1.33334C4.31808 1.33334 1.33331 4.31811 1.33331 8.00001C1.33331 11.6819 4.31808 14.6667 7.99998 14.6667Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
@@ -89,7 +94,7 @@
 					<div class="processing__inner">
 						<div class="processing__filters">
 							<form action="#" class="filters">
-								<h3 class="filters__title">
+								<h3 class="filters__title swipe-open">
 									<span>Параметры конвертирования</span>
 									<a href="#" data-popup="megapixel" class="help">
 										<svg>
@@ -98,7 +103,7 @@
 										<span>инструкция по настройкам</span>
 									</a>
 								</h3>
-								<div class="filters__content">
+								<div class="filters__content swipe-content">
 									<div class="filters__item">
 										<div class="filters__name">Изменить размер в:</div>
 										<div class="filters-select filters-change">

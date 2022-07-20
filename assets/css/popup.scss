@@ -125,6 +125,42 @@
 			padding: 50px 15px;
 		}
 	}
+
+	.popup-panel {
+		height: auto;
+		max-height: calc(100vh - 250px);
+		position: static;
+		background-color: transparent;
+		.closex {
+			display: none;
+		}
+		.popup__close {
+			display: none;
+		}
+		.popup__inner {
+			width: 100%;
+			display: block!important;
+			position: static;
+			transform: translate(0);
+		}
+		.popup__box {
+			background-color: transparent;
+			padding: 0;
+			min-height: auto;
+			border-radius: 0;
+			overflow: visible;
+		}
+		.title {
+			color: $wh;
+			font-size: 18px;
+		}
+		.text {
+			color: $wh;
+			a {
+				color: $wh;
+			}
+		}
+	}
 }
 
 @media(max-width: 546px) {

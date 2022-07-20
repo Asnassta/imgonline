@@ -57,7 +57,7 @@
 						<span>IMGonline.com.ua</span>
 					</a>
 					<nav class="nav">
-						<a href="#" class="nav__link active">Сжать</a>
+						<a href="#" class="nav__link">Сжать</a>
 						<a href="#" class="nav__link">Изменить размер</a>
 						<a href="#" class="nav__link">Конвертер</a>
 						<a href="#" class="nav__link">Редактор EXIF</a>
@@ -88,41 +88,36 @@
 				</div>
 			</div>
 		</header><!--/header-->
-		<main class="main page page_full page_compress-add">
-			<section class="add add_compress">
+		<main class="main page page_full page_result-identify">
+			<section class="result result_identify-compress">
 				<div class="container">
-					<h1 class="title">Сжатие JPEG файла онлайн</h1>
-					<div class="subtitle">Изменить размер <span>JPЕG</span> за счет параметра качества (сжатие) от 1 до 100. </div>
-					<form action="#" class="add-container">
-						<div class="add-file">
-							<input id="file-input" type="file" name="file" multiple>
-              				 <label for="file-input">Выбрать изображение</label>
-               				<span>или перетащите изображения сюда</span>
-						</div>	
-					</form>
-				</div>
-			</section><!--/add-->
-			<div class="advertising">
-				<div class="container">
-					<div class="advertising__content">
-						<a href="#" class="advertising-box">
-							<img src="assets/images/advertising_1.jpg" alt="">
+					<h1 class="title">Информация об изображении получена успешно!</h1>
+					<div class="subtitle">Время обработки: 0.04 сек.</div>
+					<div class="download-box">
+						<a href="#" class="btn-circle">
+							<img src="assets/images/arrow-big.svg" alt="">
 						</a>
-						<a href="#" class="advertising-box">
-							<img src="assets/images/advertising_2.jpg" alt="">
-						</a>
-						<a href="#" class="advertising-box">
-							<img src="assets/images/advertising_3.jpg" alt="">
-						</a>
-						<a href="#" class="advertising-box">
-							<img src="assets/images/advertising_4.jpg" alt="">
-						</a>
-						<a href="#" class="advertising-box">
-							<img src="assets/images/advertising_5.jpg" alt="">
+						<a href="#" class="btn-orange">
+							<img src="assets/images/download.svg" alt="">
+							<span>Скачать таблицу</span>
 						</a>
 					</div>
+					<div class="table-result">
+						<div class="table-result__inner">
+							<div class="table-result__row">
+								<div>Уровень качества (сжатия) JPEG: </div>
+								<div>100</div>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="link-back">
+						<svg>
+							<use xlink:href="#arrow-big"></use>
+						</svg>
+						<span>На этом сайте можно изменить размер изображения в пикселях, мегапикселях, мегабайтах</span>
+					</a>
 				</div>
-			</div><!--/advertising-->
+			</section><!--/result-->
 		</main>
 		<footer class="footer">
 			<div class="container">

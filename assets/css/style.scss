@@ -191,6 +191,20 @@ h4 {
 	}
 }
 
+.btn-circle {
+	width: 44px;
+	height: 44px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #414142;
+	border-radius: 50%;
+	transition: all .2s linear;
+	&:hover {
+		background-color: $bl;
+	}
+}
+
 .bg-color {
 	background: url("../images/bg-color.png") top -80px center no-repeat;
 	background-size: cover;
