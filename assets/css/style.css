@@ -776,6 +776,28 @@
 .result .download-box {
   margin: 20px auto 50px; }
 
+.result .file-box {
+  margin-bottom: 40px; }
+
+.result .file-photo {
+  width: 100%;
+  height: auto; }
+  .result .file-photo img {
+    height: 40vh;
+    -o-object-fit: cover;
+    object-fit: cover; }
+
+.result .file-name {
+  white-space: nowrap; }
+
+.result .btn-orange {
+  max-width: calc(100% - 59px); }
+  .result .btn-orange span {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+
 .table-result {
   overflow: auto;
   -ms-overflow-style: none;
@@ -998,13 +1020,14 @@
 
 @media (max-width: 414px) {
   .advertising .slick-list {
-    padding-right: 25%; } }
+    padding-right: 25%; }
+  .download-box .btn-orange {
+    padding: 16px;
+    min-width: calc(100% - 59px); } }
 
 @media (max-width: 360px) {
   .add-file label {
     font-size: 16px; }
-  .download-box .btn-orange {
-    padding: 16px 28px; }
   .link-back {
     margin: 30px auto; } }
 
@@ -1780,6 +1803,9 @@ h4 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: #FF844C;
   border-radius: 15px;
   padding: 14px 32px;
@@ -1800,6 +1826,9 @@ h4 {
 .btn-circle {
   width: 44px;
   height: 44px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 44px;
+  flex: 0 0 44px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;

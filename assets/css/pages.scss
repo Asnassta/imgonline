@@ -469,6 +469,28 @@
 	.download-box {
 		margin: 20px auto 50px;
 	}
+	.file-box {
+		margin-bottom: 40px;
+	}
+	.file-photo {
+		width: 100%;
+		height: auto;
+		img {
+			height: 40vh;
+			object-fit: cover;
+		}
+	}
+	.file-name {
+		white-space: nowrap;
+	}
+	.btn-orange {
+		max-width: calc(100% - 59px);
+		span {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
 }
 
 .table-result {
@@ -775,6 +797,12 @@
 			padding-right: 25%;
 		}
 	}
+	.download-box {
+		.btn-orange {
+			padding: 16px;
+			min-width: calc(100% - 59px);
+		}
+	}
 }
 
 @media(max-width: 360px) {
@@ -783,11 +811,6 @@
 			label {
 				font-size: 16px;
 			}
-		}
-	}
-	.download-box {
-		.btn-orange {
-			padding: 16px 28px;
 		}
 	}
 	.link-back {
