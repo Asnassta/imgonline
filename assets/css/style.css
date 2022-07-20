@@ -912,6 +912,8 @@
           z-index: 1; }
       .identify-panel-open svg {
         display: none; }
+      .identify-panel-open:hover span {
+        color: #fff; }
     .identify-panel > .btn-orange {
       min-width: 305px; }
     .identify-panel * {

@@ -635,6 +635,11 @@
 				svg {
 					display: none;
 				}
+				&:hover {
+					span {
+						color: $wh;
+					}
+				}
 			}
 			>.btn-orange {
 					min-width: 305px;
