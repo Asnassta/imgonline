@@ -89,7 +89,7 @@
 	display: flex;
 	align-items: center;
 	max-width: 660px;
-	padding: 30px;
+	padding: 0 30px;
 	margin: 50px auto 60px;
 	svg {
 		flex: 0 0 16px;
@@ -479,11 +479,24 @@
      	width: 0;
      	height: 0;
      }
+    margin-bottom: 30px;
+    &:last-child {
+    	margin-bottom: 0;
+    }
 	&__inner {
 		border-right: 1px solid #E4E4EF;
 		border-bottom: 1px solid #E4E4EF;
 		width: 540px;
 		margin: 0 auto;
+	}
+	&__header {
+		background-color: #E4E4EF;
+		padding: 20px 15px;
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 500;
+		color: $bl;
+		line-height: $lh;
 	}
 	&__row {
 		display: flex;
@@ -502,6 +515,33 @@
 	}
 }
 /*==========/result==========*/
+
+/*============Exif============*/
+.exif {
+	margin-bottom: 50px;
+	.title {
+		max-width: 660px;
+		margin: 0 auto;
+	}
+	.subtitle {
+		max-width: 500px;
+		margin: 10px auto 0;
+	}
+	&-tools {
+		max-width: 900px;
+		margin: 50px auto 0;
+		.tools-box {
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.tools-text {
+			font-size: 14px;
+		}
+	}
+}
+/*============/exif============*/
 
 
 /*==========Adaptive============*/
@@ -720,8 +760,10 @@
 	}
 	.identify {
 		.file-photo {
+			min-height: 40vh;
 			img {
 				height: auto;
+				min-height: 35vh;
 			}
 		}
 	}

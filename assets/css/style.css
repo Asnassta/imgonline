@@ -387,7 +387,7 @@
   -ms-flex-align: center;
   align-items: center;
   max-width: 660px;
-  padding: 30px;
+  padding: 0 30px;
   margin: 50px auto 60px; }
   .link-back svg {
     -webkit-box-flex: 0;
@@ -779,15 +779,26 @@
 .table-result {
   overflow: auto;
   -ms-overflow-style: none;
-  scrollbar-width: none; }
+  scrollbar-width: none;
+  margin-bottom: 30px; }
   .table-result::-webkit-scrollbar {
     width: 0;
     height: 0; }
+  .table-result:last-child {
+    margin-bottom: 0; }
   .table-result__inner {
     border-right: 1px solid #E4E4EF;
     border-bottom: 1px solid #E4E4EF;
     width: 540px;
     margin: 0 auto; }
+  .table-result__header {
+    background-color: #E4E4EF;
+    padding: 20px 15px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #28252F;
+    line-height: 1.21; }
   .table-result__row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -805,6 +816,26 @@
       border-left: 1px solid #E4E4EF; }
 
 /*==========/result==========*/
+/*============Exif============*/
+.exif {
+  margin-bottom: 50px; }
+  .exif .title {
+    max-width: 660px;
+    margin: 0 auto; }
+  .exif .subtitle {
+    max-width: 500px;
+    margin: 10px auto 0; }
+  .exif-tools {
+    max-width: 900px;
+    margin: 50px auto 0; }
+    .exif-tools .tools-box {
+      margin-bottom: 20px; }
+      .exif-tools .tools-box:last-child {
+        margin-bottom: 0; }
+    .exif-tools .tools-text {
+      font-size: 14px; }
+
+/*============/exif============*/
 /*==========Adaptive============*/
 @media (max-width: 1300px) {
   .advertising .slick-list {
@@ -959,8 +990,11 @@
       width: calc(50% - 15px);
       margin-left: 15px;
       margin-bottom: 15px; }
-  .identify .file-photo img {
-    height: auto; } }
+  .identify .file-photo {
+    min-height: 40vh; }
+    .identify .file-photo img {
+      height: auto;
+      min-height: 35vh; } }
 
 @media (max-width: 414px) {
   .advertising .slick-list {
@@ -1896,6 +1930,22 @@ h4 {
       color: #2022CD; }
     .tools-box:hover .tools-text {
       color: #2022CD; }
+    .tools-box_big {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .tools-box_big .tools-icon {
+        margin-right: 20px;
+        width: 100px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100px;
+        flex: 0 0 100px; }
   .tools-title {
     font-family: "Inter", sans-serif;
     font-size: 18px;
@@ -2115,34 +2165,34 @@ h4 {
     font-size: 16px; }
   .tools__inner > * {
     width: calc(50% - 20px); }
-  .tools-text {
-    font-size: 14px; }
-  .tools-icon {
+  .tools__inner .tools-icon {
     width: 45px;
     height: 40px; }
-    .tools-icon img {
+    .tools__inner .tools-icon img {
       max-width: 65%; }
-      .tools-icon img:nth-child(2) {
+      .tools__inner .tools-icon img:nth-child(2) {
         top: 6px;
         left: 9px; }
-    .tools-icon_left {
+    .tools__inner .tools-icon_left {
       padding-right: 7px; }
-      .tools-icon_left img:nth-child(2) {
+      .tools__inner .tools-icon_left img:nth-child(2) {
         top: 3px;
         left: 0; }
-    .tools-icon_top {
+    .tools__inner .tools-icon_top {
       padding-top: 15px; }
-    .tools-icon_center {
+    .tools__inner .tools-icon_center {
       padding-top: 7px;
       padding-right: 9px; }
-    .tools-icon_top-right {
+    .tools__inner .tools-icon_top-right {
       padding-top: 5px; }
-      .tools-icon_top-right img:nth-child(2) {
+      .tools__inner .tools-icon_top-right img:nth-child(2) {
         left: auto;
         right: 5px; }
-    .tools-icon_bottom img:nth-child(2) {
+    .tools__inner .tools-icon_bottom img:nth-child(2) {
       top: 12px;
       left: 4px; }
+  .tools-text {
+    font-size: 14px; }
   .about .btn-reflect {
     padding: 7px 6px;
     border-radius: 7px; }
@@ -2176,7 +2226,15 @@ h4 {
     padding-left: 10px; }
   .showing-slider-right .slick-list {
     margin-left: -30px;
-    padding-right: 20px; } }
+    padding-right: 20px; }
+  .tools-box_big {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .tools-box_big .tools-icon {
+      margin-right: 0;
+      margin-bottom: 10px; } }
 
 @media (max-width: 360px) {
   .tools-title {
