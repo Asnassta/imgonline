@@ -60,7 +60,6 @@
 
 .account {
 	position: relative;
-	padding-bottom: 5px;
 	&__btn {
 		display: flex;
 		align-items: center;
@@ -106,12 +105,13 @@
 .dropdown-box {
 	display: none;
 	max-width: 250px;
+	min-width: 164px;
 	background-color: $wh;
 	border-radius: 5px;
 	padding: 10px;
 	position: absolute;
 	right: 0;
-	top: 100%;
+	top: calc(100% + 10px);
 	z-index: 10;
 	li {
 		margin-bottom: 10px;
