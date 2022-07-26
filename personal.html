@@ -97,7 +97,7 @@
 								<div>
 									<a href="#" class="active">Мои изображение</a>
 									<a href="#">Что-то</a>
-									<a href="#">Что-то</a>
+									<a href="#">Изображения</a>
 								</div>
 							</div>
 						</div>
@@ -394,7 +394,35 @@
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
 	<script src="assets/js/slick.min.js"></script>
 	<script src="assets/js/jquery.formstyler.min.js"></script>
-	<script src="assets/js/swipe-filters.js"></script>
+	<script>
+		$(document).ready(function() {
+			/*========Download-box (fixed)======*/
+			var lastScrollTop = 0;
+
+			$(window).scroll(function(event) {
+			    st = $(this).scrollTop();
+			    fs1 = $('.personal-file');
+			    if (st > lastScrollTop)
+			    {
+			 
+			      var hT = $(fs1).offset().top,
+			            hH = $(fs1).outerHeight(),
+			            wH = $(window).height(),
+			            wS = $(this).scrollTop();
+			        if (wS > (hT+hH-wH)){
+			        $('.download-box').removeClass('fixed');
+			     } 
+			  }
+			   else {
+			 
+			     $('.download-box').addClass('fixed');
+			 
+			   }
+			   lastScrollTop = st;
+			  });
+  			/*========download-box (fixed)======*/
+		});
+	</script>
 	<script src="assets/js/script.js"></script>
 </body>
 </html>

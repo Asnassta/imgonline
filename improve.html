@@ -1,0 +1,3503 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link href="assets/css/jquery.formstyler.css" rel="stylesheet" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>IMGonline</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="arrow-big" viewBox="0 0 16 16">
+			<g>
+				<path d="M15 8H1M1 8L8 15M1 8L8 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="close-small" viewBox="0 0 16 16">
+			<g>
+				<path d="M7.99998 14.6667C11.6819 14.6667 14.6666 11.6819 14.6666 8.00001C14.6666 4.31811 11.6819 1.33334 7.99998 1.33334C4.31808 1.33334 1.33331 4.31811 1.33331 8.00001C1.33331 11.6819 4.31808 14.6667 7.99998 14.6667Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M6 6L8 8M8 8L10 10M8 8L10 6M8 8L6 10" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="close-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M18 6L12 12M12 12L6 18M12 12L6 6M12 12L18 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="help-icon" viewBox="0 0 20 20">
+			<g>
+				<path d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10 14.5H10.009" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M7.38086 7.3C7.59245 6.6985 8.0101 6.1913 8.55982 5.86822C9.10954 5.54514 9.75587 5.42704 10.3843 5.53484C11.0128 5.64264 11.5828 5.96937 11.9934 6.45718C12.4041 6.94498 12.6288 7.56237 12.6279 8.2C12.6279 10.3192 9.99986 9.98362 9.99986 11.8"  stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="tg-icon" viewBox="0 0 15 14">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M10.6678 12.942C11.5065 13.309 11.8211 12.5401 11.8211 12.5401L14.0403 1.39168C14.0228 0.640292 13.0093 1.09462 13.0093 1.09462L0.585255 5.96988C0.585255 5.96988 -0.00886325 6.17957 0.0435589 6.54653C0.0959811 6.91348 0.567781 7.08822 0.567781 7.08822L3.69564 8.13667C3.69564 8.13667 4.63924 11.2296 4.83145 11.8237C5.00619 12.4003 5.16346 12.4178 5.16346 12.4178C5.3382 12.4877 5.49547 12.3654 5.49547 12.3654L7.52246 10.5306L10.6678 12.942ZM11.2093 3.36622C11.2093 3.36622 11.6461 3.10411 11.6286 3.36622C11.6286 3.36622 11.6985 3.40117 11.4714 3.64581C11.2617 3.8555 6.31653 8.29391 5.65252 8.88803C5.60009 8.92298 5.56515 8.9754 5.56515 9.04529L5.37293 10.6879C5.33798 10.8626 5.11082 10.8801 5.0584 10.7228L4.23712 8.0318C4.20217 7.92695 4.23712 7.80464 4.34196 7.73474L11.2093 3.36622Z"/>
+			</g>
+		</symbol>
+		<symbol id="account" viewBox="0 0 14 16">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M7 9C4.09641 9 2 11.1517 2 13.5V14H12V13.5C12 11.1517 9.90359 9 7 9ZM0 16V13.5C0 9.91015 3.13401 7 7 7C10.866 7 14 9.91015 14 13.5V16H0Z"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M7 6C8.10457 6 9 5.10457 9 4C9 2.89543 8.10457 2 7 2C5.89543 2 5 2.89543 5 4C5 5.10457 5.89543 6 7 6ZM7 8C9.20914 8 11 6.20914 11 4C11 1.79086 9.20914 0 7 0C4.79086 0 3 1.79086 3 4C3 6.20914 4.79086 8 7 8Z"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<a href="#" class="logo">
+						<img src="assets/images/logo.svg" alt="">
+						<span>IMGonline.com.ua</span>
+					</a>
+					<nav class="nav none">
+						<a href="#" class="nav__link">Сжать</a>
+						<a href="#" class="nav__link">Изменить размер</a>
+						<a href="#" class="nav__link">Конвертер</a>
+						<a href="#" class="nav__link">Редактор EXIF</a>
+						<a href="#" class="nav__link">Эффекты</a>
+						<a href="#" class="nav__link active">Улучшить</a>
+						<a href="#" class="nav__link">Инструменты</a>
+					</nav>
+					<div class="account">
+						<a href="#" class="account__btn">
+							<span class="account__name">Личный кабинет</span>
+							<span class="account__icon">
+								<svg>
+									<use xlink:href="#account"></use>
+								</svg>
+							</span>
+						</a>
+						<div class="dropdown-box">
+							<ul>
+								<li>
+									<a href="#">Регистрация</a>
+								</li>
+								<li>
+									<a href="#">Войти</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header><!--/header-->
+		<main class="main page page-pt_min page_improve">
+			<div class="toolbar toolbar-processing swipe-hide">
+				<div class="container">
+					<div class="toolbar-inner">
+						<div class="toolbar-all">
+							<a href="#" class="toolbar-item">
+								<div class="toolbar-icon">
+									<span>А-Я</span>
+								</div>
+								<div class="toolbar-name">Все инструменты</div>
+							</a><!--/toolbar-item-->
+						</div>
+						<div class="toolbar-menu">
+							<a href="#" class="toolbar-item active" data-toolbar="auto-contrast">
+								<div class="toolbar-icon">
+									<img src="assets/images/auto-contrast.svg" alt="">
+								</div>
+								<div class="toolbar-name">Автоматический контраст</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="auto-saturation">
+								<div class="toolbar-icon">
+									<img src="assets/images/auto-saturation.svg" alt="">
+								</div>
+								<div class="toolbar-name">Авто обогащение</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="auto-level">
+								<div class="toolbar-icon">
+									<img src="assets/images/auto-level.svg" alt="">
+								</div>
+								<div class="toolbar-name">Авто уровни</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="auto-gamma">
+								<div class="toolbar-icon">
+									<img src="assets/images/auto-gamma.svg" alt="">
+								</div>
+								<div class="toolbar-name">Авто. гамма-коррекция</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="auto-balance">
+								<div class="toolbar-icon">
+									<img src="assets/images/auto-balance.svg" alt="">
+								</div>
+								<div class="toolbar-name">Авто. цветовой баланс</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="underwater-photo">
+								<div class="toolbar-icon">
+									<img src="assets/images/underwater-photo.svg" alt="">
+								</div>
+								<div class="toolbar-name">Для подводных фото</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="saturation-tone">
+								<div class="toolbar-icon">
+									<img src="assets/images/auto-saturation.svg" alt="">
+								</div>
+								<div class="toolbar-name">Насыщенность, светимость и тон</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="negative-to-positive">
+								<div class="toolbar-icon">
+									<img src="assets/images/negative-to-positive.svg" alt="">
+								</div>
+								<div class="toolbar-name">Негатив в позитив</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="normalization">
+								<div class="toolbar-icon">
+									<img src="assets/images/normalization.svg" alt="">
+								</div>
+								<div class="toolbar-name">Нормализация</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="lightening">
+								<div class="toolbar-icon">
+									<img src="assets/images/lightening.svg" alt="">
+								</div>
+								<div class="toolbar-name">Осветление</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="rotate">
+								<div class="toolbar-icon">
+									<img src="assets/images/rotate.svg" alt="">
+								</div>
+								<div class="toolbar-name">Повернуть на 45°, 90°, 180°</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="sharpness">
+								<div class="toolbar-icon">
+									<img src="assets/images/sharpness.svg" alt="">
+								</div>
+								<div class="toolbar-name">Резкость, нарезная маска</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="retouching">
+								<div class="toolbar-icon">
+									<img src="assets/images/lightening.svg" alt="">
+								</div>
+								<div class="toolbar-name">Ретуширование</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="white-balance">
+								<div class="toolbar-icon">
+									<img src="assets/images/auto-balance.svg" alt="">
+								</div>
+								<div class="toolbar-name">Температура цвета, баланс белого</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="shadows">
+								<div class="toolbar-icon">
+									<img src="assets/images/lightening.svg" alt="">
+								</div>
+								<div class="toolbar-name">Тени и свет</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="enlarge">
+								<div class="toolbar-icon">
+									<img src="assets/images/lightening.svg" alt="">
+								</div>
+								<div class="toolbar-name">Увеличить фото</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="improve-scanned">
+								<div class="toolbar-icon">
+									<img src="assets/images/lightening.svg" alt="">
+								</div>
+								<div class="toolbar-name">Улучшить отсканированный текст</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="eliminate">
+								<div class="toolbar-icon">
+									<img src="assets/images/lightening.svg" alt="">
+								</div>
+								<div class="toolbar-name">Устранить JPEG артефакты и пикселизацию</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="color-balance">
+								<div class="toolbar-icon">
+									<img src="assets/images/auto-balance.svg" alt="">
+								</div>
+								<div class="toolbar-name">Цветовой баланс</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="noise-reduction">
+								<div class="toolbar-icon">
+									<img src="assets/images/lightening.svg" alt="">
+								</div>
+								<div class="toolbar-name">Шумопонижение</div>
+							</a><!--/toolbar-item-->
+							<a href="#" class="toolbar-item" data-toolbar="brightness">
+								<div class="toolbar-icon">
+									<img src="assets/images/lightening.svg" alt="">
+								</div>
+								<div class="toolbar-name">Яркость и контрастность</div>
+							</a><!--/toolbar-item-->
+						</div>
+					</div>
+				</div>
+			</div><!--/toolbar-->
+			<div class="processing processing-small">
+				<div class="container">
+					<div class="processing__inner">
+						<div class="processing__filters">
+							<form action="#" class="filters filters-toolbar">
+								<h3 class="filters__title swipe-open ">
+									<span>Параметры<br> инструмента</span>
+									<a href="#" data-popup="auto-contrast" class="help">
+										<svg>
+											<use xlink:href="#help-icon"></use>
+										</svg>
+										<span>инструкция по настройкам</span>
+									</a>
+								</h3>
+								<div class="filters-version auto-contrast">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Автоматический контраст</span>
+											<a href="#" data-popup="auto-contrast" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Настройки повышения резкости </div>
+											<div class="filters-block__subtitle">(для выделения текстуры, градиента и крупных деталей картинки)</div>
+											<div class="filters__item">
+												<div class="filters__name">Интенсивность обработки</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 0 до 100, 0=не делать повышение резкости</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Радиус в пикселях</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 1.0 до 300.0, с точностью до десятых</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Настройки повышения резкости </div>
+											<div class="filters-block__subtitle">(для выделения текстуры, градиента и крупных деталей картинки)</div>
+											<div class="filters__item">
+												<div class="filters__name">Интенсивность обработки</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 0 до 100, 0=не делать повышение резкости</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Радиус в пикселях</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 1.0 до 300.0, с точностью до десятых</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="auto-contrast-format_1" name="auto-contrast-format" checked>
+													<label for="auto-contrast-format_1">
+														<span></span>
+														<i>Стандартный JPEG </i>
+													</label>
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="auto-contrast-format_2" name="auto-contrast-format" checked>
+													<label for="auto-contrast-format_2">
+														<span></span>
+														<i>PNG-24 (без сжатия, с поддержкой прозрачности)</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">С качеством</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 1 до 100</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version auto-contrast-->
+								<div class="filters-version auto-saturation">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Авто обогащение</span>
+											<a href="#" data-popup="auto-saturation" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Введите нужную ширину и высоту в пикселях </div>
+											<div class="filters__item">
+												<div class="filters__name">Интенсивность:</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">Высокая</option>
+														<option value="1">Повышенная</option>
+														<option value="2" selected>Нормальная</option>
+														<option value="3">Умеренная</option>
+														<option value="4">Низкая</option>
+													</select>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="auto-saturation-format_1" name="auto-saturation-format">
+													<label for="auto-saturation-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="auto-saturation-format_2" name="auto-saturation-format" checked>
+													<label for="auto-saturation-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="auto-saturation-format_3" name="auto-saturation-format">
+													<label for="auto-saturation-format_3">
+														<span></span>
+														<i>PNG-24-  без сжатия, прозрачный фон будет заменён на белый цвет</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Копировать EXIF и другие метаданные?</div>
+												<div class="filters__row">
+													<div class="filters-radio">
+														<input type="radio" id="copy-auto-saturation_yes" name="copy-auto-saturation">
+														<label for="copy-auto-saturation_yes">
+															<span></span>
+															<i>Да</i>
+														</label>
+													</div>
+													<div class="filters-radio">
+														<input type="radio" id="copy-auto-saturation_no" name="copy-auto-saturation" checked>
+														<label for="copy-auto-saturation_no">
+															<span></span>
+															<i>Нет</i>
+														</label>
+													</div>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version auto-saturation-->
+								<div class="filters-version auto-level">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Авто уровни</span>
+											<a href="#" data-popup="auto-level" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Параметры сжатия</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="auto-level-format_1" name="auto-level-format">
+													<label for="auto-level-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="auto-level-format_2" name="auto-level-format" checked>
+													<label for="auto-level-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version auto-level-->
+								<div class="filters-version auto-gamma">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Авто. гамма-коррекция</span>
+											<a href="#" data-popup="auto-gamma" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Параметры сжатия</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="auto-gamma-format_1" name="auto-gamma-format">
+													<label for="auto-gamma-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="auto-gamma-format_2" name="auto-gamma-format" checked>
+													<label for="auto-gamma-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version auto-gamma-->
+								<div class="filters-version auto-balance">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Авто. цветовой баланс</span>
+											<a href="#" data-popup="auto-balance" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Дополнительные настройки для автоматического цветового баланса</div>
+											<div class="filters__item">
+												<div class="filters__name">Гамма-коррекция:</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от -80 до 80, "меньше 0" = <a href="#">затемнение</a>, "больше 0" = <a href="#">осветление</a></div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Параметры сжатия</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="auto-balance-format_1" name="auto-balance-format">
+													<label for="auto-balance-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="auto-balance-format_2" name="auto-balance-format" checked>
+													<label for="auto-balance-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version auto-balance-->
+								<div class="filters-version underwater-photo">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Для подводных фото</span>
+											<a href="#" data-popup="underwater-photo" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Дополнительные настройки для автоматического цветового баланса</div>
+											<div class="filters__item">
+												<div class="filters__name">Гамма-коррекция</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">Повысить сильно</option>
+														<option value="1">Повысить слегка</option>
+														<option value="2" selected>Нормальная</option>
+														<option value="3">Не изменять</option>
+														<option value="4">Понизить</option>
+													</select>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Яркость</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">Повысить</option>
+														<option value="1" selected>Не изменять</option>
+														<option value="2" >Понизить</option>
+													</select>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Параметры сжатия</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="underwater-photo-format_1" name="underwater-photo-format">
+													<label for="underwater-photo-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="underwater-photo-format_2" name="underwater-photo-format" checked>
+													<label for="underwater-photo-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version underwater-photo-->
+								<div class="filters-version saturation-tone">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Насыщенность, светимость и тон</span>
+											<a href="#" data-popup="saturation-tone" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title"> Регулировка насыщенности цветов, светимости и тона</div>
+											<div class="filters__item">
+												<div class="filters__name">Насыщенность</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от -100 до 100, 0="не изменять", -100="<a href="#">чёрно-белая картинка</a>"</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Светимость</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от -100 до 100, 0="не изменять"</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Тон</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от -180 до 180, 0="не изменять"</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="saturation-tone-format_1" name="saturation-tone-format">
+													<label for="saturation-tone-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="saturation-tone-format_2" name="saturation-tone-format" checked>
+													<label for="saturation-tone-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="saturation-tone-format_3" name="saturation-tone-format">
+													<label for="saturation-tone-format_3">
+														<span></span>
+														<i>PNG-24-  без сжатия, прозрачный фон будет заменён на белый цвет</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version saturation-tone-->
+								<div class="filters-version negative-to-positive">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Негатив в позитив</span>
+											<a href="#" data-popup="negative-to-positive" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title"> Настройки для создания позитива из негатива</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="positive-settings_1" name="positive-settings">
+													<label for="positive-settings_1">
+														<span></span>
+														<i>Обычное создание позитива</i>
+													</label>
+													<div class="filters__description">без автоматической цветокоррекции, <a href="#">как здесь</a></div>
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="positive-settings_2" name="positive-settings" checked>
+													<label for="positive-settings_2">
+														<span></span>
+														<i>Адаптивное создание позитива</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">Гамма-коррекция</div>
+														<div class="filters-select">
+															<select>
+																<option value="0">С австоматическим цветовым балансом</option>
+																<option value="1">с авто уровнями (в отдельных случаях получается лучше)</option>
+															</select>
+														</div>
+													</div><!--/filters-subitem-->
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Дополнительные настройки для ручной коррекции цветового баланса позитива</div>
+											<div class="filters__item">
+												<div class="filters__name">Голубой (-) или Красный(+) </div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">можно указать значение от -255 до 255, 0=не изменять, <a href="#">о цветовом балансе</a></div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Фиолетовый (-) или Зелёный(+) </div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">можно указать значение от -255 до 255, 0=не изменять, <a href="#">о цветовом балансе</a></div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Жёлтый (-) или Синий(+) </div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">можно указать значение от -255 до 255, 0=не изменять, <a href="#">о цветовом балансе</a></div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Осветление</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">значение от 0 до 100, 0=не изменять</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Яркость</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">значение от 0 до 100, 0=не изменять</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Контраст</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">значение от 0 до 100, 0=не изменять</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Насыщенность</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">значение от 0 до 100, 0=не изменять</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Тон</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">-180 до 180, 0=не изменять</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="negative-to-positive-format_1" name="negative-to-positive-format">
+													<label for="negative-to-positive-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="negative-to-positive-format_2" name="negative-to-positive-format" checked>
+													<label for="negative-to-positive-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="negative-to-positive-format_3" name="negative-to-positive-format">
+													<label for="negative-to-positive-format_3">
+														<span></span>
+														<i>PNG-24 (без сжатия)</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version negative-to-positive-->
+								<div class="filters-version normalization">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Нормализация</span>
+											<a href="#" data-popup="normalization" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Настройки нормализации</div>
+											<div class="filters__item">
+												<div class="filters__name">Уровень нормализации</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">Максимальный</option>
+														<option value="1">Повышенный</option>
+														<option value="2">Нормальная</option>
+														<option value="3" selected>Умеренный</option>
+														<option value="4">Минимальный</option>
+													</select>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="normalization-format_1" name="normalization-format">
+													<label for="normalization-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="normalization-format_2" name="normalization-format" checked>
+													<label for="normalization-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="normalization-format_3" name="normalization-format">
+													<label for="normalization-format_3">
+														<span></span>
+														<i>PNG без сжатия, с поддержкой прозрачности</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version normalization-->
+								<div class="filters-version lightening">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Осветление</span>
+											<a href="#" data-popup="lightening" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Настройки осветления</div>
+											<div class="filters__item">
+												<div class="filters__name">Уровень осветления</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 1 до 100</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="lightening-format_1" name="lightening-format">
+													<label for="lightening-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="lightening-format_2" name="lightening-format" checked>
+													<label for="lightening-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="lightening-format_3" name="lightening-format">
+													<label for="lightening-format_3">
+														<span></span>
+														<i>PNG без сжатия, с поддержкой прозрачности</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Копировать EXIF и другие метаданные?</div>
+												<div class="filters__row">
+													<div class="filters-radio">
+														<input type="radio" id="copy-lightening_yes" name="copy-lightening">
+														<label for="copy-lightening_yes">
+															<span></span>
+															<i>Да</i>
+														</label>
+													</div>
+													<div class="filters-radio">
+														<input type="radio" id="copy-lightening_no" name="copy-lightening" checked>
+														<label for="copy-lightening_no">
+															<span></span>
+															<i>Нет</i>
+														</label>
+													</div>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version lightening-->
+								<div class="filters-version rotate">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Повернуть на 45°, 90°, 180°</span>
+											<a href="#" data-popup="rotate" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Настройки для поворота изображения</div>
+											<div class="filters__item">
+												<div class="filters__name">Угол поворота</div>
+												<div class="filters__description">от -360.00° до 360.00°, 0°="физический поворот на основе exif"</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">Положительное значение позволяет повернуть картинку по часовой стрелке , а отрицательное – против часовой </div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Тип поворота изображения</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="rotate-type_1" name="rotate-type">
+													<label for="rotate-type_1">
+														<span></span>
+														<i>Обычный или "физический" поворот на любой угол </i>
+													</label>
+													<div class="filters__description">Подходит для поворота на 90, -90, 180, 270 градусов, если не кратно 90°, то появится однотонный фон</div>
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="rotate-type_2" name="rotate-type">
+													<label for="rotate-type_2">
+														<span></span>
+														<i>С автоматической <a href="#">обрезкой</a> однотонного фона, с сохранением пропорций  </i>
+													</label>
+													<div class="filters__description">Рекомендуется для поворота на несколько градусов, например, на: 3, 5 или 15 градусов</div>
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="rotate-type_3" name="rotate-type">
+													<label for="rotate-type_3">
+														<span></span>
+														<i>С автоматической <a href="#">обрезкой</a> однотонного фона, с сохранением пропорций и размеров изображения</i>
+													</label>
+													<div class="filters__description">Размер результата в пикселях будет таким же, как и у исходной картинки, также подходит для поворота около 15 градусов</div>
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="rotate-type_4" name="rotate-type">
+													<label for="rotate-type_4">
+														<span></span>
+														<i>Вращение относительно центра, с сохранением пропорций и размеров изображения </i>
+													</label>
+													<div class="filters__description">Размер холста не изменяется, выступающие углы картинки будут обрезаны, на пустом месте будет однотонный фон</div>
+												</div>
+												<div class="filters-radio photo-jpg">
+													<input type="radio" id="rotate-type_5" name="rotate-type">
+													<label for="rotate-type_5">
+														<span></span>
+														<i>Поворот jpg-картинки "в EXIF" без потери качества </i>
+													</label>
+													<div class="filters__description">Указанный в самом начале "угол поворота" игнорируется, повторное сжатие jpeg не применяется</div>
+													<div class="filters-subitem">
+														<div class="filters-select">
+															<select>
+																<option value="0">стереть поворот в EXIF</option>
+																<option value="1">0</option>
+																<option value="2" selected>90 по часовой стрелке</option>
+																<option value="3">90 против часовой стрелке</option>
+																<option value="4">180, перевернуть вверх ногами</option>
+															</select>
+														</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="rotate-type_6" name="rotate-type">
+													<label for="rotate-type_6">
+														<span></span>
+														<i>Поворот jpg-картинки "физически" без потери качества</i>
+													</label>
+													<div class="filters__description">Указанный в самом начале "угол поворота" игнорируется, повторное сжатие jpeg не применяется</div>
+													<div class="filters-subitem">
+														<div class="filters-select">
+															<select>
+																<option value="0">90 по часовой стрелке</option>
+																<option value="1">90 против часовой стрелке</option>
+																<option value="2">180, перевернуть вверх ногами</option>
+															</select>
+														</div>
+													</div><!--/filters-subitem-->
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Тип изменения размера:</div>
+												<div class="filters-radio">
+													<input type="radio" id="format_result-radio_1" name="format_result-radio" checked>
+													<label for="format_result-radio_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="rotate-background_list" name="rotate-background">
+													<label for="rotate-background_list">
+														<span></span>
+														<i>Цвет фона из списка</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters-select">
+															<select>
+																<option value="0">красный</option>
+																<option value="1">розовый</option>
+																<option value="2">фиолетовый</option>
+																<option value="3">синий</option>
+																<option value="4">бирюзовый</option>
+																<option value="5">небесный</option>
+																<option value="6">салатовый</option>
+																<option value="7">зеленый</option>
+																<option value="8">желтный</option>
+																<option value="9">оранжевый</option>
+																<option value="10">черный</option>
+																<option value="11" selected>белый</option>
+																<option value="12">прозрачный (только для PNG-24)</option>
+															</select>
+														</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="rotate-background_hex" name="rotate-background" checked>
+													<label for="rotate-background_hex">
+														<span></span>
+														<i>Цвет фона  в формате HEX</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">
+															<a href="#">открыть палитру</a>
+														</div>
+													</div><!--/filters-subitem-->
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="rotate-format_1" name="rotate-format">
+													<label for="rotate-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="rotate-format_2" name="rotate-format" checked>
+													<label for="rotate-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="rotate-format_3" name="rotate-format">
+													<label for="rotate-format_3">
+														<span></span>
+														<i>PNG-24 (без сжатия, без потери качества, с поддержкой прозрачности)</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Копировать EXIF и другие метаданные?</div>
+												<div class="filters__row">
+													<div class="filters-radio">
+														<input type="radio" id="copy-rotate_yes" name="copy-rotate">
+														<label for="copy-rotate_yes">
+															<span></span>
+															<i>Да</i>
+														</label>
+													</div>
+													<div class="filters-radio">
+														<input type="radio" id="copy-rotate_no" name="copy-rotate" checked>
+														<label for="copy-rotate_no">
+															<span></span>
+															<i>Нет</i>
+														</label>
+													</div>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version rotate-->
+								<div class="filters-version sharpness">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Резкость, нарезная маска</span>
+											<a href="#" data-popup="sharpness" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Настройки повышения резкости</div>
+											<div class="filters-block__subtitle">(для выделения текстуры, градиента и крупных деталей картинки)</div>
+											<div class="filters__item">
+												<div class="filters__name">Интенсивность обработки</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 0 до 100, 0=не делать повышение резкости</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Радиус в пикселях</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 1.0 до 300.0, с точностью до десятых</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Настройки нарезной маски</div>
+											<div class="filters-block__subtitle">(для выделения мелких деталей картинки, лучше подходит для лиц)</div>
+											<div class="filters__item">
+												<div class="filters__name">Интенсивность обработки</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 0 до 100, 0=не делать нарезную маску</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Радиус в пикселях</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 0.01 до 50.00, с точностью до сотых</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Коррекция интенсивности для светлых контуров</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от -100 до 100, 0=без изменений</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Коррекция интенсивности для тёмных контуров</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от -100 до 100, 0=без изменений</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="sharpness-format_1" name="sharpness-format">
+													<label for="sharpness-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="sharpness-format_2" name="sharpness-format" checked>
+													<label for="sharpness-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="sharpness-format_3" name="sharpness-format">
+													<label for="sharpness-format_3">
+														<span></span>
+														<i>PNG-24 (без сжатия, без потери качества, с поддержкой прозрачности)</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version sharpness-->
+								<div class="filters-version retouching">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Ретуширование</span>
+											<a href="#" data-popup="retouching" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Настройки ретуширования</div>
+											<div class="filters__item">
+												<div class="filters__name">Уровень ретуширования</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 1 до 8</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Общее сглаживание</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">Максимальное</option>
+														<option value="1">Высокое</option>
+														<option value="2" selected>Нормальное</option>
+														<option value="3">Пониженное</option>
+														<option value="4">Минимальное</option>
+													</select>
+												</div>
+												<div class="filters__description">от 1.0 до 300.0, с точностью до десятых</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Дополнительная обработка после ретуширования</div>
+											<div class="filters__item">
+												<div class="filters__name">Добавить резкость</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">значение от 0 до 100, 0=не изменять</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Яркость</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">значение -100 до 100, 0=не изменять</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Контрастность</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">значение -100 до 100, 0=не изменять</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Насыщенность</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">значение -100 до 100, 0=не изменять</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters__name">Оптимизировать размер в мегапикселях до</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">0.5 (обработка примерно 2 сек.)</option>
+														<option value="1" selected>1.0(обработка примерно 5 сек.)</option>
+														<option value="2">1x2 (среднее качество)</option>
+														<option value="3">2.0(обработка примерно 10 сек.)</option>
+														<option value="4">5.0(обработка примерно 25 сек.)</option>
+													</select>
+												</div>
+												<div class="filters__description">от 1.0 до 300.0, с точностью до десятых</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="retouching-format_1" name="retouching-format">
+													<label for="retouching-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="retouching-format_2" name="retouching-format" checked>
+													<label for="retouching-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="retouching-format_3" name="retouching-format">
+													<label for="retouching-format_3">
+														<span></span>
+														<i>PNG-24 (без сжатия, без потери качества, с поддержкой прозрачности)</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version retouching-->
+								<div class="filters-version white-balance">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Температура цвета, баланс белого</span>
+											<a href="#" data-popup="white-balance" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Настройки цветовой температуры</div>
+											<div class="filters__item">
+												<div class="filters__name">Коррекция температуры цвета</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от -200 до 200, "меньше 0" = добавление холодного света, "больше 0" = добавление тёплого света</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters-checkbox">
+													<input type="checkbox" id="auto-white-balance" name="auto-white-balance">
+													<label for="auto-white-balance">
+														<span></span>
+														<i>Автоматический баланс цвета</i>
+													</label>
+												</div>
+												<div class="filters__description">иногда помогает, применяется предварительно, ручную коррекцию температуры цвета не отменяет</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="white-balance-format_1" name="white-balance-format">
+													<label for="white-balance-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="white-balance-format_2" name="white-balance-format" checked>
+													<label for="white-balance-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version white-balance-->
+								<div class="filters-version shadows">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Тени и свет</span>
+											<a href="#" data-popup="shadows" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Тени, тёмные участки</div>
+											<div class="filters__item">
+												<div class="filters__name">Степень осветления тёмных участков </div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 0 до 100</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Тональная широта</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 1 до 100, 50 по умолчанию</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Радиус</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 1 до 250, 30 по умолчанию</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Свет, светлые участки</div>
+											<div class="filters__item">
+												<div class="filters__name">Степень затемнения светлых участков</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">от 0 до 100</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Тональная широта</div>
+												<div class="filters-input">
+													<input type="text" value="50%">
+												</div>
+												<div class="filters__description">от 1 до 100, 50 по умолчанию</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Радиус</div>
+												<div class="filters-input">
+													<input type="text" value="30px">
+												</div>
+												<div class="filters__description">от 1 до 250, 30 по умолчанию</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Дополнительные настройки</div>
+											<div class="filters__item">
+												<div class="filters__name">Коррекция цвета (насыщенность)</div>
+												<div class="filters-input">
+													<input type="text" value="0%">
+												</div>
+												<div class="filters__description">от -100 до 100, 0 по умолчанию</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Контрастность для средних тонов</div>
+												<div class="filters-input">
+													<input type="text" value="0%">
+												</div>
+												<div class="filters__description">от -100 до 100, 0 по умолчанию</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Отсечение чёрного</div>
+												<div class="filters-input">
+													<input type="text" value="0.01">
+												</div>
+												<div class="filters__description">от 0 до 100, 0.01 по умолчанию</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Отсечение белого</div>
+												<div class="filters-input">
+													<input type="text" value="0.01">
+												</div>
+												<div class="filters__description">от 0 до 100, 0.01 по умолчанию</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="shadows-format_1" name="shadows-format">
+													<label for="shadows-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="shadows-format_2" name="shadows-format" checked>
+													<label for="shadows-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Копировать EXIF и другие метаданные?</div>
+												<div class="filters__row">
+													<div class="filters-radio">
+														<input type="radio" id="copy-shadows_yes" name="copy-shadows">
+														<label for="copy-shadows_yes">
+															<span></span>
+															<i>Да</i>
+														</label>
+													</div>
+													<div class="filters-radio">
+														<input type="radio" id="copy-shadows_no" name="copy-shadows" checked>
+														<label for="copy-shadows_no">
+															<span></span>
+															<i>Нет</i>
+														</label>
+													</div>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version shadows-->
+								<div class="filters-version enlarge">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Увеличить фото</span>
+											<a href="#" data-popup="enlarge" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Настройки для увеличения изображения</div>
+											<div class="filters__item">
+												<div class="filters__name">Увеличить размеры в пикселях</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">в 2 раза</option>
+														<option value="1">в 4 раза</option>
+														<option value="2">в 8 раза</option>
+														<option value="3">в 16 раза</option>
+													</select>
+												</div>
+												<div class="filters__description">максимально возможный размер – до 100 Мп</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Использовать алгоритм</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">DCCI (наилучшее качеcтво)</option>
+														<option value="1">Lanczos</option>
+														<option value="2">Mitchell</option>
+														<option value="3">Quadratic</option>
+														<option value="4">Cubic</option>
+													</select>
+												</div>
+												<div class="filters__description">При сильной пикселизации и <a href="#">jpeg-артефактах</a> стоит попробовать алгоритм "Mitchell" или "Quadratic"</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Тональная широта</div>
+												<div class="filters-input">
+													<input type="text" value="50%">
+												</div>
+												<div class="filters__description">от 1 до 100, 50 по умолчанию</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="enlarge-format_1" name="enlarge-format">
+													<label for="enlarge-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="enlarge-format_2" name="enlarge-format" checked>
+													<label for="enlarge-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="enlarge-format_3" name="enlarge-format">
+													<label for="enlarge-format_3">
+														<span></span>
+														<i>PNG-24 (без сжатия, без потери качества, с поддержкой прозрачности)</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version enlarge-->
+								<div class="filters-version improve-scanned">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Улучшить отсканированный текст</span>
+											<a href="#" data-popup="improve-scanned" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Настройки для улучшения отсканированного текста</div>
+											<div class="filters__item">
+												<div class="filters__name">Повернуть изображение</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">автоматически, на основе exif информации</option>
+														<option value="1">на 90 градусов по часовой стрелке</option>
+														<option value="2">на 90 градусов против часовой стрелки</option>
+														<option value="3">на 180 градусов (перевернуть вверх ногами)</option>
+														<option value="4">не поворачивать, оставить как есть</option>
+													</select>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Автоматическое устранение лёгкого перекоса (поворота) страницы</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">Отключить</option>
+														<option value="1">Включить</option>
+													</select>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">На отсканированной странице есть важные иллюстрации (фото, картинки)?</div>
+												<div class="filters-radio">
+													<input type="radio" id="improve-scanned-photo_no" name="improve-scanned-photo">
+													<label for="improve-scanned-photo_no">
+														<span></span>
+														<i>Нет </i>
+													</label>
+													<div class="filters__description">рекомендуется, текст будет выделен хорошо</div>
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="improve-scanned-photo_yes" name="improve-scanned-photo">
+													<label for="improve-scanned-photo_yes">
+														<span></span>
+														<i>Да</i>
+													</label>
+													<div class="filters__description">детализация иллюстраций станет лучше, обработка будет длиться дольше</div>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="improve-scanned-format_1" name="improve-scanned-format">
+													<label for="improve-scanned-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="improve-scanned-format_2" name="improve-scanned-format" checked>
+													<label for="improve-scanned-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="improve-scanned-format_3" name="improve-scanned-format">
+													<label for="improve-scanned-format_3">
+														<span></span>
+														<i>PNG-24 (без сжатия, без потери качества, с поддержкой прозрачности)</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version improve-scanned-->
+								<div class="filters-version eliminate">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Устранить JPEG артефакты и пикселизацию</span>
+											<a href="#" data-popup="eliminate" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Настройки устранения артефактов и пикселизации</div>
+											<div class="filters__item">
+												<div class="filters__name">Интенсивность устранения артефактов</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">Максимальная</option>
+														<option value="1">Высокая</option>
+														<option value="2" selected>Нормальная</option>
+														<option value="3">Отключить</option>
+													</select>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Интенсивность устранения пикселизации</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">например, 3 или от 0 до 10, 0="отключить"</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Интенсивность шумопонижения</div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">например, 5 или от 0 до 20, 0="отключить"</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="eliminate-format_1" name="eliminate-format">
+													<label for="eliminate-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="eliminate-format_2" name="eliminate-format" checked>
+													<label for="eliminate-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="eliminate-format_3" name="eliminate-format">
+													<label for="eliminate-format_3">
+														<span></span>
+														<i>PNG-24 (без сжатия, без потери качества, с поддержкой прозрачности)</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version eliminate-->
+								<div class="filters-version color-balance">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Цветовой баланс</span>
+											<a href="#" data-popup="color-balance" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Настройки цветового баланса<br> (значения могут быть от -255 до 255)</div>
+											<div class="filters__item">
+												<div class="filters__name">Голубой (-) или Красный(+) </div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">можно указать значение от -255 до 255, 0=не изменять, <a href="#">о цветовом балансе</a></div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Фиолетовый (-) или Зелёный(+) </div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">можно указать значение от -255 до 255, 0=не изменять, <a href="#">о цветовом балансе</a></div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Жёлтый (-) или Синий(+) </div>
+												<div class="filters-input">
+													<input type="text">
+												</div>
+												<div class="filters__description">можно указать значение от -255 до 255, 0=не изменять, <a href="#">о цветовом балансе</a></div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters-checkbox">
+													<input type="checkbox" id="auto-color-balance" name="auto-color-balance">
+													<label for="auto-color-balance">
+														<span></span>
+														<i>Автоматический баланс цвета</i>
+													</label>
+												</div>
+												<div class="filters__description">иногда помогает, применяется предварительно, ручную коррекцию температуры цвета не отменяет</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="color-balance-format_1" name="color-balance-format">
+													<label for="color-balance-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="color-balance-format_2" name="color-balance-format" checked>
+													<label for="color-balance-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version color-balance-->
+								<div class="filters-version noise-reduction">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Шумопонижение</span>
+											<a href="#" data-popup="noise-reduction" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Настройки шумопонижения</div>
+											<div class="filters__item">
+												<div class="filters__name">Уровень шумопонижения</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">Максимальный</option>
+														<option value="1">Высокий</option>
+														<option value="2">Нормальный</option>
+														<option value="3" selected>Умеренный</option>
+														<option value="4">Минимальный</option>
+													</select>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Размытие шума</div>
+												<div class="filters-select">
+													<select>
+														<option value="0">Высокое</option>
+														<option value="1" selected>Автоматическое</option>
+														<option value="2">Низкое</option>
+													</select>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Добавить немного <a href="#">резкости</a> после обработки?</div>
+												<div class="filters__row">
+													<div class="filters-radio">
+														<input type="radio" id="add-sharpness_yes" name="add-sharpness">
+														<label for="add-sharpness_yes">
+															<span></span>
+															<i>Да</i>
+														</label>
+													</div>
+													<div class="filters-radio">
+														<input type="radio" id="add-sharpness_no" name="add-sharpness" checked>
+														<label for="add-sharpness_no">
+															<span></span>
+															<i>Нет</i>
+														</label>
+													</div>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Параметры сжатия JPEG</div>
+											<div class="filters__item">
+												<div class="filters__name">С качеством:</div>
+													<div class="filters__description">Укажите значение от 1 до 100</div>
+													<div class="filters-input">
+														<input type="text">
+													</div>
+													<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version noise-reduction-->
+								<div class="filters-version brightness">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Яркость и контрастность</span>
+											<a href="#" data-popup="brightness" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title">Настройки шумопонижения</div>
+											<div class="filters__item">
+												<div class="filters__name">Яркость</div>
+												<div class="filters-input">
+													<input type="text" value="0">
+												</div>
+												<div class="filters__description">от -100 до 100, 0=не изменять</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Контрастность</div>
+												<div class="filters-input">
+													<input type="text" value="0">
+												</div>
+												<div class="filters__description">от -100 до 100, 0=не изменять</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат изображения на выходе</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="brightness-format_1" name="brightness-format">
+													<label for="brightness-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="brightness-format_2" name="brightness-format" checked>
+													<label for="brightness-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="brightness-format_3" name="brightness-format">
+													<label for="brightness-format_3">
+														<span></span>
+														<i>PNG-24 (без сжатия, без потери качества, с поддержкой прозрачности)</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Копировать EXIF и другие метаданные?</div>
+												<div class="filters__row">
+													<div class="filters-radio">
+														<input type="radio" id="copy-brightness_yes" name="copy-brightness">
+														<label for="copy-brightness_yes">
+															<span></span>
+															<i>Да</i>
+														</label>
+													</div>
+													<div class="filters-radio">
+														<input type="radio" id="copy-brightness_no" name="copy-brightness" checked>
+														<label for="copy-brightness_no">
+															<span></span>
+															<i>Нет</i>
+														</label>
+													</div>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version brightness-->
+							</form>
+						</div>
+						<div class="processing__content">
+							<div class="processing-add">
+								<h1 class="title">
+									<span>Автоматический контраст</span>
+								</h1>
+								<div class="subtitle">Выберите изображение для обработки</div>
+								<form action="#" class="add-container">
+									<div class="add-file">
+										<input id="file-input" type="file" name="file" multiple>
+              							 <label for="file-input">Выбрать изображение</label>
+               							<span>или перетащите изображения сюда</span>
+									</div>	
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/processing-->
+		</main>
+		<footer class="footer none">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="lang">
+						<div class="lang__open">
+							<span>Русский</span>
+							<img src="assets/images/arrow-small.svg" alt="">
+						</div>
+						<div class="dropdown-box">
+							<ul>
+								<li>
+									<a href="#">Русский</a>
+								</li>
+								<li>
+									<a href="#">Английский</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="copyright">© 2018 www.imgonline.com.ua</div>
+						<div class="social">
+							<a href="#" target="blank">
+								<svg>
+									<use xlink:href="#tg-icon"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="popup popup-help auto-contrast">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Автоматический контраст</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help auto-saturation">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Автоматическое обогащение</h4>
+						<div class="subtitle-gray"> Больше информации о возможностях  и методах сжатия. </div>
+						<div class="text">
+							<p>Главное нужно указать изображение на вашем компьютере или телефоне, указать качество от 1 до 100, нажать кнопку “Обработать” внизу страницы. Остальные настройки выставлены по умолчанию. Чем больше указано «качество» в настройках (80-100), тем больше получится размер файла. И наоборот, меньшее качество (50-75) даст меньший размер JPEG файла. При необходимости уровень качества (сжатия), с которым был создан jpeg-файл, можно узнать <a href="#">здесь.</a></p>
+							<p>Если после сжатия размер jpeg файла стал наоборот больше, чем оригинал, то значит нужно понизить уровень качества с 80 на более меньшее число, например, установить 60. Размеры в пикселях и мегабайтах до и после сжатия можно будет увидеть после обработки или нажатия кнопки OK. Если при уровне качества в 40-50 размер всё равно больше оригинала, то сжимать картинку нет смысла – она и так была хорошо сжата. Можно разве что попробовать <a href="#">удалить метаданные</a>, встроенные в jpg файл или <a href="#">удалить exif + сделать jpg прогрессивным</a> без потери качества.</p>
+							<p>В настройках есть возможность выбрать тип субдискретизации (прореживания), что позволяет добиться бо́льшего сжатия jpg файла с минимальными потерями. Субвыборка 1x1 даёт наилучшее качество изображения, яркие цветовые переходы сохраняются, в основном подходит для качественных превью или маленьких картинок для предпросмотра. Субвыборка 2x1 – это наиболее распространённый метод, используется практически во всех цифровых фотокамерах, сжатие резких цветовых переходов происходит по горизонтали, позволяет добиться меньшего размера файла без особых потерь, отлично подходит для больших изображений. 1x2 – тоже самое, что и 2x1, но только усреднение резких цветовых переходов будет по вертикали. Субвыборка 2x2 усредняет резкие цветовые переходы по горизонтали и по вертикали, позволяет добиться наименьшего размера файла, подходит для размытых картинок.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+						</div>
+						<div class="gallery-show">
+							<h4 class="title">На фотографиях "Красного перчика после дождя" указан уровень качества JPEG для сравнения:</h4>
+							<div class="gallery-show__inner">
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="text">
+							<p>Размеры этой jpg картинки в зависимости от уровня качества (Q - качество, KB - это размер в килобайтах): <br>Q 10 = 2 KB; Q 15 = 2,7 KB; Q 30 = 4,3 KB; Q 50 = 5,9 KB; Q 60 = 6,7 KB; Q 70 = 7,9 KB; Q 80 = 9,8 KB; Q 90 = 14,1 KB; Q 100 = 46,5 KB.</p>
+							<p>Из вышеуказанных примеров можно сделать вывод, что наилучшим соотношением размер-качество может быть уровень качества от 75 до 95. А для того, чтобы картинка занимала наименьший размер и была в тоже время более и менее нормальной, подойдёт качество 60-70. Если качество не имеет значения, а нужен маленький размер файла, то подойдёт процент качества от 30 до 50.</p>
+							<p>Обратите внимание, что размер файла прогрессивной JPEG картинки обычно меньше стандартной на 2-3% с таким же качеством изображения, да и ещё будет красиво открываться при её загрузке в интернет браузере, как это обычно делают в фильмах! Пример стандартной и прогрессивной JPEG картинки можно посмотреть <a href="#">здесь.</a></p>
+							<p>Ещё можно сжать JPG указав <a href="#">желаемый размер в Кбайтах</a>, а также уменьшить размер фото или картинки в килобайтах или мегабайтах за счёт уменьшения количества <a href="#">пикселей</a> или <a href="#">мегапикселей</a>.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help auto-level">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Авто уровни</h4>
+						<div class="text">
+							<p>Главное нужно указать файл на вашем компьютере или телефоне, ввести размеры в пикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию. Ещё можно изменить размер фото в: <a href="#">Сантиметрах для печати</a> , <a href="#">Мегапикселях</a> , <a href="#">Процентах</a> , <a href="#">Мегабайтах (сжать)</a>, а также качественно <a href="#">Увеличить маленькую картинку</a>.</p>
+							<p>Для изменения размера «С соблюдением пропорций» можно указывать не только обе стороны (ширину и высоту), но и одну из этих сторон, например, ширину указать 1366 пикселей, а поле для ввода высоты можно оставить пустым или наоборот. Таким образом второй параметр автоматически подстроится под нужное значение.</p>
+							<p>Для сужения или растягивания картинки в высоту или ширину необходимо выбрать такой тип изменения размера: «Резиновое, точно до указанных размеров».</p>
+							<p>Чтобы сделать квадратную картинку, нужно указать одинаковую ширину и высоту в пикселях, например, 1080x1080 (такой размер используется на сайте Instagram.com) и выбрать в настройках «Обрезка лишних краев, точно до указанных размеров», при необходимости можно указать ту часть картинки, которую обрезать не нужно.</p>
+							<p>Здесь также можно уменьшить и автоматически обрезать обои или картинку точно под размер своего рабочего стола. Для этого нужно ввести ширину и высоту своего монитора в пикселях 2560 x 1440 и выбрать тип изменения размера «Обрезка лишних краев, точно до указанных размеров», для более точного позиционирования можно предварительно <a href="#">обрезать картинку</a>, примерно как нужно в итоге, и уже после этого обработать на этой странице.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка, а также её размеры в пикселях и мегабайтах до и после обработки.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help auto-gamma">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Автоматическая гамма-коррекция</h4>
+						<div class="text">
+							<p>Главное нужно указать фото на вашем компьютере или телефоне, ввести нужный размер в <a href="#">сантиметрах</a>, <a href="#">миллиметрах</a> или <a href="#">дюймах</a>, нажать кнопку ОК внизу страницы, подождать пару секунд и скачать готовый результат. Остальные настройки выставлены по умолчанию. На этом сайте ещё можно изменить размер в: <a href="#">пикселях</a>, <a href="#">мегапикселях</a>, <a href="#">процентах</a>, <a href="#">мегабайтах</a>, увеличить маленькую картинку, а также предварительно <a href="#">обрезать</a> или <a href="#">повернуть</a> с учётом Exif.</p>
+							<p>Размер фотографии будет изменён с учётом указанного размера в сантиметрах (миллиметрах, дюймах), а также с учётом указанного размера в DPI, согласно стандартам бумажной печати. Размеры в см, мм и дюймах можно указывать с точностью до тысячных, например, вместо формата 15x10 можно выставить 15,201x10,203 см.</p>
+						</div>
+						<div class="table">
+							<div class="table__inner">
+								<div class="table__head table__row">
+									<div>Формат фото в сантиметрах </div>
+									<div>Размер в миллиметрах </div>
+									<div>Размер в пикселях <span>(для печати 300 dpi)</span></div>
+									<div>Соотношение сторон <span>(при альбомной ориентации)</span></div>
+								</div>
+								<div class="table__content">
+									<div class="table__row">
+										<div>3х4 <span>(после ручной обрезки)</span></div>
+										<div>30x40</div>
+										<div>354x472</div>
+										<div>354x472</div>
+									</div>
+									<div class="table__row">
+										<div>3,5х4,5 <span>(после ручной обрезки)</span>	</div>
+										<div>35x45</div>
+										<div>413x531</div>
+										<div>4:3 (1.33)</div>
+									</div>
+									<div class="table__row">
+										<div>9x13	</div>
+										<div>89х127</div>
+										<div>1063x1535</div>
+										<div>10:7 (1.43)</div>
+									</div>
+									<div class="table__row">
+										<div>10x15	</div>
+										<div>102х152</div>
+										<div>1181x1772	</div>
+										<div>3:2 (1.5)</div>
+									</div>
+									<div class="table__row">
+										<div>13x18</div>
+										<div>127х178</div>
+										<div>1535x2126</div>
+										<div>7:5 (1.4)</div>
+									</div>
+									<div class="table__row">
+										<div>15x20 (≈A5)	</div>
+										<div>152х203</div>
+										<div>1772x2362</div>
+										<div>4:3 (1.33)</div>
+									</div>
+									<div class="table__row">
+										<div>15x21	</div>
+										<div>152х216</div>
+										<div>1772x2480	</div>
+										<div>4:3 (1.33)</div>
+									</div>
+									<div class="table__row">
+										<div>18x24</div>
+										<div>178x240</div>
+										<div>2126x2835</div>
+										<div>19:14 (1.36)</div>
+									</div>
+									<div class="table__row">
+										<div>20x25	</div>
+										<div>203x254</div>
+										<div>2362x2953</div>
+										<div>5:4 (1.25)</div>
+									</div>
+									<div class="table__row">
+										<div>20x30 (≈A4)</div>
+										<div>203х305	</div>
+										<div>2362x3543</div>
+										<div>3:2 (1.5)</div>
+									</div>
+									<div class="table__row">
+										<div>30x40</div>
+										<div>305x406</div>
+										<div>3543x4724</div>
+										<div>4:3 (1.33)</div>
+									</div>
+									<div class="table__row">
+										<div>30x45</div>
+										<div>305x457</div>
+										<div>3543x5315</div>
+										<div>3:2 (1.5)</div>
+									</div>
+								</div>
+							</div>
+						</div><!--/table-->
+						<div class="text">
+							<p>Стандартный размер бумажного листа формата A4 – 21x29,7 см или 2480x3508 пикселей при 300 dpi. Размеры других форматов листов можно увидеть на странице в Википедии, но только не забывайте, что там перечислены размеры в миллиметрах и дюймах, т.е. в настройках на этой странице нужно выбрать соответствующую величину</p>
+							<p>Если нужно изменить размер фотографии без учёта DPI (точек на дюйм), то есть только соблюдая пропорции указанного формата, то для этого нужно установить параметр "Размер в DPI" на "0" в настройках.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help auto-balance">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Автоматический цветовой баланс</h4>
+						<div class="subtitle-gray"> Больше информации о возможностях  и методах сжатия. </div>
+						<div class="text">
+							<p>Главное нужно указать изображение на вашем компьютере или телефоне, указать качество от 1 до 100, нажать кнопку “Обработать” внизу страницы. Остальные настройки выставлены по умолчанию. Чем больше указано «качество» в настройках (80-100), тем больше получится размер файла. И наоборот, меньшее качество (50-75) даст меньший размер JPEG файла. При необходимости уровень качества (сжатия), с которым был создан jpeg-файл, можно узнать <a href="#">здесь.</a></p>
+							<p>Если после сжатия размер jpeg файла стал наоборот больше, чем оригинал, то значит нужно понизить уровень качества с 80 на более меньшее число, например, установить 60. Размеры в пикселях и мегабайтах до и после сжатия можно будет увидеть после обработки или нажатия кнопки OK. Если при уровне качества в 40-50 размер всё равно больше оригинала, то сжимать картинку нет смысла – она и так была хорошо сжата. Можно разве что попробовать <a href="#">удалить метаданные</a>, встроенные в jpg файл или <a href="#">удалить exif + сделать jpg прогрессивным</a> без потери качества.</p>
+							<p>В настройках есть возможность выбрать тип субдискретизации (прореживания), что позволяет добиться бо́льшего сжатия jpg файла с минимальными потерями. Субвыборка 1x1 даёт наилучшее качество изображения, яркие цветовые переходы сохраняются, в основном подходит для качественных превью или маленьких картинок для предпросмотра. Субвыборка 2x1 – это наиболее распространённый метод, используется практически во всех цифровых фотокамерах, сжатие резких цветовых переходов происходит по горизонтали, позволяет добиться меньшего размера файла без особых потерь, отлично подходит для больших изображений. 1x2 – тоже самое, что и 2x1, но только усреднение резких цветовых переходов будет по вертикали. Субвыборка 2x2 усредняет резкие цветовые переходы по горизонтали и по вертикали, позволяет добиться наименьшего размера файла, подходит для размытых картинок.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+						</div>
+						<div class="gallery-show">
+							<h4 class="title">На фотографиях "Красного перчика после дождя" указан уровень качества JPEG для сравнения:</h4>
+							<div class="gallery-show__inner">
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="text">
+							<p>Размеры этой jpg картинки в зависимости от уровня качества (Q - качество, KB - это размер в килобайтах): <br>Q 10 = 2 KB; Q 15 = 2,7 KB; Q 30 = 4,3 KB; Q 50 = 5,9 KB; Q 60 = 6,7 KB; Q 70 = 7,9 KB; Q 80 = 9,8 KB; Q 90 = 14,1 KB; Q 100 = 46,5 KB.</p>
+							<p>Из вышеуказанных примеров можно сделать вывод, что наилучшим соотношением размер-качество может быть уровень качества от 75 до 95. А для того, чтобы картинка занимала наименьший размер и была в тоже время более и менее нормальной, подойдёт качество 60-70. Если качество не имеет значения, а нужен маленький размер файла, то подойдёт процент качества от 30 до 50.</p>
+							<p>Обратите внимание, что размер файла прогрессивной JPEG картинки обычно меньше стандартной на 2-3% с таким же качеством изображения, да и ещё будет красиво открываться при её загрузке в интернет браузере, как это обычно делают в фильмах! Пример стандартной и прогрессивной JPEG картинки можно посмотреть <a href="#">здесь.</a></p>
+							<p>Ещё можно сжать JPG указав <a href="#">желаемый размер в Кбайтах</a>, а также уменьшить размер фото или картинки в килобайтах или мегабайтах за счёт уменьшения количества <a href="#">пикселей</a> или <a href="#">мегапикселей</a>.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help underwater-photo">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Для подводных фото</h4>
+						<div class="subtitle-gray"> Больше информации о возможностях  и методах сжатия. </div>
+						<div class="text">
+							<p>Главное нужно указать изображение на вашем компьютере или телефоне, указать качество от 1 до 100, нажать кнопку “Обработать” внизу страницы. Остальные настройки выставлены по умолчанию. Чем больше указано «качество» в настройках (80-100), тем больше получится размер файла. И наоборот, меньшее качество (50-75) даст меньший размер JPEG файла. При необходимости уровень качества (сжатия), с которым был создан jpeg-файл, можно узнать <a href="#">здесь.</a></p>
+							<p>Если после сжатия размер jpeg файла стал наоборот больше, чем оригинал, то значит нужно понизить уровень качества с 80 на более меньшее число, например, установить 60. Размеры в пикселях и мегабайтах до и после сжатия можно будет увидеть после обработки или нажатия кнопки OK. Если при уровне качества в 40-50 размер всё равно больше оригинала, то сжимать картинку нет смысла – она и так была хорошо сжата. Можно разве что попробовать <a href="#">удалить метаданные</a>, встроенные в jpg файл или <a href="#">удалить exif + сделать jpg прогрессивным</a> без потери качества.</p>
+							<p>В настройках есть возможность выбрать тип субдискретизации (прореживания), что позволяет добиться бо́льшего сжатия jpg файла с минимальными потерями. Субвыборка 1x1 даёт наилучшее качество изображения, яркие цветовые переходы сохраняются, в основном подходит для качественных превью или маленьких картинок для предпросмотра. Субвыборка 2x1 – это наиболее распространённый метод, используется практически во всех цифровых фотокамерах, сжатие резких цветовых переходов происходит по горизонтали, позволяет добиться меньшего размера файла без особых потерь, отлично подходит для больших изображений. 1x2 – тоже самое, что и 2x1, но только усреднение резких цветовых переходов будет по вертикали. Субвыборка 2x2 усредняет резкие цветовые переходы по горизонтали и по вертикали, позволяет добиться наименьшего размера файла, подходит для размытых картинок.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+						</div>
+						<div class="gallery-show">
+							<h4 class="title">На фотографиях "Красного перчика после дождя" указан уровень качества JPEG для сравнения:</h4>
+							<div class="gallery-show__inner">
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="text">
+							<p>Размеры этой jpg картинки в зависимости от уровня качества (Q - качество, KB - это размер в килобайтах): <br>Q 10 = 2 KB; Q 15 = 2,7 KB; Q 30 = 4,3 KB; Q 50 = 5,9 KB; Q 60 = 6,7 KB; Q 70 = 7,9 KB; Q 80 = 9,8 KB; Q 90 = 14,1 KB; Q 100 = 46,5 KB.</p>
+							<p>Из вышеуказанных примеров можно сделать вывод, что наилучшим соотношением размер-качество может быть уровень качества от 75 до 95. А для того, чтобы картинка занимала наименьший размер и была в тоже время более и менее нормальной, подойдёт качество 60-70. Если качество не имеет значения, а нужен маленький размер файла, то подойдёт процент качества от 30 до 50.</p>
+							<p>Обратите внимание, что размер файла прогрессивной JPEG картинки обычно меньше стандартной на 2-3% с таким же качеством изображения, да и ещё будет красиво открываться при её загрузке в интернет браузере, как это обычно делают в фильмах! Пример стандартной и прогрессивной JPEG картинки можно посмотреть <a href="#">здесь.</a></p>
+							<p>Ещё можно сжать JPG указав <a href="#">желаемый размер в Кбайтах</a>, а также уменьшить размер фото или картинки в килобайтах или мегабайтах за счёт уменьшения количества <a href="#">пикселей</a> или <a href="#">мегапикселей</a>.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help saturation-tone">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Насыщенность, светимость и тон</h4>
+						<div class="subtitle-gray"> Больше информации о возможностях  и методах сжатия. </div>
+						<div class="text">
+							<p>Главное нужно указать изображение на вашем компьютере или телефоне, указать качество от 1 до 100, нажать кнопку “Обработать” внизу страницы. Остальные настройки выставлены по умолчанию. Чем больше указано «качество» в настройках (80-100), тем больше получится размер файла. И наоборот, меньшее качество (50-75) даст меньший размер JPEG файла. При необходимости уровень качества (сжатия), с которым был создан jpeg-файл, можно узнать <a href="#">здесь.</a></p>
+							<p>Если после сжатия размер jpeg файла стал наоборот больше, чем оригинал, то значит нужно понизить уровень качества с 80 на более меньшее число, например, установить 60. Размеры в пикселях и мегабайтах до и после сжатия можно будет увидеть после обработки или нажатия кнопки OK. Если при уровне качества в 40-50 размер всё равно больше оригинала, то сжимать картинку нет смысла – она и так была хорошо сжата. Можно разве что попробовать <a href="#">удалить метаданные</a>, встроенные в jpg файл или <a href="#">удалить exif + сделать jpg прогрессивным</a> без потери качества.</p>
+							<p>В настройках есть возможность выбрать тип субдискретизации (прореживания), что позволяет добиться бо́льшего сжатия jpg файла с минимальными потерями. Субвыборка 1x1 даёт наилучшее качество изображения, яркие цветовые переходы сохраняются, в основном подходит для качественных превью или маленьких картинок для предпросмотра. Субвыборка 2x1 – это наиболее распространённый метод, используется практически во всех цифровых фотокамерах, сжатие резких цветовых переходов происходит по горизонтали, позволяет добиться меньшего размера файла без особых потерь, отлично подходит для больших изображений. 1x2 – тоже самое, что и 2x1, но только усреднение резких цветовых переходов будет по вертикали. Субвыборка 2x2 усредняет резкие цветовые переходы по горизонтали и по вертикали, позволяет добиться наименьшего размера файла, подходит для размытых картинок.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+						</div>
+						<div class="gallery-show">
+							<h4 class="title">На фотографиях "Красного перчика после дождя" указан уровень качества JPEG для сравнения:</h4>
+							<div class="gallery-show__inner">
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="text">
+							<p>Размеры этой jpg картинки в зависимости от уровня качества (Q - качество, KB - это размер в килобайтах): <br>Q 10 = 2 KB; Q 15 = 2,7 KB; Q 30 = 4,3 KB; Q 50 = 5,9 KB; Q 60 = 6,7 KB; Q 70 = 7,9 KB; Q 80 = 9,8 KB; Q 90 = 14,1 KB; Q 100 = 46,5 KB.</p>
+							<p>Из вышеуказанных примеров можно сделать вывод, что наилучшим соотношением размер-качество может быть уровень качества от 75 до 95. А для того, чтобы картинка занимала наименьший размер и была в тоже время более и менее нормальной, подойдёт качество 60-70. Если качество не имеет значения, а нужен маленький размер файла, то подойдёт процент качества от 30 до 50.</p>
+							<p>Обратите внимание, что размер файла прогрессивной JPEG картинки обычно меньше стандартной на 2-3% с таким же качеством изображения, да и ещё будет красиво открываться при её загрузке в интернет браузере, как это обычно делают в фильмах! Пример стандартной и прогрессивной JPEG картинки можно посмотреть <a href="#">здесь.</a></p>
+							<p>Ещё можно сжать JPG указав <a href="#">желаемый размер в Кбайтах</a>, а также уменьшить размер фото или картинки в килобайтах или мегабайтах за счёт уменьшения количества <a href="#">пикселей</a> или <a href="#">мегапикселей</a>.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help negative-to-positive">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Негатив в позитив</h4>
+						<div class="subtitle-gray"> Больше информации о возможностях  и методах сжатия. </div>
+						<div class="text">
+							<p>Главное нужно указать изображение на вашем компьютере или телефоне, указать качество от 1 до 100, нажать кнопку “Обработать” внизу страницы. Остальные настройки выставлены по умолчанию. Чем больше указано «качество» в настройках (80-100), тем больше получится размер файла. И наоборот, меньшее качество (50-75) даст меньший размер JPEG файла. При необходимости уровень качества (сжатия), с которым был создан jpeg-файл, можно узнать <a href="#">здесь.</a></p>
+							<p>Если после сжатия размер jpeg файла стал наоборот больше, чем оригинал, то значит нужно понизить уровень качества с 80 на более меньшее число, например, установить 60. Размеры в пикселях и мегабайтах до и после сжатия можно будет увидеть после обработки или нажатия кнопки OK. Если при уровне качества в 40-50 размер всё равно больше оригинала, то сжимать картинку нет смысла – она и так была хорошо сжата. Можно разве что попробовать <a href="#">удалить метаданные</a>, встроенные в jpg файл или <a href="#">удалить exif + сделать jpg прогрессивным</a> без потери качества.</p>
+							<p>В настройках есть возможность выбрать тип субдискретизации (прореживания), что позволяет добиться бо́льшего сжатия jpg файла с минимальными потерями. Субвыборка 1x1 даёт наилучшее качество изображения, яркие цветовые переходы сохраняются, в основном подходит для качественных превью или маленьких картинок для предпросмотра. Субвыборка 2x1 – это наиболее распространённый метод, используется практически во всех цифровых фотокамерах, сжатие резких цветовых переходов происходит по горизонтали, позволяет добиться меньшего размера файла без особых потерь, отлично подходит для больших изображений. 1x2 – тоже самое, что и 2x1, но только усреднение резких цветовых переходов будет по вертикали. Субвыборка 2x2 усредняет резкие цветовые переходы по горизонтали и по вертикали, позволяет добиться наименьшего размера файла, подходит для размытых картинок.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+						</div>
+						<div class="gallery-show">
+							<h4 class="title">На фотографиях "Красного перчика после дождя" указан уровень качества JPEG для сравнения:</h4>
+							<div class="gallery-show__inner">
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+								<div>
+									<img src="assets/images/placeholder-photo.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="text">
+							<p>Размеры этой jpg картинки в зависимости от уровня качества (Q - качество, KB - это размер в килобайтах): <br>Q 10 = 2 KB; Q 15 = 2,7 KB; Q 30 = 4,3 KB; Q 50 = 5,9 KB; Q 60 = 6,7 KB; Q 70 = 7,9 KB; Q 80 = 9,8 KB; Q 90 = 14,1 KB; Q 100 = 46,5 KB.</p>
+							<p>Из вышеуказанных примеров можно сделать вывод, что наилучшим соотношением размер-качество может быть уровень качества от 75 до 95. А для того, чтобы картинка занимала наименьший размер и была в тоже время более и менее нормальной, подойдёт качество 60-70. Если качество не имеет значения, а нужен маленький размер файла, то подойдёт процент качества от 30 до 50.</p>
+							<p>Обратите внимание, что размер файла прогрессивной JPEG картинки обычно меньше стандартной на 2-3% с таким же качеством изображения, да и ещё будет красиво открываться при её загрузке в интернет браузере, как это обычно делают в фильмах! Пример стандартной и прогрессивной JPEG картинки можно посмотреть <a href="#">здесь.</a></p>
+							<p>Ещё можно сжать JPG указав <a href="#">желаемый размер в Кбайтах</a>, а также уменьшить размер фото или картинки в килобайтах или мегабайтах за счёт уменьшения количества <a href="#">пикселей</a> или <a href="#">мегапикселей</a>.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help normalization">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Нормализация</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help lightening">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Осветление</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help rotate">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Повернуть на 45°, 90°, 180°</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help sharpness">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Резкость, нарезная маска</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help retouching">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Ретуширование</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help white-balance">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Температура цвета, баланс белого</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help shadows">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Тени и свет</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help enlarge">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Увеличить фото</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help improve-scanned">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Улучшить отсканированный текст</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help eliminate">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Устранить JPEG артефакты и пикселизацию</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help color-balance">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Цветовой баланс</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help noise-reduction">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Шумопонижение</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<div class="popup popup-help brightness">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Яркость и контрастность</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/slick.min.js"></script>
+	<script src="assets/js/jquery.formstyler.min.js"></script>
+	<script src="assets/js/swipe-filters.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
