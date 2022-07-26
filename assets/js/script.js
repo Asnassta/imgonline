@@ -13,13 +13,13 @@ $(document).ready(function() {
   /*==========/lang (dropdown)=========*/
 
 
-  /*===========Filter-varianrs=======*/
+  /*===========Filter-version=======*/
     $('select[name="type_size"]').change(function() {
       $('.filters-version').slideUp(222);
       $('.filters-version.'+$(this).val()).slideDown(222);
       $('.filters__title .help').attr('data-popup', $(this).val());
     });
-  /*===========/filter-varianrs=======*/
+  /*===========/filter-version=======*/
 
 
   /*=======Filters-input (subitem)============*/
@@ -154,30 +154,18 @@ $(document).ready(function() {
   });
   /*==========/file-check=========*/
 
-  /*========Download-box (fixed)======*/
-  var lastScrollTop = 0;
-$(window).scroll(function(event) {
-    st = $(this).scrollTop();
-    fs1 = $('.personal-file');
-    if (st > lastScrollTop)
-    {
- 
-      var hT = $(fs1).offset().top,
-            hH = $(fs1).outerHeight(),
-            wH = $(window).height(),
-            wS = $(this).scrollTop();
-        if (wS > (hT+hH-wH)){
-        $('.download-box').removeClass('fixed');
-     } 
-  }
-   else {
- 
-     $('.download-box').addClass('fixed');
- 
-   }
-   lastScrollTop = st;
-  });
-  /*========download-box (fixed)======*/
+
+  /*===========Toolbar=======*/
+    $('.toolbar-item').on("click", function(event) {
+      event.preventDefault();
+      $(this).addClass('active');
+      $('.toolbar-item').not(this).removeClass('active');
+      $('.filters-version').hide();
+      $('.filters-version.'+$(this).attr('data-toolbar')).fadeIn(222);
+      $('.filters__title .help').attr('data-popup', $(this).attr('data-toolbar'));
+      $('.filters-tools__name .help').attr('data-popup', $(this).attr('data-toolbar'));
+    });
+  /*===========/toolbar=======*/
 
   /*=================Sliders==========================*/
   /*===========Slider-advertising============*/

@@ -228,6 +228,23 @@
 	}
 }
 
+@media(max-width: 765px) {
+	.nav {
+		&-purple {
+			background: transparent;
+			.nav__link {
+				color: #D7C3F5;
+				&:hover {
+					color: $wh;
+				}
+				&.active {
+					color: $wh;
+				}
+			}
+		}
+	}
+}
+
 @media(max-width: 546px) {
 	.account {
 		&__name {

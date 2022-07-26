@@ -89,6 +89,39 @@
 		display: none;
 		margin-top: 13px;
 	}
+	&-tools {
+		display: none;
+		align-items: center;
+		justify-content: space-between;
+		&__cancel, &__apply {
+			width: 40px;
+			height: 40px;
+			flex: 0 0  40px;
+			background: rgba(0, 0, 0, 0.2);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all .2s linear;
+			&:hover {
+				background: rgba(0, 0, 0, 0.4);
+			}
+		}
+		&__name {
+			display: flex;
+			align-items: center;
+			margin: 0 42px 0 25px;
+			>span {
+				font-family: $ff;
+				font-size: 15px;
+				font-weight: 600;
+				color: $wh;
+				line-height: $lh;
+				text-align: center;
+				margin-right: 8px;
+			}
+		}
+	}
 	&__name {
 		font-family: $ff;
 		font-size: 14px;
@@ -96,6 +129,15 @@
 		color: $wh;
 		line-height: $lh;
 		margin-bottom: 5px;
+		a {
+			color: $wh;
+			text-decoration: underline;
+			transition: all .2s linear;
+			&:hover {
+				text-decoration: underline;
+				color: $orange;
+			}
+		}
 	}
 	&__description {
 		font-family: $ff;
@@ -143,6 +185,14 @@
 			line-height: $lh;
 			margin-bottom: 15px;
 		}
+		&__subtitle {
+			font-size: 14px;
+			font-weight: 500;
+			color: $wh;
+			line-height: $lh;
+			margin-top: -15px;
+			margin-bottom: 15px;
+		}
 		.filters__item {
 			margin-bottom: 15px;
 			&:last-child {
@@ -153,6 +203,17 @@
 	&-version {
 		&.pixel, &.megabytes, &.centimeters,
 		&.percent {
+			display: none;
+		}
+		&.auto-saturation, &.auto-level, &.auto-gamma,
+		&.auto-balance, &.underwater-photo,
+		&.saturation-tone, &.negative-to-positive,
+		&.normalization, &.lightening,
+		&.rotate, &.sharpness, &.retouching,
+		&.white-balance, &.shadows, &.enlarge,
+		&.improve-scanned, &.eliminate,
+		&.color-balance, &.noise-reduction,
+		&.brightness {
 			display: none;
 		}
 	}
@@ -224,6 +285,86 @@
 			}
 			strong {
 				font-weight: 600;
+			}
+			a {
+				color: $wh;
+				text-decoration: underline;
+				transition: all .2s linear;
+				&:hover {
+					text-decoration: underline;
+					color: $orange;
+				}
+			}
+		}
+		>input {
+			display: none;
+			&:checked + label {
+				span {
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		&.checked {
+			.filters-subitem {
+				display: block;
+			}
+		}
+	}
+	&-checkbox {
+		margin-top: 12px;
+		margin-bottom: 12px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		label {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			span {
+				display: inline-block;
+				margin-right: 15px;
+				flex: 0 0 20px;
+				width: 20px;
+				height: 20px;
+				border: 2px solid $lblue;
+				border-radius: 3px;
+				background-color: $wh;
+				position: relative;
+				&:after {
+					content: "";
+					width: 12px;
+					height: 12px;
+					background: url("../images/check-blue.svg") center no-repeat;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					z-index: 1;
+					transform: translate(-50%, -50%);
+					opacity: 0;
+					transition: all .1s linear;
+				}
+			}
+			i {
+				font-family: $ff;
+				font-size: 14px;
+				font-weight: 400;
+				font-style: normal;
+				color: $wh;
+				line-height: $lh;
+			}
+			strong {
+				font-weight: 600;
+			}
+			a {
+				color: $wh;
+				text-decoration: underline;
+				transition: all .2s linear;
+				&:hover {
+					text-decoration: underline;
+					color: $orange;
+				}
 			}
 		}
 		>input {
@@ -401,6 +542,25 @@
 		border-bottom-right-radius: 0;
 		padding: 0px 35px 14px;
 		min-height: auto;
+		&-btn {
+			text-align: center;
+		}
+		&-toolbar {
+			padding: 0 12px 10px;
+			.filters__title {
+				border-bottom: 1px solid $wh;
+				margin-bottom: 10px;
+				padding-bottom: 110px;
+				&.pb {
+					padding-bottom: 20px;
+				}
+			}
+		}
+		.btn-orange {
+			&.hide {
+				display: none;
+			}
+		}
 		&__title {
 			padding-top: 20px;
 			font-size: 14px;
@@ -449,6 +609,16 @@
 			}
 			.filters__foot {
 				display: block;
+			}
+		}
+		&-tools {
+			display: flex;
+			.help {
+				width: 18px;
+				height: 18px;
+				display: inline-flex!important;
+				position: static;
+				transform: translate(0);
 			}
 		}
 	}

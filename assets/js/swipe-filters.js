@@ -80,7 +80,10 @@ class Swipe {
       $('.swipe-content').slideDown(555);
       $('.filters__foot').slideDown(555);
       $('.help').slideDown(555);
+      $('.swipe-fast').slideDown(111);
+      $('.swipe-hide').fadeOut(111);
       $('body').addClass("hidden");
+      $('.filters-toolbar .filters__title').addClass("pb");
     }
   });
   swiper.onDown(function() { 
@@ -88,8 +91,11 @@ class Swipe {
     {
       $('.swipe-content').slideUp(555);
       $('.filters__foot').slideUp(333);
+      $('.swipe-fast').slideUp(111);
       $('.help').slideUp(111);
+      $('.swipe-hide').fadeIn(111);
       $('body').removeClass("hidden");
+      $('.filters-toolbar .filters__title').removeClass("pb");
     }
   });
   swiper.run();
