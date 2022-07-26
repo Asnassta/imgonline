@@ -156,7 +156,7 @@ $(document).ready(function() {
 
 
   /*===========Toolbar=======*/
-    $('.toolbar-item').on("click", function(event) {
+    $('.toolbar-processing .toolbar-item').on("click", function(event) {
       event.preventDefault();
       $(this).addClass('active');
       $('.toolbar-item').not(this).removeClass('active');
@@ -166,6 +166,27 @@ $(document).ready(function() {
       $('.filters-tools__name .help').attr('data-popup', $(this).attr('data-toolbar'));
     });
   /*===========/toolbar=======*/
+
+    /*===========Toolbar (show filters)=======*/
+    $('.toolbar-processing .toolbar-item').on("click", function(event) {
+      event.preventDefault();
+      if($(window).width() <= 860)
+    {
+      $('.processing__filters').fadeIn(333);
+      $('.toolbar').fadeOut(111);
+      $('.nav').fadeOut(111);
+    }
+    });
+    $('.filters-tools__cancel').on("click", function(event) {
+      event.preventDefault();
+      if($(window).width() <= 860)
+    {
+      $('.processing__filters').fadeOut(111);
+      $('.toolbar').fadeIn(333);
+      $('.nav').fadeIn(333);
+    }
+    });
+  /*===========/toolbar (show filters)=======*/
 
   /*=================Sliders==========================*/
   /*===========Slider-advertising============*/
@@ -219,5 +240,31 @@ $(document).ready(function() {
   });
   /*======/select-styler=============*/
 
+
+
 });
 
+  /*=========ToolbarScroll=========*/
+  window.onload = function () {
+          var scr = $(".toolbar-menu");
+          scr.mousedown(function () {
+              var startX = this.scrollLeft + event.pageX;
+              var startY = this.scrollTop + event.pageY;
+
+              scr.mousemove(function () {
+
+                  this.scrollLeft = startX - event.pageX;
+
+                  this.scrollTop = startY - event.pageY;
+
+                  return false;
+
+              });
+
+          });
+
+          $(window).mouseup(function () {
+              scr.off("mousemove");
+          });
+      }
+  /*=========/toolbarScroll=========*/

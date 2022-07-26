@@ -266,7 +266,7 @@
   .footer {
     padding-bottom: 80px; } }
 
-@media (max-width: 765px) {
+@media (max-width: 860px) {
   .nav-purple {
     background: transparent; }
     .nav-purple .nav__link {
@@ -274,7 +274,11 @@
       .nav-purple .nav__link:hover {
         color: #fff; }
       .nav-purple .nav__link.active {
-        color: #fff; } }
+        color: #fff; }
+    .nav-purple.none {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 @media (max-width: 546px) {
   .account__name {
@@ -313,7 +317,7 @@
   .page-pt_min {
     padding-top: 75px; }
   .page_pb {
-    padding-bottom: 25px; }
+    padding-bottom: 45px; }
 
 .toolbar {
   margin-bottom: 20px; }
@@ -1374,7 +1378,68 @@
     margin-bottom: 0; }
   .add-file span {
     display: none; }
-  .toolbar-processing {
+  .toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 60px;
+    background: -webkit-linear-gradient(234.24deg, #AC6DD6 4.06%, #5D47EE 108.54%);
+    background: -o-linear-gradient(234.24deg, #AC6DD6 4.06%, #5D47EE 108.54%);
+    background: linear-gradient(215.76deg, #AC6DD6 4.06%, #5D47EE 108.54%); }
+    .toolbar-fixed {
+      position: fixed;
+      bottom: 45px;
+      left: 0;
+      z-index: 500;
+      background: transparent;
+      width: 100%;
+      margin-bottom: 0;
+      padding-bottom: 0; }
+      .toolbar-fixed .toolbar-inner:after {
+        display: none; }
+    .toolbar-inner {
+      margin: 0 -15px;
+      padding-left: 0;
+      border-radius: 0;
+      background: transparent;
+      position: relative;
+      -ms-overflow-style: none;
+      scrollbar-width: none; }
+      .toolbar-inner:after {
+        content: "";
+        width: calc(100% - 40px);
+        height: 1px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 22px;
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        z-index: 1; }
+      .toolbar-inner::-webkit-scrollbar {
+        width: 0;
+        height: 0; }
+      .toolbar-inner * {
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent; }
+      .toolbar-inner *::-webkit-scrollbar {
+        height: 0;
+        width: 0; }
+      .toolbar-inner *::-webkit-scrollbar-track {
+        background: transparent; }
+      .toolbar-inner *::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: 27px;
+        border: 0 solid transparent; }
+    .toolbar-all {
+      display: none; }
+    .toolbar-item {
+      margin-right: 10px; }
+    .toolbar-name {
+      font-size: 10px; }
+  .toolbar-fixed {
     position: fixed;
     bottom: 45px;
     left: 0;
@@ -1382,29 +1447,29 @@
     background: transparent;
     width: 100%;
     margin-bottom: 0; }
-    .toolbar-processing .toolbar-inner {
+    .toolbar-fixed .toolbar-inner {
       background: transparent;
       border-radius: 0;
       padding-left: 0;
       margin: 0 -15px;
       -ms-overflow-style: none;
       scrollbar-width: none; }
-      .toolbar-processing .toolbar-inner::-webkit-scrollbar {
+      .toolbar-fixed .toolbar-inner::-webkit-scrollbar {
         width: 0;
         height: 0; }
-      .toolbar-processing .toolbar-inner * {
+      .toolbar-fixed .toolbar-inner * {
         scrollbar-width: thin;
         scrollbar-color: transparent transparent; }
-      .toolbar-processing .toolbar-inner *::-webkit-scrollbar {
+      .toolbar-fixed .toolbar-inner *::-webkit-scrollbar {
         height: 0;
         width: 0; }
-      .toolbar-processing .toolbar-inner *::-webkit-scrollbar-track {
+      .toolbar-fixed .toolbar-inner *::-webkit-scrollbar-track {
         background: transparent; }
-      .toolbar-processing .toolbar-inner *::-webkit-scrollbar-thumb {
+      .toolbar-fixed .toolbar-inner *::-webkit-scrollbar-thumb {
         background-color: transparent;
         border-radius: 27px;
         border: 0 solid transparent; }
-    .toolbar-processing .toolbar-all {
+    .toolbar-fixed .toolbar-all {
       display: none; }
   .processing__inner {
     padding-bottom: 150px;
@@ -1426,6 +1491,8 @@
     min-height: auto; }
   .processing-small .processing__content {
     max-height: 100%; }
+  .processing-small .processing__filters {
+    display: none; }
   .processing-small .filters__content {
     max-height: calc(100vh - 290px); }
   .file {
@@ -1506,67 +1573,6 @@
       border: 3px solid #7E52AF; } }
 
 @media (max-width: 765px) {
-  .toolbar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-    width: 100%;
-    margin-bottom: 0;
-    padding-bottom: 60px;
-    background: -webkit-linear-gradient(234.24deg, #AC6DD6 4.06%, #5D47EE 108.54%);
-    background: -o-linear-gradient(234.24deg, #AC6DD6 4.06%, #5D47EE 108.54%);
-    background: linear-gradient(215.76deg, #AC6DD6 4.06%, #5D47EE 108.54%); }
-    .toolbar-processing {
-      position: fixed;
-      bottom: 45px;
-      left: 0;
-      z-index: 500;
-      background: transparent;
-      width: 100%;
-      margin-bottom: 0;
-      padding-bottom: 0; }
-      .toolbar-processing .toolbar-inner:after {
-        display: none; }
-    .toolbar-inner {
-      margin: 0 -15px;
-      padding-left: 0;
-      border-radius: 0;
-      background: transparent;
-      position: relative;
-      -ms-overflow-style: none;
-      scrollbar-width: none; }
-      .toolbar-inner:after {
-        content: "";
-        width: calc(100% - 40px);
-        height: 1px;
-        background: rgba(255, 255, 255, 0.5);
-        border-radius: 22px;
-        position: absolute;
-        bottom: 0;
-        left: 20px;
-        z-index: 1; }
-      .toolbar-inner::-webkit-scrollbar {
-        width: 0;
-        height: 0; }
-      .toolbar-inner * {
-        scrollbar-width: thin;
-        scrollbar-color: transparent transparent; }
-      .toolbar-inner *::-webkit-scrollbar {
-        height: 0;
-        width: 0; }
-      .toolbar-inner *::-webkit-scrollbar-track {
-        background: transparent; }
-      .toolbar-inner *::-webkit-scrollbar-thumb {
-        background-color: transparent;
-        border-radius: 27px;
-        border: 0 solid transparent; }
-    .toolbar-all {
-      display: none; }
-    .toolbar-item {
-      margin-right: 10px; }
-    .toolbar-name {
-      font-size: 10px; }
   .advertising .slick-list {
     padding-right: 15%; }
   .file {
@@ -2165,9 +2171,10 @@
       .filters-toolbar .filters__title {
         border-bottom: 1px solid #fff;
         margin-bottom: 10px;
-        padding-bottom: 110px; }
-        .filters-toolbar .filters__title.pb {
-          padding-bottom: 20px; }
+        /*padding-bottom: 110px;
+				&.pb {
+					padding-bottom: 20px;
+				}*/ }
     .filters .btn-orange.hide {
       display: none; }
     .filters__title {

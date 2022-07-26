@@ -10,7 +10,7 @@
 		padding-top: 75px;
 	}
 	&_pb {
-		padding-bottom: 25px;
+		padding-bottom: 45px;
 	}
 }
 
@@ -1103,7 +1103,82 @@
 	}
 
 	.toolbar {
-		&-processing {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 100;
+		width: 100%;
+		margin-bottom: 0;
+		padding-bottom: 60px;
+		background: linear-gradient(215.76deg, #AC6DD6 4.06%, #5D47EE 108.54%);
+		&-fixed {
+			position: fixed;
+			bottom: 45px;
+			left: 0;
+			z-index: 500;
+			background: transparent;
+			width: 100%;
+			margin-bottom: 0;
+			padding-bottom: 0;
+			.toolbar-inner {
+				&:after {
+					display: none;
+				}
+			}
+		}
+		&-inner {
+			margin: 0 -15px;
+			padding-left: 0;
+			border-radius: 0;
+			background: transparent;
+			position: relative;
+			&:after {
+				content: "";
+				width: calc(100% - 40px);
+				height: 1px;
+				background: rgba(255, 255, 255, 0.5);
+				border-radius: 22px;
+				position: absolute;
+				bottom: 0;
+				left: 20px;
+				z-index: 1;
+			}
+			-ms-overflow-style: none;
+      		scrollbar-width: none;
+      		&::-webkit-scrollbar {
+      			width: 0;
+      			height: 0;
+      		}
+      		* {
+			  scrollbar-width: thin;
+			  scrollbar-color:  transparent transparent;
+			}
+			*::-webkit-scrollbar {
+			  height: 0;
+			  width: 0;
+			}
+			*::-webkit-scrollbar-track {
+			  background: transparent;
+			}
+			*::-webkit-scrollbar-thumb {
+			  background-color:transparent;
+			  border-radius: 27px;
+			  border: 0 solid transparent;
+			}
+		}
+		&-all {
+			display: none;
+		}
+		&-item {
+			margin-right: 10px;
+		}
+		&-name {
+			font-size: 10px;
+		}
+	}
+
+	.toolbar {
+		&-fixed {
 			position: fixed;
 			bottom: 45px;
 			left: 0;
@@ -1167,6 +1242,9 @@
 			}
 			.processing__content {
 				max-height: 100%;
+			}
+			.processing__filters {
+				display: none;
 			}
 			.filters__content {
 				max-height: calc(100vh - 290px);
@@ -1263,80 +1341,6 @@
 }
 
 @media(max-width: 765px) {
-	.toolbar {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		z-index: 100;
-		width: 100%;
-		margin-bottom: 0;
-		padding-bottom: 60px;
-		background: linear-gradient(215.76deg, #AC6DD6 4.06%, #5D47EE 108.54%);
-		&-processing {
-			position: fixed;
-			bottom: 45px;
-			left: 0;
-			z-index: 500;
-			background: transparent;
-			width: 100%;
-			margin-bottom: 0;
-			padding-bottom: 0;
-			.toolbar-inner {
-				&:after {
-					display: none;
-				}
-			}
-		}
-		&-inner {
-			margin: 0 -15px;
-			padding-left: 0;
-			border-radius: 0;
-			background: transparent;
-			position: relative;
-			&:after {
-				content: "";
-				width: calc(100% - 40px);
-				height: 1px;
-				background: rgba(255, 255, 255, 0.5);
-				border-radius: 22px;
-				position: absolute;
-				bottom: 0;
-				left: 20px;
-				z-index: 1;
-			}
-			-ms-overflow-style: none;
-      		scrollbar-width: none;
-      		&::-webkit-scrollbar {
-      			width: 0;
-      			height: 0;
-      		}
-      		* {
-			  scrollbar-width: thin;
-			  scrollbar-color:  transparent transparent;
-			}
-			*::-webkit-scrollbar {
-			  height: 0;
-			  width: 0;
-			}
-			*::-webkit-scrollbar-track {
-			  background: transparent;
-			}
-			*::-webkit-scrollbar-thumb {
-			  background-color:transparent;
-			  border-radius: 27px;
-			  border: 0 solid transparent;
-			}
-		}
-		&-all {
-			display: none;
-		}
-		&-item {
-			margin-right: 10px;
-		}
-		&-name {
-			font-size: 10px;
-		}
-	}
 	.advertising {
 		.slick-list {
 			padding-right: 15%;
