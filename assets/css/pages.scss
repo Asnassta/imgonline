@@ -9,13 +9,21 @@
 	&-pt_min {
 		padding-top: 75px;
 	}
-	&_pb {
-		padding-bottom: 45px;
+	&.pb-140 {
+		@media(max-width: 860px) {
+			padding-bottom: 140px;
+		}
 	}
 }
 
 .toolbar {
-	margin-bottom: 20px;
+	margin-bottom: 50px;
+	&.mb-20 {
+		margin-bottom: 20px;
+	}
+	&-processing {
+		margin-bottom: 20px;
+	}
 	&-inner {
 		background-color: $purple;
 		border-radius: 20px;
@@ -242,6 +250,9 @@
 /*============Add==========*/
 .add {
 	margin-bottom: 80px;
+	&.mt-50 {
+		margin-top: 50px;
+	}
 	.title {
 		max-width: 660px;
 		margin: 0 auto;
@@ -343,6 +354,100 @@
      	z-index: -10;
 	}
 }
+
+.add-data {
+	max-width: 400px;
+	margin: 20px auto 0;
+ 	.description {
+ 		font-family: $ff;
+ 		font-size: 14px;
+ 		font-weight: 400;
+ 		line-height: $lh;
+ 		color: $bl;
+ 		margin-bottom: 4px;
+ 	}
+ 	&__title {
+ 		font-family: $ff;
+ 		font-size: 16px;
+ 		font-weight: 600;
+ 		color: $bl;
+ 		line-height: $lh;
+ 		margin-bottom: 15px;
+ 	}
+ 	&__block {
+ 		margin-bottom: 15px;
+ 		&:last-child {
+ 			margin-bottom: 0;
+ 		}
+ 		.row {
+ 			display: flex;
+ 			>* {
+ 				width: calc(50% - 16px);
+ 				margin-right: 32px;
+ 				&:nth-child(2) {
+ 					margin-right: 0;
+ 				}
+ 				&:first-child {
+ 					position: relative;
+ 					&:after {
+ 						content: "в";
+ 						font-family: $ff;
+ 						font-size: 14px;
+ 						font-weight: 400;
+ 						color: $bl;
+ 						line-height: $lh;
+ 						position: absolute;
+ 						top: 50%;
+ 						transform: translateY(-50%);
+ 						right: -20px;
+ 						z-index: 1;
+ 					}
+ 				}
+ 			}
+ 		}
+ 	}
+ 	input {
+ 		width: 100%;
+ 		display: block;
+ 		padding: 10px 15px;
+ 		background-color: $wh;
+ 		border-radius: 15px;
+ 		font-family: $ff;
+ 		font-size: 14px;
+ 		font-weight: 400;
+ 		line-height: $lh-big;
+ 		color: $bl;
+ 		&::placeholder {
+ 			opacity: 1;
+ 			color: #ACACAC;
+ 		}
+ 	}
+ 	&-info {
+ 		font-family: $ff;
+ 		font-size: 12px;
+ 		font-weight: 400;
+ 		color: $gray;
+ 		line-height: $lh;
+ 		a {
+ 			font-weight: 600;
+ 			color: $orange;
+ 			transition: all .2s linear;
+ 			&:hover {
+ 				color: $d-orange;
+ 			}
+ 		}
+
+ 	}
+ 	.btn {
+ 		margin-top: 20px;
+ 		width: 100%;
+ 	}
+ 	.btn-orange {
+ 		margin-top: 20px;
+ 		width: 100%;
+ 		font-size: 18px;
+ 	}
+}
 /*============/add==========*/
 
 /*========Advertising========*/
@@ -372,6 +477,10 @@
 
 /*==========Processing=========*/
 .processing {
+	.title {
+		max-width: 660px;
+		margin: 0 auto;
+	}
 	&__inner {
 		display: flex;
 		position: relative;
@@ -394,10 +503,15 @@
 	}
 	&__filters {
 		width: 24%;
+		margin-right: 20px;
 	}
 	&__content {
 		max-height: calc(100vh - 100px);
 		width: 76%;
+		.subtitle {
+			max-width: 500px;
+			margin: 10px auto 0;
+		}
 	}
 	&-add {
 		padding-top: 30px;
@@ -418,12 +532,12 @@
 
 /*========File=========*/
 .file {
-	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	max-height: calc(100% - 90px);
 	overflow: auto;
+	margin-left: -20px;
 	>* {
 		width: calc(33.33333% - 20px);
 		margin-left: 20px;
@@ -717,6 +831,9 @@
 		border-bottom: 1px solid #E4E4EF;
 		width: 540px;
 		margin: 0 auto;
+		&.three-item {
+			width: 810px;
+		}
 	}
 	&__header {
 		background-color: #E4E4EF;
@@ -1188,6 +1305,11 @@
 }
  
 @media(max-width: 860px) {
+	.page {
+		&_pb {
+			padding-bottom: 55px;
+		}
+	}
 	.add {
 		&-container {
 			padding-bottom: 0;
@@ -1225,6 +1347,9 @@
 					display: none;
 				}
 			}
+		}
+		&.mb-20 {
+			margin-bottom: 0;
 		}
 		&-inner {
 			margin: 0 -15px;
@@ -1326,6 +1451,7 @@
 		}
 		&__filters {
 			width: 100%;
+			margin-right: 0;
 			position: fixed;
 			bottom: 0;
 			left: 0;
@@ -1446,6 +1572,16 @@
 			padding-right: 15%;
 		}
 	}
+	.processing {
+		&__content {
+			margin-left: 0;
+		}
+	}
+	.add {
+		&.mt-50 {
+			margin-top: 0;
+		}
+	}
 	.file {
 		margin-left: 0;
 		>* {
@@ -1556,6 +1692,11 @@
 }
 
 @media(max-width: 414px) {
+	.page {
+		&_pb {
+			padding-bottom: 20px;
+		}
+	}
 	.advertising {
 		.slick-list {
 			padding-right: 25%;

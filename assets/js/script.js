@@ -112,7 +112,7 @@ $(document).ready(function() {
     });
     /*==============/popup-help=================*/
 
-        /*===============Popup-panel=================*/
+    /*===============Popup-panel=================*/
     $(".identify-panel-open").on("click", function (event) {
       if($(window).width() > 860)
       {
@@ -131,7 +131,7 @@ $(document).ready(function() {
         $('body').removeClass("hidden");
       }
     });
-    /*==============/popup-help=================*/
+    /*==============/popup-panel=================*/
 
 /*=======Table-result (number)======*/
   $('.table-result__inner').removeClass('one').addClass(function(){
@@ -140,7 +140,7 @@ $(document).ready(function() {
   });
 /*=======/table-result (number)======*/
 
-      /*=======Personal-file (number)======*/
+/*=======Personal-file (number)======*/
   $('.personal-file').removeClass('one').addClass(function(){
     return ["none", "one"]
        [$(this).children('.file-box').length];
@@ -156,7 +156,7 @@ $(document).ready(function() {
 
 
   /*===========Toolbar=======*/
-    $('.toolbar-processing .toolbar-item').on("click", function(event) {
+    $('.toolbar-processing .toolbar-item').not('.link').on("click", function(event) {
       event.preventDefault();
       $(this).addClass('active');
       $('.toolbar-item').not(this).removeClass('active');
@@ -165,13 +165,23 @@ $(document).ready(function() {
       $('.filters__title .help').attr('data-popup', $(this).attr('data-toolbar'));
       $('.filters-tools__name .help').attr('data-popup', $(this).attr('data-toolbar'));
     });
+
+    $('.toolbar-processing .toolbar-item').each(function() {
+      if($(this).hasClass('active')) {
+        $('.filters-version').hide();
+        $('.filters-version.'+$(this).attr('data-toolbar')).fadeIn(222);
+        $('.filters__title .help').attr('data-popup', $(this).attr('data-toolbar'));
+        $('.filters-tools__name .help').attr('data-popup', $(this).attr('data-toolbar'));
+      }
+      
+    });
   /*===========/toolbar=======*/
 
     /*===========Toolbar (show filters)=======*/
-    $('.toolbar-processing .toolbar-item').on("click", function(event) {
-      event.preventDefault();
+    $('.toolbar-processing .toolbar-item').not('.link').on("click", function(event) {
       if($(window).width() <= 860)
     {
+      event.preventDefault();
       $('.processing__filters').fadeIn(333);
       $('.toolbar').fadeOut(111);
       $('.nav').fadeOut(111);
@@ -187,6 +197,18 @@ $(document).ready(function() {
     }
     });
   /*===========/toolbar (show filters)=======*/
+
+  /*===========Toolbar active (show filters)=======*/
+    $('.toolbar-item.active').not('.toolbar-only-link .toolbar-item').on("click", function(event) {
+      if($(window).width() <= 860)
+    {
+      event.preventDefault();
+      $('.processing__filters').fadeIn(333);
+      $('.toolbar').fadeOut(111);
+      $('.nav').fadeOut(111);
+    }
+    });
+  /*===========/toolbar active (show filters)=======*/
 
   /*=================Sliders==========================*/
   /*===========Slider-advertising============*/
