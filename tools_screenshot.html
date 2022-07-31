@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link href="assets/css/jquery.formstyler.css" rel="stylesheet" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>IMGonline</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="arrow-big" viewBox="0 0 16 16">
+			<g>
+				<path d="M15 8H1M1 8L8 15M1 8L8 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="close-small" viewBox="0 0 16 16">
+			<g>
+				<path d="M7.99998 14.6667C11.6819 14.6667 14.6666 11.6819 14.6666 8.00001C14.6666 4.31811 11.6819 1.33334 7.99998 1.33334C4.31808 1.33334 1.33331 4.31811 1.33331 8.00001C1.33331 11.6819 4.31808 14.6667 7.99998 14.6667Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M6 6L8 8M8 8L10 10M8 8L10 6M8 8L6 10" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="close-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M18 6L12 12M12 12L6 18M12 12L6 6M12 12L18 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="help-icon" viewBox="0 0 20 20">
+			<g>
+				<path d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10 14.5H10.009" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M7.38086 7.3C7.59245 6.6985 8.0101 6.1913 8.55982 5.86822C9.10954 5.54514 9.75587 5.42704 10.3843 5.53484C11.0128 5.64264 11.5828 5.96937 11.9934 6.45718C12.4041 6.94498 12.6288 7.56237 12.6279 8.2C12.6279 10.3192 9.99986 9.98362 9.99986 11.8"  stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="tg-icon" viewBox="0 0 15 14">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M10.6678 12.942C11.5065 13.309 11.8211 12.5401 11.8211 12.5401L14.0403 1.39168C14.0228 0.640292 13.0093 1.09462 13.0093 1.09462L0.585255 5.96988C0.585255 5.96988 -0.00886325 6.17957 0.0435589 6.54653C0.0959811 6.91348 0.567781 7.08822 0.567781 7.08822L3.69564 8.13667C3.69564 8.13667 4.63924 11.2296 4.83145 11.8237C5.00619 12.4003 5.16346 12.4178 5.16346 12.4178C5.3382 12.4877 5.49547 12.3654 5.49547 12.3654L7.52246 10.5306L10.6678 12.942ZM11.2093 3.36622C11.2093 3.36622 11.6461 3.10411 11.6286 3.36622C11.6286 3.36622 11.6985 3.40117 11.4714 3.64581C11.2617 3.8555 6.31653 8.29391 5.65252 8.88803C5.60009 8.92298 5.56515 8.9754 5.56515 9.04529L5.37293 10.6879C5.33798 10.8626 5.11082 10.8801 5.0584 10.7228L4.23712 8.0318C4.20217 7.92695 4.23712 7.80464 4.34196 7.73474L11.2093 3.36622Z"/>
+			</g>
+		</symbol>
+		<symbol id="account" viewBox="0 0 14 16">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M7 9C4.09641 9 2 11.1517 2 13.5V14H12V13.5C12 11.1517 9.90359 9 7 9ZM0 16V13.5C0 9.91015 3.13401 7 7 7C10.866 7 14 9.91015 14 13.5V16H0Z"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M7 6C8.10457 6 9 5.10457 9 4C9 2.89543 8.10457 2 7 2C5.89543 2 5 2.89543 5 4C5 5.10457 5.89543 6 7 6ZM7 8C9.20914 8 11 6.20914 11 4C11 1.79086 9.20914 0 7 0C4.79086 0 3 1.79086 3 4C3 6.20914 4.79086 8 7 8Z"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<a href="#" class="logo">
+						<img src="assets/images/logo.svg" alt="">
+						<span>IMGonline.com.ua</span>
+					</a>
+					<nav class="nav none nav-purple">
+						<a href="#" class="nav__link">Сжать</a>
+						<a href="#" class="nav__link">Изменить размер</a>
+						<a href="#" class="nav__link">Конвертер</a>
+						<a href="#" class="nav__link">Редактор EXIF</a>
+						<a href="#" class="nav__link">Эффекты</a>
+						<a href="#" class="nav__link">Улучшить</a>
+						<a href="#" class="nav__link active">Инструменты</a>
+					</nav>
+					<div class="account">
+						<a href="#" class="account__btn">
+							<span class="account__name">Личный кабинет</span>
+							<span class="account__icon">
+								<svg>
+									<use xlink:href="#account"></use>
+								</svg>
+							</span>
+						</a>
+						<div class="dropdown-box">
+							<ul>
+								<li>
+									<a href="#">Регистрация</a>
+								</li>
+								<li>
+									<a href="#">Войти</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header><!--/header-->
+		<main class="main page page-pt_min page_tools">
+			<div class="toolbar mb-20">
+				<div class="container">
+					<div class="toolbar-inner">
+						<div class="toolbar-all">
+							<a href="tools.html" class="toolbar-item">
+								<div class="toolbar-icon">
+									<span>А-Я</span>
+								</div>
+								<div class="toolbar-name">Все инструменты</div>
+							</a><!--/toolbar-item-->
+						</div>
+						<div class="toolbar-menu">
+							<a href="tools.html" class="toolbar-item" data-toolbar="3d-img">
+								<div class="toolbar-icon">
+									<img src="assets/images/3d-img.svg" alt="">
+								</div>
+								<div class="toolbar-name">3D картинка</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="3d-to-2d">
+								<div class="toolbar-icon">
+									<img src="assets/images/3d-to-2d.svg" alt="">
+								</div>
+								<div class="toolbar-name">3D картинка в 2D</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="favicon-make">
+								<div class="toolbar-icon">
+									<img src="assets/images/favicon-make.svg" alt="">
+								</div>
+								<div class="toolbar-name">Favicon.ico для сайта</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="gif-animate">
+								<div class="toolbar-icon">
+									<img src="assets/images/gif-animate.svg" alt="">
+								</div>
+								<div class="toolbar-name">GIF-анимация из 2-30 картинок</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="pdf-to-jpg">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">PDF и DjVu в JPG </div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="seamless">
+								<div class="toolbar-icon">
+									<img src="assets/images/seamless.svg" alt="">
+								</div>
+								<div class="toolbar-name">Бесшовная текстура</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="bg-on-transparent">
+								<div class="toolbar-icon">
+									<img src="assets/images/bg-on-transparent.svg" alt="">
+								</div>
+								<div class="toolbar-name">Фон на прозрачный</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="resize-sm">
+								<div class="toolbar-icon">
+									<img src="assets/images/resize-sm.svg" alt="">
+								</div>
+								<div class="toolbar-name">Изменить размер в см</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="texture-change">
+								<div class="toolbar-icon">
+									<img src="assets/images/texture-change.svg" alt="">
+								</div>
+								<div class="toolbar-name">Изменить текстуру</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="collage">
+								<div class="toolbar-icon">
+									<img src="assets/images/collage.svg" alt="">
+								</div>
+								<div class="toolbar-name">Коллаж</div>
+							</a><!--/toolbar-item-->
+							<a href="tools_color-converter.html" class="toolbar-item link" data-toolbar="color-converter">
+								<div class="toolbar-icon">
+									<img src="assets/images/color-converter.svg" alt="">
+								</div>
+								<div class="toolbar-name">Конвертер цветов</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="cut">
+								<div class="toolbar-icon">
+									<img src="assets/images/cut.svg" alt="">
+								</div>
+								<div class="toolbar-name">Разрезать фото на части</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item link" data-toolbar="calendar-photo">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name"> Календарь с фото</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="motivator">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Мотиватор или демотиватор</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="find-differences">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Найти отличия </div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="apply-grid">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Наложить сетку</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="apply-text">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Наложить текст на фото</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="cropping">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Обрезка, кадрирование</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="combine">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Объединить две картинки</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="define-color">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Определить основные цвета картинки</div>
+							</a><!--/toolbar-item-->
+							<a href="identify-compress_add.html" class="toolbar-item link" data-toolbar="define-compress">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Определить уровень сжатия JPG</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item link" data-toolbar="palette-color">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Палитра цветов</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="tile">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Плитка</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="check-progressive">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name"> Проверить, прогрессивный ли JPEG</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="similarity-percent">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Процент похожести</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="recognize-qr">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Распознать QR-код, Штрихкод, DataMatrix </div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="recognize-text">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Распознать текст (OCR)</div>
+							</a><!--/toolbar-item-->
+							<a href="tools_website-to-pdf.html" class="toolbar-item" data-toolbar="website-to-pdf">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Сайт в PDF</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="make-progressive">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Сделать JPG прогрессивным</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="figures">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Фото в форме ♥️ ▲ фигур</div>
+							</a><!--/toolbar-item-->
+							<a href="tools_screenshot.html" class="toolbar-item active" data-toolbar="screenshot">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Скриншот сайта</div>
+							</a><!--/toolbar-item-->
+							<a href="tools_mix-colors.html" class="toolbar-item" data-toolbar="mix-colors">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Смешать цвета</div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="make-qr">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Создать QR-код </div>
+							</a><!--/toolbar-item-->
+							<a href="tools_unique-colors.html" class="toolbar-item" data-toolbar="unique-colors">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Количество уникальных цветов </div>
+							</a><!--/toolbar-item-->
+							<a href="tools.html" class="toolbar-item" data-toolbar="find-size">
+								<div class="toolbar-icon">
+									<img src="assets/images/convert-to.svg" alt="">
+								</div>
+								<div class="toolbar-name">Узнать размер в мегапикселях</div>
+							</a><!--/toolbar-item-->
+						</div>
+					</div>
+				</div>
+			</div><!--/toolbar-->
+			<div class="processing processing-small">
+				<div class="container">
+					<div class="processing__inner">
+						<div class="processing__filters">
+							<form action="#" class="filters filters-toolbar">
+								<h3 class="filters__title swipe-open ">
+									<span>Параметры<br> инструмента</span>
+									<a href="#" data-popup="screenshot" class="help">
+										<svg>
+											<use xlink:href="#help-icon"></use>
+										</svg>
+										<span>инструкция по настройкам</span>
+									</a>
+								</h3>
+								<div class="filters-version screenshot">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Скриншот сайта, сделать из веб-страницы картинку</span>
+											<a href="#" data-popup="screenshot" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
+										<div class="filters-block">
+											<div class="filters-block__title"> Параметры создания скриншота сайта</div>
+											<div class="filters__item">
+												<div class="filters__name">Ширина X Высота экрана для создания скриншота:</div>
+												<div class="filters__description">опустая высота = скриншот на всю высоту страницы сайта</div>
+												<div class="filters__row filters__row-inputs multiply">
+													<div class="filters-input__box">
+														<div class="filters-input">
+															<input type="text" value="1280">
+														</div>
+													</div>
+													<div class="filters-input__box">
+														<div class="filters-input">
+															<input type="text" value="800">
+														</div>
+													</div>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters-checkbox">
+													<input type="checkbox" id="disable-img-screenshot-checkbox" name="disable-img-screenshot-checkbox">
+													<label for="disable-img-screenshot-checkbox">
+														<span></span>
+														<i>Отключить картинки </i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters-checkbox">
+													<input type="checkbox" id="disable-js-screenshot-checkbox" name="disable-js-screenshot-checkbox">
+													<label for="disable-js-screenshot-checkbox">
+														<span></span>
+														<i>Отключить javascript</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+											<div class="filters__item">
+												<div class="filters__name">Зум</div>
+												<div class="filters-input">
+													<input type="text" value="1">
+												</div>
+												<div class="filters__description">уменьшение или увеличение элементов сайта, 1=не изменять</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters__item">
+												<div class="filters__name">Тип изменения размера</div>
+												<div class="filters__row">
+													<div class="filters-radio">
+														<input type="radio" id="type-resize-screenshot_1" name="type-resize-screenshot">
+														<label for="type-resize-screenshot_1">
+															<span></span>
+															<i>С соблюдением пропорций</i>
+														</label>
+													</div>
+													<div class="filters-radio">
+														<input type="radio" id="type-resize-screenshot_2" name="type-resize-screenshot">
+														<label for="type-resize-screenshot_2">
+															<span></span>
+															<i>Резиновое, точно до указанных размеров</i>
+														</label>
+													</div>
+													<div class="filters-radio">
+														<input type="radio" id="type-resize-screenshot_3" name="type-resize-screenshot">
+														<label for="type-resize-screenshot_3">
+															<span></span>
+															<i>С обрезкой лишних краев, точно до указанных размеров</i>
+														</label>
+													</div>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+										<div class="filters-block">
+											<div class="filters-block__title">Формат файла</div>
+											<div class="filters__item">
+												<div class="filters-radio">
+													<input type="radio" id="screenshot-format_1" name="screenshot-format">
+													<label for="screenshot-format_1">
+														<span></span>
+														<i>JPEG стандартный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text" value="92">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="screenshot-format_2" name="screenshot-format" checked>
+													<label for="screenshot-format_2">
+														<span></span>
+														<i>JPEG прогрессивный</i>
+													</label>
+													<div class="filters-subitem">
+														<div class="filters__name">С качеством:</div>
+														<div class="filters__description">Укажите значение от 1 до 100</div>
+														<div class="filters-input">
+															<input type="text" value="92">
+														</div>
+														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
+													</div><!--/filters-subitem-->
+												</div>
+												<div class="filters-radio">
+													<input type="radio" id="screenshot-format_3" name="screenshot-format">
+													<label for="screenshot-format_3">
+														<span></span>
+														<i>PNG-24 (без сжатия)</i>
+													</label>
+												</div>
+											</div><!--/filters__item-->
+										</div><!--/filters-block-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version screenshot-->
+							</form>
+						</div>
+						<div class="processing__content">
+							<div class="processing-add">
+								<h1 class="title">
+									<span>Перевести страницу сайта в PDF-документ онлайн</span>
+								</h1>
+								<form action="#" class="add-data">
+									<div class="add-data__item">
+										<div class="description">URL-адрес сайта или веб-страница:</div>
+										<input type="text" placeholder="Например, ">
+									</div>
+									<button class="btn">Ок</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/processing-->
+		</main>
+		<footer class="footer none">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="lang">
+						<div class="lang__open">
+							<span>Русский</span>
+							<img src="assets/images/arrow-small.svg" alt="">
+						</div>
+						<div class="dropdown-box">
+							<ul>
+								<li>
+									<a href="#">Русский</a>
+								</li>
+								<li>
+									<a href="#">Английский</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="copyright">© 2018 www.imgonline.com.ua</div>
+						<div class="social">
+							<a href="#" target="blank">
+								<svg>
+									<use xlink:href="#tg-icon"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="popup popup-help screenshot">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__content">
+					<div class="resize-help">
+						<h4 class="title title_center">Яркость и контрастность</h4>
+						<div class="text">
+							<p>Ещё можно изменить размер в: <a href="#">Пикселях</a>, <a href="#">Процентах</a>, <a href="#">Мегабайтах</a></p>
+							<p>Главное нужно указать картинку в формате jpg на вашем компьютере или телефоне, выбрать нужный размер в мегапикселях и нажать кнопку ОК. Остальные настройки выставлены по умолчанию.</p>
+							<p>При помощи этого онлайн инструмента можно уменьшить картинку до 0,01 мегапикселя, а также увеличить её до 20 мегапикселей. Один мегапиксель - это просто один миллион пикселей. Для того, чтобы узнать количество миллионов пикселей у любой фотографии, нужно лишь умножить её ширину на высоту в пикселях. Например, если есть картинка размером 1280x800 (ширина и высота в пикселях), то размер в мегапикселях можно подсчитать так: 1280 умножить на 800 и разделить на 1000000 (1 миллион). В результате получится число 1,024 - это и есть примерно 1 мегапиксель.</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка в формате jpg.</p>
+							<p>Если нет возможности узнать ширину и высоту фотографии в пикселях для подсчёта её размера в мегапикселях, то это можно <a href="#">узнать здесь</a> или просто после обработки этим онлайн инструментом (смотрите строку «Размер оригинала»).</p>
+							<p>Исходное изображение никак не изменяется. Вам будет предоставлена другая обработанная картинка.</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div><!--/popup-help-->
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/slick.min.js"></script>
+	<script src="assets/js/jquery.formstyler.min.js"></script>
+	<script src="assets/js/swipe-filters.js"></script>
+	<script src="assets/js/script.js"></script>
+
+
+</body>
+</html>
