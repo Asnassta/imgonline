@@ -210,6 +210,17 @@ $(document).ready(function() {
     });
   /*===========/toolbar active (show filters)=======*/
 
+  /*============Table-result (color)===========*/
+  $('.table-result__row').not('.multi-model .table-result__row').each(function(i, el){
+    color = $(this).find('div:nth-child(3)').html();
+    $(this).find('div:nth-child(2)').css('background', color);
+  });
+  $('.multi-model .table-result__row').each(function(i, el){
+    bgcolor = $(this).find('div:nth-child(3)').attr('data-color');
+    $(this).find('div:nth-child(2)').css('background', bgcolor);
+  });
+  /*============/table-result (color)===========*/
+
   /*=================Sliders==========================*/
   /*===========Slider-advertising============*/
   $('.advertising__content').slick({
