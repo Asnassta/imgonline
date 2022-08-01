@@ -299,13 +299,13 @@
 								</div>
 								<div class="toolbar-name">Создать QR-код </div>
 							</a><!--/toolbar-item-->
-							<a href="tools_unique-colors.html" class="toolbar-item" data-toolbar="unique-colors">
+							<a href="tools_unique-colors.html" class="toolbar-item link" data-toolbar="unique-colors">
 								<div class="toolbar-icon">
 									<img src="assets/images/convert-to.svg" alt="">
 								</div>
 								<div class="toolbar-name">Количество уникальных цветов </div>
 							</a><!--/toolbar-item-->
-							<a href="tools.html" class="toolbar-item link" data-toolbar="find-size">
+							<a href="identify-size_add.html" class="toolbar-item link" data-toolbar="find-size">
 								<div class="toolbar-icon">
 									<img src="assets/images/convert-to.svg" alt="">
 								</div>
@@ -1270,6 +1270,23 @@
 									</div>
 								</div><!--/filters-version bg-on-transparent-->
 								<div class="filters-version resize-sm">
+									<div class="filters-tools swipe-hide">
+										<a href="#" class="filters-tools__cancel">
+											<img src="assets/images/close_2.svg" alt="">
+										</a>
+										<div class="filters-tools__name">
+											<span>Изменить размер в см</span>
+											<a href="#" data-popup="resize-sm" class="help">
+												<svg>
+													<use xlink:href="#help-icon"></use>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="filters-tools__apply">
+											<img src="assets/images/check_2.svg" alt="">
+										</a>
+									</div><!--/filters-tools-->
+									<div class="filters__content swipe-content">
 										<div class="filters-block">
 											<div class="filters-block__title">Введите нужную ширину и высоту в пикселях</div>
 											<div class="filters__item">
@@ -1402,15 +1419,15 @@
 												<div class="filters__name">Копировать EXIF и другие метаданные?</div>
 												<div class="filters__row">
 													<div class="filters-radio">
-														<input type="radio" id="copy-resize-sm_yes" name="copy-resize-sm">
-														<label for="copy-resize-sm_yes">
+														<input type="radio" id="copy-radio_yes_centimeters" name="copy-radio_centimeters">
+														<label for="copy-radio_yes_centimeters">
 															<span></span>
 															<i>Да</i>
 														</label>
 													</div>
 													<div class="filters-radio">
-														<input type="radio" id="copy-resize-sm_no" name="copy-resize-sm" checked>
-														<label for="copy-resize-sm_no">
+														<input type="radio" id="copy-radio_no_centimeters" name="copy-radio_centimeters" checked>
+														<label for="copy-radio_no_centimeters">
 															<span></span>
 															<i>Нет</i>
 														</label>
@@ -1418,7 +1435,22 @@
 												</div>
 											</div><!--/filters__item-->
 										</div><!--/filters-block-->
-									</div><!--/filters-version resize-sm-->
+									</div>
+									<div class="filters-btn">
+										<button class="btn-orange hide swipe-fast" type="submit">
+											<img src="assets/images/check.svg" alt="">
+											<span>Преобразовать</span>
+										</button>
+									</div>
+									<div class="filters__foot">
+										<button type="reset" class="filters-reset">
+											<svg>
+												<use xlink:href="#close-small"></use>
+											</svg>
+											<span>вернуться к настройкам по умолчанию</span>
+										</button>
+									</div>
+								</div><!--/filters-version resize-sm-->
 								<div class="filters-version texture-change">
 									<div class="filters-tools swipe-hide">
 										<a href="#" class="filters-tools__cancel">
