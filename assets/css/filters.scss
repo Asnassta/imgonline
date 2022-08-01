@@ -137,6 +137,12 @@
 				text-decoration: underline;
 				color: $orange;
 			}
+			&.orange {
+				color: $orange;
+				&:hover {
+					color: $wh;
+				}
+			}
 		}
 	}
 	&__description {
@@ -499,6 +505,29 @@
 			line-height: 1.7;
 			&::placeholder {
 				color: #ACACAC;
+			}
+		}
+	}
+	&-date {
+		position: relative;
+		svg {
+			width: 24px;
+			height: 24px;
+			fill: none;
+			stroke: #ACACAC;
+			transition: all .2s linear;
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translateY(-50%);
+			z-index: 1;
+		}
+		input {
+			padding-right: 49px;
+		}
+		&.active {
+			svg {
+				stroke: $bl;
 			}
 		}
 	}

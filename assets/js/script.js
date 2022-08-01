@@ -221,6 +221,30 @@ $(document).ready(function() {
   });
   /*============/table-result (color)===========*/
 
+  /*=============Filters-date===========*/
+  $('.filters-date input').each(function() {
+     if($(this).val().length == 0)
+    {
+      $(this).parent().removeClass('active');
+    }
+    else
+    {
+      $(this).parent().addClass('active');
+    }
+  });
+
+   $('.filters-date input').on('input', function() {
+    if($(this).val().length == 0)
+    {
+      $(this).parent().removeClass('active');
+    }
+    else
+    {
+      $(this).parent().addClass('active');
+    }
+  });
+  /*=============/filters-date===========*/
+
   /*=================Sliders==========================*/
   /*===========Slider-advertising============*/
   $('.advertising__content').slick({

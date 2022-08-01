@@ -524,6 +524,12 @@
 	&-add {
 		padding-top: 30px;
 	}
+	&-info {
+		padding-top: 165px;
+		.subtitle {
+			font-weight: 400;
+		}
+	}
 	&-small {
 		.processing__content {
 			max-height: calc(100vh - 240px);
@@ -1712,6 +1718,11 @@
 		}
 		&-pt_min {
 			padding-top: 90px;
+		}
+	}
+	.processing {
+		&-info {
+			padding-top: 20px;
 		}
 	}
 	.advertising {

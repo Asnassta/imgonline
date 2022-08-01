@@ -818,6 +818,11 @@
 .processing-add {
   padding-top: 30px; }
 
+.processing-info {
+  padding-top: 165px; }
+  .processing-info .subtitle {
+    font-weight: 400; }
+
 .processing-small .processing__content {
   max-height: calc(100vh - 240px); }
 
@@ -1875,6 +1880,8 @@
     padding-top: 90px; }
   .page-pt_min {
     padding-top: 90px; }
+  .processing-info {
+    padding-top: 20px; }
   .advertising .slick-list {
     padding-right: 8%; }
   .gallery-show__inner {
@@ -2091,6 +2098,10 @@
       .filters__name a:hover {
         text-decoration: underline;
         color: #FF844C; }
+      .filters__name a.orange {
+        color: #FF844C; }
+        .filters__name a.orange:hover {
+          color: #fff; }
   .filters__description {
     font-family: "Inter", sans-serif;
     font-size: 12px;
@@ -2399,6 +2410,27 @@
         color: #ACACAC; }
       .filters-input input::placeholder {
         color: #ACACAC; }
+  .filters-date {
+    position: relative; }
+    .filters-date svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: #ACACAC;
+      -webkit-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      z-index: 1; }
+    .filters-date input {
+      padding-right: 49px; }
+    .filters-date.active svg {
+      stroke: #28252F; }
   .filters-textarea {
     margin-top: 4px; }
     .filters-textarea textarea {
