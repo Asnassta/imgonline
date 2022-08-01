@@ -613,6 +613,10 @@
       opacity: 0;
       position: absolute;
       z-index: -10; }
+    .add-file_orange label {
+      background-color: #FF844C; }
+      .add-file_orange label:hover {
+        background-color: #E75C1C; }
 
 .add-btn {
   position: relative; }
@@ -1048,6 +1052,11 @@
     -o-object-fit: cover;
     object-fit: cover; }
 
+.identify .copy-box .file-photo {
+  min-height: auto; }
+  .identify .copy-box .file-photo img {
+    min-height: auto; }
+
 .identify-panel {
   margin-top: 20px;
   display: -webkit-box;
@@ -1093,6 +1102,40 @@
     color: #FF844C; }
 
 /*==========/identify=======*/
+/*========Copy-box============*/
+.copy-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .copy-box > * {
+    width: 25%;
+    margin-left: 0; }
+    .copy-box > *:first-child {
+      margin-right: 85px;
+      position: relative; }
+      .copy-box > *:first-child:after {
+        content: "";
+        background: url("../images/arrow-long.svg") center no-repeat;
+        background-size: contain;
+        width: 45px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        right: -65px;
+        z-index: 1;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); }
+  .copy-box .file-photo {
+    height: 266px;
+    min-height: auto; }
+    .copy-box .file-photo img {
+      height: auto; }
+
+/*========copy-box============*/
 /*==========Result===========*/
 .result .title {
   max-width: 660px;
@@ -1554,6 +1597,8 @@
     width: calc(50% - 20px); }
   .file .add-btn {
     left: calc(65% - 10px); }
+  .copy-box > * {
+    width: calc(50% - 42.5px); }
   .login-box {
     min-height: calc(100vh - 280px); } }
 
@@ -1789,6 +1834,22 @@
     .file > * {
       width: 100%;
       margin-left: 0; }
+  .copy-box {
+    display: block; }
+    .copy-box > * {
+      width: 100%; }
+      .copy-box > *:first-child {
+        margin-right: 0;
+        margin-bottom: 85px; }
+        .copy-box > *:first-child:after {
+          -webkit-transform-origin: 100% 100%;
+          -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+          -webkit-transform: rotate(90deg) translateY(50%);
+          -ms-transform: rotate(90deg) translateY(50%);
+          transform: rotate(90deg) translateY(50%);
+          top: calc(100% + 40px);
+          right: 50%; }
   .table-result__inner.one {
     width: auto; }
     .table-result__inner.one .table-result__row {
@@ -2861,6 +2922,8 @@ h4 {
   text-align: center; }
   .subtitle span {
     color: #FF844C; }
+    .subtitle span.uppercase {
+      text-transform: uppercase; }
   .subtitle-gray {
     font-family: "Inter", sans-serif;
     font-size: 14px;

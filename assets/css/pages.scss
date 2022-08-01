@@ -309,6 +309,14 @@
      		position: absolute;
      		z-index: -10;
 		}
+		&_orange {
+			label {
+				background-color: $orange;
+				&:hover {
+					background-color: $d-orange;
+				}
+			}
+		}
 	}
 }
 
@@ -738,6 +746,14 @@
 			object-fit: cover;
 		}
 	}
+	.copy-box {
+		.file-photo {
+			min-height: auto;
+			img {
+				min-height: auto;
+			}
+		}
+	}
 	&-panel {
 		margin-top: 20px;
 		display: flex;
@@ -775,6 +791,40 @@
 	}
 }
 /*==========/identify=======*/
+
+/*========Copy-box============*/
+.copy-box {
+	display: flex;
+	justify-content: center;
+	>* {
+		width: 25%;
+		margin-left: 0;
+		&:first-child {
+			margin-right: 85px;
+			position: relative;
+			&:after {
+				content: "";
+				background: url("../images/arrow-long.svg") center no-repeat;
+   				background-size: contain;
+   				width: 45px;
+   				height: 20px;
+   				position: absolute;
+   				top: 50%;
+   				right: -65px;
+   				z-index: 1;
+   				transform: translateY(-50%);
+			}
+		}
+	}
+	.file-photo {
+		height: 266px;
+		min-height: auto;
+		img {
+			height: auto;
+		}
+	}
+}
+/*========copy-box============*/
 
 /*==========Result===========*/
 .result {
@@ -1268,6 +1318,11 @@
 			left: calc(65% - 10px);
 		}
 	}
+	.copy-box {
+		>* {
+			width: calc(50% - 42.5px);
+		}
+	}
 	.login {
 		&-box {
 			min-height: calc(100vh - 280px);
@@ -1587,6 +1642,23 @@
 		>* {
 			width: 100%;
 			margin-left: 0;
+		}
+	}
+
+	.copy-box {
+		display: block;
+		>* {
+			width: 100%;
+			&:first-child {
+				margin-right: 0;
+				margin-bottom: 85px;
+				&:after {
+					transform-origin: 100% 100%;
+					transform: rotate(90deg) translateY(50%);
+					top: calc(100% + 40px);
+					right: 50%;
+				}
+			}
 		}
 	}
 
