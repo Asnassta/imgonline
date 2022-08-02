@@ -232,7 +232,6 @@ $(document).ready(function() {
       $(this).parent().addClass('active');
     }
   });
-
    $('.filters-date input').on('input', function() {
     if($(this).val().length == 0)
     {
@@ -244,6 +243,13 @@ $(document).ready(function() {
     }
   });
   /*=============/filters-date===========*/
+
+  /*===========Palette-color===============*/
+    $('.palette-color-box').each(function(i, el){
+      BgColor = $(this).find('div:nth-child(3) span').html();
+      $(this).css('background', BgColor);
+  });
+  /*===========/palette-color===============*/
 
   /*=================Sliders==========================*/
   /*===========Slider-advertising============*/

@@ -1582,6 +1582,50 @@
       margin-bottom: 0; }
 
 /*=========/guide==========*/
+/*==========Palette-color==========*/
+.palette {
+  margin-bottom: 50px; }
+  .palette .title {
+    max-width: 660px;
+    margin: 0 auto; }
+  .palette .subtitle {
+    font-weight: 400;
+    max-width: 680px;
+    margin: 10px auto 0; }
+  .palette .download-box {
+    margin: 20px auto 90px; }
+  .palette .btn-orange {
+    max-width: 100%; }
+    .palette .btn-orange span {
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+  .palette-color {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -1px;
+    margin-bottom: -1px; }
+    .palette-color > * {
+      width: calc(16.66666% - 1px);
+      margin-left: 1px;
+      margin-bottom: 1px; }
+    .palette-color-box {
+      padding: 10px 16px; }
+      .palette-color-box > * {
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #28252F;
+        line-height: 1.21;
+        margin-bottom: 10px; }
+      .palette-color-box.white > * {
+        color: #fff; }
+
+/*==========/palette-color==========*/
 /*==========Adaptive============*/
 @media (max-width: 1350px) {
   .personal-file {
@@ -1604,6 +1648,10 @@
     left: calc(65% - 10px); }
   .copy-box > * {
     width: calc(50% - 42.5px); }
+  .palette-color > * {
+    width: calc(20% - 1px); }
+  .palette .download-box {
+    margin-bottom: 40px; }
   .login-box {
     min-height: calc(100vh - 280px); } }
 
@@ -1619,7 +1667,9 @@
   .guide {
     padding: 20px 0 100px; }
     .guide-header {
-      margin-bottom: 70px; } }
+      margin-bottom: 70px; }
+  .palette-color > * {
+    width: calc(25% - 1px); } }
 
 @media (max-width: 860px) {
   .page_pb {
@@ -1828,6 +1878,8 @@
       border: 3px solid #7E52AF; } }
 
 @media (max-width: 765px) {
+  .palette-color > * {
+    width: calc(50% - 1px); }
   .advertising .slick-list {
     padding-right: 15%; }
   .processing__content {
@@ -1914,6 +1966,11 @@
 @media (max-width: 414px) {
   .page_pb {
     padding-bottom: 20px; }
+  .palette-color {
+    margin-left: 0; }
+    .palette-color > * {
+      width: 100%;
+      margin-left: 0; }
   .advertising .slick-list {
     padding-right: 25%; }
   .download-box .btn-orange {
