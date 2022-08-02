@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link href="assets/css/jquery.formstyler.css" rel="stylesheet" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>FOTOdis</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="calendar" viewBox="0 0 24 24">
+			<g>
+				<path d="M20 10V7C20 5.89543 19.1046 5 18 5H6C4.89543 5 4 5.89543 4 7V10M20 10V19C20 20.1046 19.1046 21 18 21H6C4.89543 21 4 20.1046 4 19V10M20 10H4M8 3V7M16 3V7" stroke-width="2" stroke-linecap="round"/>
+			</g>
+		</symbol>
+		<symbol id="arrow-big" viewBox="0 0 16 16">
+			<g>
+				<path d="M15 8H1M1 8L8 15M1 8L8 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="close-small" viewBox="0 0 16 16">
+			<g>
+				<path d="M7.99998 14.6667C11.6819 14.6667 14.6666 11.6819 14.6666 8.00001C14.6666 4.31811 11.6819 1.33334 7.99998 1.33334C4.31808 1.33334 1.33331 4.31811 1.33331 8.00001C1.33331 11.6819 4.31808 14.6667 7.99998 14.6667Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M6 6L8 8M8 8L10 10M8 8L10 6M8 8L6 10" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="close-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M18 6L12 12M12 12L6 18M12 12L6 6M12 12L18 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="help-icon" viewBox="0 0 20 20">
+			<g>
+				<path d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10 14.5H10.009" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M7.38086 7.3C7.59245 6.6985 8.0101 6.1913 8.55982 5.86822C9.10954 5.54514 9.75587 5.42704 10.3843 5.53484C11.0128 5.64264 11.5828 5.96937 11.9934 6.45718C12.4041 6.94498 12.6288 7.56237 12.6279 8.2C12.6279 10.3192 9.99986 9.98362 9.99986 11.8"  stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="tg-icon" viewBox="0 0 15 14">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M10.6678 12.942C11.5065 13.309 11.8211 12.5401 11.8211 12.5401L14.0403 1.39168C14.0228 0.640292 13.0093 1.09462 13.0093 1.09462L0.585255 5.96988C0.585255 5.96988 -0.00886325 6.17957 0.0435589 6.54653C0.0959811 6.91348 0.567781 7.08822 0.567781 7.08822L3.69564 8.13667C3.69564 8.13667 4.63924 11.2296 4.83145 11.8237C5.00619 12.4003 5.16346 12.4178 5.16346 12.4178C5.3382 12.4877 5.49547 12.3654 5.49547 12.3654L7.52246 10.5306L10.6678 12.942ZM11.2093 3.36622C11.2093 3.36622 11.6461 3.10411 11.6286 3.36622C11.6286 3.36622 11.6985 3.40117 11.4714 3.64581C11.2617 3.8555 6.31653 8.29391 5.65252 8.88803C5.60009 8.92298 5.56515 8.9754 5.56515 9.04529L5.37293 10.6879C5.33798 10.8626 5.11082 10.8801 5.0584 10.7228L4.23712 8.0318C4.20217 7.92695 4.23712 7.80464 4.34196 7.73474L11.2093 3.36622Z"/>
+			</g>
+		</symbol>
+		<symbol id="account" viewBox="0 0 14 16">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M7 9C4.09641 9 2 11.1517 2 13.5V14H12V13.5C12 11.1517 9.90359 9 7 9ZM0 16V13.5C0 9.91015 3.13401 7 7 7C10.866 7 14 9.91015 14 13.5V16H0Z"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M7 6C8.10457 6 9 5.10457 9 4C9 2.89543 8.10457 2 7 2C5.89543 2 5 2.89543 5 4C5 5.10457 5.89543 6 7 6ZM7 8C9.20914 8 11 6.20914 11 4C11 1.79086 9.20914 0 7 0C4.79086 0 3 1.79086 3 4C3 6.20914 4.79086 8 7 8Z"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<a href="#" class="logo">
+						<img src="assets/images/logo.svg" alt="">
+						<span>FOTOdis.ru</span>
+					</a>
+					<nav class="nav">
+						<a href="#" class="nav__link">Сжать</a>
+						<a href="#" class="nav__link">Изменить размер</a>
+						<a href="#" class="nav__link">Конвертер</a>
+						<a href="#" class="nav__link">Редактор EXIF</a>
+						<a href="#" class="nav__link">Эффекты</a>
+						<a href="#" class="nav__link">Улучшить</a>
+						<a href="#" class="nav__link">Инструменты</a>
+					</nav>
+					<div class="account">
+						<a href="#" class="account__btn">
+							<span class="account__name">Личный кабинет</span>
+							<span class="account__icon">
+								<svg>
+									<use xlink:href="#account"></use>
+								</svg>
+							</span>
+						</a>
+						<div class="dropdown-box">
+							<ul>
+								<li>
+									<a href="#">Регистрация</a>
+								</li>
+								<li>
+									<a href="#">Войти</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header><!--/header-->
+		<main class="main page page_full page_palette-color">
+			<section class="palette">
+				<div class="container">
+					<h1 class="title">Палитра цветов с названиями</h1>
+					<div class="subtitle">Палитра из 137 цветов с названиями, RGB значениями и HEX (HTML) кодом.</div>
+					<div class="download-box">
+						<a href="#" class="btn-orange">
+							<img src="assets/images/download.svg" alt="">
+							<span>Скачать таблицу</span>
+						</a>
+					</div>
+					<div class="palette-color">
+						<div class="palette-color-box white">
+							<div>Тёмно-бордовый</div>
+							<div>RGB 128,0,0</div>
+							<div>HEX <span>#800000</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Тёмно-красный	</div>
+							<div>RGB 139,0,0</div>
+							<div>HEX <span>#8B0000</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Огнеупорный кирпич</div>
+							<div>RGB 178,34,34</div>
+							<div>HEX <span>#B22222</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Красный</div>
+							<div>RGB 255,0,0</div>
+							<div>HEX <span>#FF0000</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Лососевый</div>
+							<div>RGB 250,128,114</div>
+							<div>HEX <span>#FA8072</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Томатный</div>
+							<div>RGB 255,99,71</div>
+							<div>HEX <span>#FF6347</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Коралловый</div>
+							<div>RGB 255,127,80</div>
+							<div>HEX <span>#FF7F50</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Оранжево-красный</div>
+							<div>RGB 255,69,0</div>
+							<div>HEX <span>#FF4500</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Шоколадный</div>
+							<div>RGB 210,105,30</div>
+							<div>HEX <span>#D2691E</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Песочно-коричневый</div>
+							<div>RGB 244,164,96</div>
+							<div>HEX <span>#F4A460</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Тёмно-оранжевый</div>
+							<div>RGB 255,140,0</div>
+							<div>HEX <span>#FF8C00</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Оранжевый</div>
+							<div>RGB 255,165,0</div>
+							<div>HEX <span>#FFA500</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Тёмный золотарник</div>
+							<div>RGB 184,134,11</div>
+							<div>HEX <span>#B8860B</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Золотарниковый</div>
+							<div>RGB 218,165,32</div>
+							<div>HEX <span>#DAA520</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Золотой</div>
+							<div>RGB 255,215,0</div>
+							<div>HEX <span>#FFD700</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Оливковый</div>
+							<div>RGB 128,128,0</div>
+							<div>HEX <span>#808000</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Жёлтый</div>
+							<div>RGB 255,255,0</div>
+							<div>HEX <span>#FFFF00</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Жёлто-зелёный</div>
+							<div>RGB 154,205,50</div>
+							<div>HEX <span>#9ACD32</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Зелёно-жёлтый</div>
+							<div>RGB 173,255,47</div>
+							<div>HEX <span>#ADFF2F</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Шартрёз (ликёр)</div>
+							<div>RGB 127,255,0</div>
+							<div>HEX <span>#7FFF00</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Зелёный газон</div>
+							<div>RGB 124,252,0</div>
+							<div>HEX <span>#7CFC00</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Зелёный</div>
+							<div>RGB 0,128,0</div>
+							<div>HEX <span>#008000</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Лаймовый</div>
+							<div>RGB 0,255,0</div>
+							<div>HEX <span>#00FF00</span></div>
+						</div><div class="palette-color-box">
+							<div>Зелёный лайм</div>
+							<div>RGB 50,205,50</div>
+							<div>HEX <span>#32CD32</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Весенне зелёный</div>
+							<div>RGB 0,255,127</div>
+							<div>HEX <span>#00FF7F</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Весенне-зелёный нейтральный</div>
+							<div>RGB 0,250,154</div>
+							<div>HEX <span>#00FA9A</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Бирюзовый</div>
+							<div>RGB 64,224,208</div>
+							<div>HEX <span>#40E0D0</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Светло-зелёное море</div>
+							<div>RGB 32,178,70</div>
+							<div>HEX <span>#20B2AA</span></div>
+						</div><div class="palette-color-box">
+							<div>Бирюзовый нейтральный</div>
+							<div>RGB 72,209,204</div>
+							<div>HEX <span>#48D1CC</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Тёмный циан</div>
+							<div>RGB 0,139,139</div>
+							<div>HEX <span>#008B8B</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Морская волна</div>
+							<div>RGB 0,255,255</div>
+							<div>HEX <span>#00FFFF</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Тёмно-бирюзовый</div>
+							<div>RGB 0,206,209</div>
+							<div>HEX <span>#00CED1</span></div>
+						</div><div class="palette-color-box">
+							<div>Небесно-голубой тёмный</div>
+							<div>RGB 0,191,255</div>
+							<div>HEX <span>#00BFFF</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Обманчивый синий</div>
+							<div>RGB 30,144,255</div>
+							<div>HEX <span>#1E90FF</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Королевский синий</div>
+							<div>RGB 65,105,225</div>
+							<div>HEX <span>#4169E1</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Военно-морского флота</div>
+							<div>RGB 0,0,128</div>
+							<div>HEX <span>#000080</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Тёмно-синий</div>
+							<div>RGB 0,0,139</div>
+							<div>HEX <span>#00008B</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Cиний нейтральный</div>
+							<div>RGB 0,0,205</div>
+							<div>HEX <span>#0000CD</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Синий</div>
+							<div>RGB 0,0,255</div>
+							<div>HEX <span>#0000FF</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Сине-фиолетовый</div>
+							<div>RGB 138,43,226</div>
+							<div>HEX <span>#8A2BE2</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Тёмная орхидея</div>
+							<div>RGB 153,50,204</div>
+							<div>HEX <span>#9932CC</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Тёмно-фиолетовый</div>
+							<div>RGB 148,0,211</div>
+							<div>HEX <span>#9400D3</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Фиолетовый</div>
+							<div>RGB 128,0,128</div>
+							<div>HEX <span>#800080</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Тёмный маджента</div>
+							<div>RGB 139,0,139</div>
+							<div>HEX <span>#8B008B</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Маджента</div>
+							<div>RGB 255,0,255</div>
+							<div>HEX <span>#FF00FF</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Фиолетово-красный нейтральный</div>
+							<div>RGB 199,21,133</div>
+							<div>HEX <span>#C71585</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Насыщенный розовый</div>
+							<div>RGB 255,20,147</div>
+							<div>HEX <span>#FF1493</span></div>
+						</div><div class="palette-color-box">
+							<div>Ярко-розовый</div>
+							<div>RGB 255,105,80</div>
+							<div>HEX <span>#FF69B4</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Малиновый</div>
+							<div>RGB 220,20,60</div>
+							<div>HEX <span>#DC143C</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Коричневый</div>
+							<div>RGB 165,42,42</div>
+							<div>HEX <span>#A52A2A</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Красный индийский</div>
+							<div>RGB 205,92,92</div>
+							<div>HEX <span>#CD5C5C</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Розово-коричневый</div>
+							<div>RGB 188,143,143</div>
+							<div>HEX <span>#BC8F8F</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Светло-коралловый</div>
+							<div>RGB 240,128,128</div>
+							<div>HEX <span>#F08080</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Снег</div>
+							<div>RGB 255,250,250</div>
+							<div>HEX <span>#FFFAFA</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Туманная роза</div>
+							<div>RGB 255,228,225</div>
+							<div>HEX <span>#FFE4E1</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Тёмный лосось</div>
+							<div>RGB 233,150,122</div>
+							<div>HEX <span>#E9967A</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Светлый лосось</div>
+							<div>RGB 255,160,122</div>
+							<div>HEX <span>#FFA07A</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Охра</div>
+							<div>RGB 160,82,45</div>
+							<div>HEX <span>#A0522D</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Морская ракушка</div>
+							<div>RGB 255,245,238</div>
+							<div>HEX <span>#FFF5EE</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Седло Браун</div>
+							<div>RGB 139,69,19</div>
+							<div>HEX <span>#8B4513</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Персиковая пудра</div>
+							<div>RGB 255,218,185</div>
+							<div>HEX <span>#FFDAB9</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Перу</div>
+							<div>RGB 205,133,63</div>
+							<div>HEX <span>#CD853F</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Текстильный</div>
+							<div>RGB 250,240,230</div>
+							<div>HEX <span>#FAF0E6</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Бисквит</div>
+							<div>RGB 255,228,196</div>
+							<div>HEX <span>#FFE4C4</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Плотное дерево</div>
+							<div>RGB 222,184,135</div>
+							<div>HEX <span>#DEB887</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Загар</div>
+							<div>RGB 210,180,140</div>
+							<div>HEX <span>#D2B48C</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Античный белый</div>
+							<div>RGB 255,235,215</div>
+							<div>HEX <span>#FAEBD7</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Белый навахо</div>
+							<div>RGB 255,222,173</div>
+							<div>HEX <span>#FFDEAD</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Бланшированный миндаль</div>
+							<div>RGB 255,235,205</div>
+							<div>HEX <span>#FFEBCD</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Побег папайи</div>
+							<div>RGB 255,239,213</div>
+							<div>HEX <span>#FFEFD5</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Мокасиновый</div>
+							<div>RGB 255,228,181</div>
+							<div>HEX <span>#FFE4B5</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Пшеничный</div>
+							<div>RGB 245,222,179</div>
+							<div>HEX <span>#F5DEB3</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Старое кружево</div>
+							<div>RGB 253,245,230</div>
+							<div>HEX <span>#FDF5E6</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Цветочный белый</div>
+							<div>RGB 255,250,240</div>
+							<div>HEX <span>#FFFAF0</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Кукурузный волос</div>
+							<div>RGB 255,248,220</div>
+							<div>HEX <span>#FFF8DC</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Хаки</div>
+							<div>RGB 240,230,140</div>
+							<div>HEX <span>#F0E68C</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Лимонный шифон</div>
+							<div>RGB 255,250,205</div>
+							<div>HEX <span>#FFFACD</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Бледный золотарник</div>
+							<div>RGB 238,232,170</div>
+							<div>HEX <span>#EEE8AA</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Тёмный хаки</div>
+							<div>RGB 189,183,107</div>
+							<div>HEX <span>#BDB76B</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Бежевый</div>
+							<div>RGB 245,245,220</div>
+							<div>HEX <span>#F5F5DC</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Светло-жёлтый золотарник</div>
+							<div>RGB 250,250,210</div>
+							<div>HEX <span>#FAFAD2</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Светло-жёлтый</div>
+							<div>RGB 255,255,224</div>
+							<div>HEX <span>#FFFFE0</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Слоновая кость</div>
+							<div>RGB 255,255,240</div>
+							<div>HEX <span>#FFFFF0</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Тёмно-оливковый</div>
+							<div>RGB 107,142,35</div>
+							<div>HEX <span>#6B8E23</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Тёмно-оливковый зелёный</div>
+							<div>RGB 85,107,47</div>
+							<div>HEX <span>#556B2F</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Тёмно-зелёное море</div>
+							<div>RGB 143,188,143</div>
+							<div>HEX <span>#8FBC8F</span></div>
+						</div><div class="palette-color-box white">
+							<div>Тёмно-зелёный</div>
+							<div>RGB 0,100,0</div>
+							<div>HEX <span>#006400</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Зелёный лесной</div>
+							<div>RGB 34,139,34</div>
+							<div>HEX <span>#228B22</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Светло-зелёный</div>
+							<div>RGB 144,238,144</div>
+							<div>HEX <span>#90EE90</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Бледно-зелёный</div>
+							<div>RGB 152,251,152</div>
+							<div>HEX <span>#98FB98</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Медвяная роса</div>
+							<div>RGB 240,255,240</div>
+							<div>HEX <span>#F0FFF0</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Зелёное море</div>
+							<div>RGB 46,139,87</div>
+							<div>HEX <span>#2E8B57</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Зелёное море, нейтральный</div>
+							<div>RGB 60,179,113</div>
+							<div>HEX <span>#3CB371</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Мятный крем</div>
+							<div>RGB 245,255,250</div>
+							<div>HEX <span>#F5FFFA</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Аквамариновый нейтральный</div>
+							<div>RGB 102,205,170</div>
+							<div>HEX <span>#66CDAA</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Аквамариновый</div>
+							<div>RGB 127,255,212</div>
+							<div>HEX <span>#7FFFD4</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Тёмный грифельно-серый</div>
+							<div>RGB 47,79,79</div>
+							<div>HEX <span>#2F4F4F</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Бледно-бирюзовый</div>
+							<div>RGB 179,238,238</div>
+							<div>HEX <span>#AFEEEE</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Светло-голубой</div>
+							<div>RGB 224,255,255</div>
+							<div>HEX <span>#E0FFFF</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Лазурный</div>
+							<div>RGB 245,255,255</div>
+							<div>HEX <span>#F0FFFF</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Серо-синий</div>
+							<div>RGB 95,158,160</div>
+							<div>HEX <span>#5F9EA0</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Пыльный голубой</div>
+							<div>RGB 176,224,230</div>
+							<div>HEX <span>#B0E0E6</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Светло-синий</div>
+							<div>RGB 173,216,230</div>
+							<div>HEX <span>#ADD8E6</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Небесно-голубой</div>
+							<div>RGB 135,206,235</div>
+							<div>HEX <span>#87CEEB</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Небесно-голубой светлый</div>
+							<div>RGB 135,206,250</div>
+							<div>HEX <span>#87CEFA</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Синяя сталь</div>
+							<div>RGB 70,130,180</div>
+							<div>HEX <span>#4682B4</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Синяя Элис</div>
+							<div>RGB 240,248,255</div>
+							<div>HEX <span>#F0F8FF</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Серый шифер</div>
+							<div>RGB 119,136,153</div>
+							<div>HEX <span>#778899</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Светло-серый шифер</div>
+							<div>RGB 119,136,153</div>
+							<div>HEX <span>#778899</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Светло-стальной синий</div>
+							<div>RGB 176,196,222</div>
+							<div>HEX <span>#B0C4DE</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Васильковый голубой</div>
+							<div>RGB 100,149,237</div>
+							<div>HEX <span>#6495ED</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Лаванда</div>
+							<div>RGB 230,230,250</div>
+							<div>HEX <span>#E6E6FA</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Призрачно-белый</div>
+							<div>RGB 248,248,255</div>
+							<div>HEX <span>#F8F8FF</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Полуночный синий</div>
+							<div>RGB 25,25,112</div>
+							<div>HEX <span>#191970</span></div>
+						</div><div class="palette-color-box white">
+							<div>Аспидно-синий</div>
+							<div>RGB 106,90,205</div>
+							<div>HEX <span>#6A5ACD</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Тёмный аспидно-синий</div>
+							<div>RGB 72,61,139</div>
+							<div>HEX <span>#483D8B</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Нейтральный аспидно-синий</div>
+							<div>RGB 123,104,238</div>
+							<div>HEX <span>#7B68EE</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Фиолетовый нейтральный</div>
+							<div>RGB 147,112,219</div>
+							<div>HEX <span>#9370DB</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Индиго</div>
+							<div>RGB 75,0,130</div>
+							<div>HEX <span>#4B0082</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Нейтральный цвет орхидеи</div>
+							<div>RGB 186,85,211</div>
+							<div>HEX <span>#BA55D3</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Слива светлая</div>
+							<div>RGB 221,160,221</div>
+							<div>HEX <span>#DDA0DD</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Розово-фиолетовый</div>
+							<div>RGB 238,130,238</div>
+							<div>HEX <span>#EE82EE</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Чертополох</div>
+							<div>RGB 216,191,216</div>
+							<div>HEX <span>#D8BFD8</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Орхидея</div>
+							<div>RGB 218,112,214</div>
+							<div>HEX <span>#DA70D6</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Розово-лавандовый</div>
+							<div>RGB 255,240,245</div>
+							<div>HEX <span>#FFF0F5</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Лиловый</div>
+							<div>RGB 219,112,147</div>
+							<div>HEX <span>#DB7093</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Розовый</div>
+							<div>RGB 255,192,203</div>
+							<div>HEX <span>#FFC0CB</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Розовый</div>
+							<div>RGB </div>
+							<div>HEX <span>#FFC0CB</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Светло-розовый</div>
+							<div>RGB 255,182,193</div>
+							<div>HEX <span>#FFB6C1</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Чёрный</div>
+							<div>RGB 0,0,0</div>
+							<div>HEX <span>#000000</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Тускло-серый</div>
+							<div>RGB 105,105,105</div>
+							<div>HEX <span>#696969</span></div>
+						</div>
+						<div class="palette-color-box white">
+							<div>Серый</div>
+							<div>RGB 128,128,128</div>
+							<div>HEX <span>#808080</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Тёмно-серый</div>
+							<div>RGB 169,169,169</div>
+							<div>HEX <span>#A9A9A9</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Серебряный</div>
+							<div>RGB 192,192,192</div>
+							<div>HEX <span>#C0C0C0</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Светло-серый</div>
+							<div>RGB 211,211,211</div>
+							<div>HEX <span>#D3D3D3</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Геинсборо</div>
+							<div>RGB 220,220,220</div>
+							<div>HEX <span>#DCDCDC</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Белый дым</div>
+							<div>RGB 245,245,245</div>
+							<div>HEX <span>#F5F5F5</span></div>
+						</div>
+						<div class="palette-color-box">
+							<div>Белый</div>
+							<div>RGB 255,255,255</div>
+							<div>HEX <span>#FFFFFF</span></div>
+						</div>
+					</div><!--/palette-color-->
+				</div>
+			</section><!--/palette-->
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="lang">
+						<div class="lang__open">
+							<span>Русский</span>
+							<img src="assets/images/arrow-small.svg" alt="">
+						</div>
+						<div class="dropdown-box">
+							<ul>
+								<li>
+									<a href="#">Русский</a>
+								</li>
+								<li>
+									<a href="#">Английский</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="copyright">© 2022 fotodis.ru</div>
+						<div class="social">
+							<a href="#" target="blank">
+								<svg>
+									<use xlink:href="#tg-icon"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/slick.min.js"></script>
+	<script src="assets/js/jquery.formstyler.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
