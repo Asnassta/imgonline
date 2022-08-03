@@ -622,7 +622,7 @@
 			max-height: 340px;
 		}
 		li {
-			max-width: 240px;
+			//max-width: 240px;
 			cursor: pointer;
 			padding: 5px 15px;
 			font-family: $ff;
@@ -641,7 +641,7 @@
 				height: 1px;
 				padding: 0;
 				margin: 5px 0 5px 15px;
-				width: 100%;
+				width: calc(100% - 30px);
 				background-color: #ACACAC;
 				&:first-child {
 					display: none;
@@ -668,6 +668,52 @@
 	}
 }
 /*========/jq-selectbox=======*/
+
+/*============Generate-field==========*/
+.generate-field {
+	margin-bottom: 15px;
+	.filters-input {
+		margin-bottom: 12px;
+	}
+	&-btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		span {
+			&:first-child {
+				width: 24px;
+				flex: 0 0 24px;
+				height: 24px;
+				background-color: $bl;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: all .2s linear;
+				margin-right: 10px;
+				img {
+					width: 9.6px;
+					height: 9.6px;
+				}
+			}
+			&:nth-child(2) {
+				font-family: $ff;
+				font-size: 14px;
+				font-weight: 600;
+				color: $wh;
+				line-height: $lh;
+			}
+		}
+		&:hover {
+			span {
+				&:first-child {
+					background-color: $lblue;
+				}
+			}
+		}
+	}
+}
+/*============/generate-field==========*/
 
 /*============Adaptive==========*/
 @media(max-width: 1200px) {

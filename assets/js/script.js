@@ -251,6 +251,20 @@ $(document).ready(function() {
   });
   /*===========/palette-color===============*/
 
+  /*======Table-editor (dropdown)=============*/
+  $(".table-editor-open").on("click", function() {
+    $(this).next().slideToggle(555);
+    $(this).toggleClass('active');
+  });
+  /*==========/table-editor (dropdown)=========*/
+
+  /*=======Generate-field=======*/
+  $(".generate-field-btn").on("click", function() {
+
+    $('.generate-field').append('<div class="filters-input filters-date"><input type="text" placeholder="Выберите дату и время"><svg><use xlink:href="#calendar"></use></svg></div>');
+  });
+  /*=======/generate-field=======*/
+
   /*=================Sliders==========================*/
   /*===========Slider-advertising============*/
   $('.advertising__content').slick({
