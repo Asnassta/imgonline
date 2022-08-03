@@ -1841,6 +1841,9 @@
 }
 
 @media(max-width: 765px) {
+	.page {
+		padding-top: 90px;
+	}
 	.palette {
 		&-color {
 			>* {
@@ -1904,6 +1907,13 @@
 
 	.table-editor {
 		overflow-x: auto;
+		&-open {
+			padding: 10px 15px 10px 50px;
+			&:after {
+				right: auto;
+				left: 15px;
+			}
+		}
 	}
 
 	.personal {

@@ -2008,6 +2008,8 @@
       border: 3px solid #7E52AF; } }
 
 @media (max-width: 765px) {
+  .page {
+    padding-top: 90px; }
   .palette-color > * {
     width: calc(50% - 1px); }
   .advertising .slick-list {
@@ -2046,6 +2048,11 @@
         width: 100%; }
   .table-editor {
     overflow-x: auto; }
+    .table-editor-open {
+      padding: 10px 15px 10px 50px; }
+      .table-editor-open:after {
+        right: auto;
+        left: 15px; }
   .personal-file > * {
     width: calc(50% - 20px); }
   .guide-header {
@@ -2765,7 +2772,8 @@
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
     .generate-field-btn span:first-child {
       width: 24px;
       -webkit-box-flex: 0;

@@ -221,29 +221,6 @@ $(document).ready(function() {
   });
   /*============/table-result (color)===========*/
 
-  /*=============Filters-date===========*/
-  $('.filters-date input').each(function() {
-     if($(this).val().length == 0)
-    {
-      $(this).parent().removeClass('active');
-    }
-    else
-    {
-      $(this).parent().addClass('active');
-    }
-  });
-   $('.filters-date input').on('input', function() {
-    if($(this).val().length == 0)
-    {
-      $(this).parent().removeClass('active');
-    }
-    else
-    {
-      $(this).parent().addClass('active');
-    }
-  });
-  /*=============/filters-date===========*/
-
   /*===========Palette-color===============*/
     $('.palette-color-box').each(function(i, el){
       BgColor = $(this).find('div:nth-child(3) span').html();
@@ -316,9 +293,6 @@ $(document).ready(function() {
     $('select').styler();
   });
   /*======/select-styler=============*/
-
-
-
 });
 
 /*=========ToolbarScroll=========*/
