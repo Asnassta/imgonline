@@ -154,7 +154,7 @@
   position: absolute;
   right: 0;
   top: calc(100% + 10px);
-  z-index: 10; }
+  z-index: 100; }
   .dropdown-box li {
     margin-bottom: 10px; }
     .dropdown-box li:last-child {
@@ -2606,6 +2606,15 @@
         color: #ACACAC; }
       .filters-input input::placeholder {
         color: #ACACAC; }
+    .filters-input input[type="number"]::-webkit-outer-spin-button,
+    .filters-input input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none; }
+    .filters-input input[type='number'],
+    .filters-input input[type="number"]:hover,
+    .filters-input input[type="number"]:focus {
+      -webkit-appearance: none;
+      appearance: none;
+      -moz-appearance: textfield; }
   .filters-date {
     position: relative; }
     .filters-date svg {
@@ -2804,8 +2813,9 @@
       font-weight: 600;
       color: #fff;
       line-height: 1.21; }
-    .generate-field-btn:hover span:first-child {
-      background-color: #5355FD; }
+    @media (min-width: 861px) {
+      .generate-field-btn:hover span:first-child {
+        background-color: #5355FD; } }
 
 /*============/generate-field==========*/
 /*============Adaptive==========*/
