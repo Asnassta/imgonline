@@ -361,14 +361,14 @@
 											<div class="filters__item">
 												<div class="filters__name">Глубина</div>
 												<div class="filters-input">
-													<input type="text" value="15">
+													<input type="number" min="1" max="50" value="15">
 												</div>
 												<div class="filters__description">от 1 до 50 </div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Расстояние</div>
 												<div class="filters-input">
-													<input type="text" value="10">
+													<input type="number" min="-20" max="20" value="10">
 												</div>
 												<div class="filters__description">от -20 до 20</div>
 											</div><!--/filters__item-->
@@ -395,7 +395,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -410,7 +410,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -483,7 +483,7 @@
 											<div class="filters__item">
 												<div class="filters__name">Коррекция насыщенности цветов</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="-100" max="100" value="0">
 												</div>
 												<div class="filters__description">от -100 до 100 </div>
 											</div><!--/filters__item-->
@@ -501,7 +501,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -516,7 +516,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -603,42 +603,42 @@
 											<div class="filters__item">
 												<div class="filters__name">Повысить резкость</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="10" value="0">
 												</div>
 												<div class="filters__description">значение от 0 до 10, 0=не изменять</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Насыщенность</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="-100" max="100" value="0">
 												</div>
 												<div class="filters__description">значение от -100 до 100, 0=не изменять</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Жёлтый (-) или Синий(+) </div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="-255" max="255" value="0">
 												</div>
 												<div class="filters__description">можно указать значение от -255 до 255, 0=не изменять, <a href="#">о цветовом балансе</a></div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Тон цвета</div>
 												<div class="filters-input">
-													<input type="text" value="100">
+													<input type="number" min="-180" max="180" value="100">
 												</div>
 												<div class="filters__description">0-180, 100=не изменять</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Яркость</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="-100" max="100" value="0">
 												</div>
 												<div class="filters__description">значение -100 до 100, 0=не изменять</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Контраст</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="-100" max="100" value="0">>
 												</div>
 												<div class="filters__description">значение -100 до 100, 0=не изменять</div>
 											</div><!--/filters__item-->
@@ -682,14 +682,14 @@
 											<div class="filters__item">
 												<div class="filters__name">Время смены каждого кадра</div>
 												<div class="filters-input">
-													<input type="text" value="0,5 сек.">
+													<input type="number" min="0.03" max="60" step="0.01" value="0.5">
 												</div>
 												<div class="filters__description">значение от 0.03 до 60 секунд</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Количество повторов анимации</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="100" value="0">
 												</div>
 												<div class="filters__description">значение от 0 до 100, 0=”бесконечно”</div>
 											</div><!--/filters__item-->
@@ -811,7 +811,7 @@
 											<div class="filters__item">
 												<div class="filters__name">Размер изображений на выходе в DPI</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="50" max="300" value="240">
 												</div>
 												<div class="filters__description">150 dpi = "нормальное качество", 300 dpi = "хорошее качество"</div>
 											</div><!--/filters__item-->
@@ -819,10 +819,10 @@
 												<div class="filters__name">Диапазон страниц</div>
 												<div class="filters__row filters__row-inputs">
 													<div class="filters-input">
-														<input type="text" value="1">
+														<input type="number" min="1" max="99999" value="1">
 													</div>
 													<div class="filters-input">
-														<input type="text" value="2000">
+														<input type="number" min="1" max="99999" value="2000">
 													</div>
 												</div>
 												<div class="filters__description">в обеих полях можно указать от 1 до 99999, за один раз можно обработать не более 2000 страниц</div>
@@ -863,25 +863,25 @@
 											<div class="filters__item">
 												<div class="filters__name">Обрезать cлева, PX</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Обрезать cправа, PX</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Обрезать сверху, PX</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Обрезать снизу, PX</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
@@ -909,7 +909,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -924,7 +924,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -1019,25 +1019,25 @@
 											<div class="filters__item">
 												<div class="filters__name">Обрезать cлева, PX</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Обрезать cправа, PX</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Обрезать сверху, PX</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Обрезать снизу, PX</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 										</div><!--/filters-block-->
@@ -1046,14 +1046,14 @@
 											<div class="filters__item">
 												<div class="filters__name">Интенсивность</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="100" value="0">
 												</div>
 												<div class="filters__description">от 0 до 100, 0="отключено"</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Радиус</div>
 												<div class="filters-input">
-													<input type="text" value="5">
+													<input type="number" min="1" max="20" value="5">
 												</div>
 												<div class="filters__description">1-20</div>
 											</div><!--/filters__item-->
@@ -1071,7 +1071,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -1086,7 +1086,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -1139,14 +1139,14 @@
 											<div class="filters__item">
 												<div class="filters__name">Интенсивность замены</div>
 												<div class="filters-input">
-													<input type="text" value="20">
+													<input type="number" min="1" max="100" value="20">
 												</div>
 												<div class="filters__description">1-100</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Сглаживание по краям</div>
 												<div class="filters-input">
-													<input type="text" value="5">
+													<input type="number" min="1" max="100" value="5">
 												</div>
 												<div class="filters__description">1-100</div>
 											</div><!--/filters__item-->
@@ -1196,7 +1196,7 @@
 												<div class="filters__name">Обрезка или добавление по краям</div>
 												<div class="filters__description">Интенсивность для дополнительной обрезки или добавления пикселей вокруг выделенной области на прозрачном фоне</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="-100" max="100" value="0">
 												</div>
 												<div class="filters__description">от -100 до 100, значения <0- обрезка, <br> >0-добавление, </div>
 											</div><!--/filters__item-->
@@ -1224,7 +1224,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -1239,7 +1239,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -1292,13 +1292,13 @@
 											<div class="filters__item">
 												<div class="filters__name">Ширина:</div>
 												<div class="filters-input">
-													<input type="text" placeholder="Укажите ширину в PX">
+													<input type="number" placeholder="Укажите ширину в PX">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Высота:</div>
 												<div class="filters-input">
-													<input type="text" placeholder="Укажите высоту в PX">
+													<input type="number" placeholder="Укажите высоту в PX">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
@@ -1316,7 +1316,7 @@
 												<div class="filters__name">Размер в DPI:</div>
 												<div class="filters__description">0 = "не учитывать DPI, сделать по пропорции на основе указанного формата"</div>
 												<div class="filters-input">
-													<input type="text">
+													<input type="number" value="0">
 												</div>
 												<div class="filters__description">Размер исходной jpg-картинки в DPI можно <a href="#">узнать здесь</a>, считав метаданные</div>
 											</div><!--/filters__item-->
@@ -1406,7 +1406,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -1421,7 +1421,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -1494,10 +1494,10 @@
 												<div class="filters__name">Настройки генерирования текстуры на основе указанной</div>
 												<div class="filters__row filters__row-inputs">
 													<div class="filters-input">
-														<input type="text" value="430">
+														<input type="number" min="64" max="768" value="430">
 													</div>
 													<div class="filters-input">
-														<input type="text" value="430">
+														<input type="number" min="64" max="768" value="430">
 													</div>
 												</div>
 												<div class="filters__description">значения от 64 до 768</div>
@@ -1505,7 +1505,7 @@
 											<div class="filters__item">
 												<div class="filters__name">Сглаживание мест стыковки</div>
 												<div class="filters-input">
-													<input type="text" value="3">
+													<input type="number" min="0" max="5" value="3">
 												</div>
 												<div class="filters__description">значения от 0 до 5</div>
 											</div><!--/filters__item-->
@@ -1532,7 +1532,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -1547,7 +1547,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -1599,7 +1599,7 @@
 													</label>
 													<div class="filters-subitem">
 														<div class="filters-input">
-															<input type="text" value="5">
+															<input type="number" min="1" max="30" value="5">
 														</div>
 														<div class="filters__description">значение от 1 до 30</div>
 													</div><!--/filters-subitem-->
@@ -1612,7 +1612,7 @@
 													</label>
 													<div class="filters-subitem">
 														<div class="filters-input">
-															<input type="text" value="5">
+															<input type="number" min="1" max="30" value="5">
 														</div>
 														<div class="filters__description">значение от 1 до 30</div>
 													</div><!--/filters-subitem-->
@@ -1631,13 +1631,13 @@
 													<div class="filters-input__box">
 														<div class="filters__name">слева-справа</div>
 														<div class="filters-input">
-															<input type="text" value="430">
+															<input type="number" value="430">
 														</div>
 													</div>
 													<div class="filters-input__box">
 														<div class="filters__name">сверху-вниз</div>
 														<div class="filters-input">
-															<input type="text" value="430">
+															<input type="number" value="430">
 														</div>
 													</div>
 												</div>
@@ -1667,10 +1667,10 @@
 													<div class="filters-subitem">
 														<div class="filters__row filters__row-inputs">
 															<div class="filters-input">
-																<input type="text" value="500">
+																<input type="number" min="10" max="1000" value="500">
 															</div>
 															<div class="filters-input">
-																<input type="text" value="500">
+																<input type="number" min="10" max="1000" value="500">
 															</div>
 														</div>
 														<div class="filters__description">от 10x10 до 1000x1000</div>
@@ -1715,7 +1715,7 @@
 												</div>
 												<div class="filters__description">В процентах можно указать значение от -25.0 до 25.0, в пикселях – от -250 до 250, 0="слитно" </div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" value="92" min="1" max="100">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
@@ -1823,7 +1823,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -1838,7 +1838,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -1989,7 +1989,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -2004,7 +2004,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -2108,7 +2108,7 @@
 											<div class="filters__item">
 												<div class="filters__name">Качество</div>
 												<div class="filters-input">
-													<input type="text" value="92">
+													<input type="number" value="92" min="1" max="100">
 												</div>
 												<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 											</div><!--/filters__item-->
@@ -2155,12 +2155,12 @@
 												<div class="filters__row filters__row-inputs multiply">
 													<div class="filters-input__box">
 														<div class="filters-input">
-															<input type="text" value="11">
+															<input type="number" min="0.1" max="150" step="0.1" value="11">
 														</div>
 													</div>
 													<div class="filters-input__box">
 														<div class="filters-input">
-															<input type="text" value="11">
+															<input type="number" min="0.1" max="150" step="0.1" value="11">
 														</div>
 													</div>
 												</div>
@@ -2177,7 +2177,7 @@
 												<div class="filters__name">Толщина линий</div>
 												<div class="filters__description">в процентах от 0.1 до 150</div>
 												<div class="filters-input">
-													<input type="text" value="0.2">
+													<input type="number" min="0.1" max="150" step="0.1" value="0.2">
 												</div>
 												<div class="filters-subsetting">
 													<div class="filters-select">
@@ -2233,7 +2233,7 @@
 											<div class="filters__item">
 												<div class="filters__name">Прозрачность линий</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="1" max="100" value="0">
 												</div>
 												<div class="filters__description">Значение от 1 до 100, 0=непрозрачность</div>
 											</div><!--/filters__item-->
@@ -2262,7 +2262,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -2277,7 +2277,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -2378,12 +2378,12 @@
 												<div class="filters__row filters__row-inputs arguments">
 													<div class="filters-input__box">
 														<div class="filters-input">
-															<input type="text" value="0">
+															<input type="number" min="0.1" max="150" step="0.1" value="0">
 														</div>
 													</div>
 													<div class="filters-input__box">
 														<div class="filters-input">
-															<input type="text" value="0">
+															<input type="number" min="0.1" max="150" step="0.1" value="0">
 														</div>
 													</div>
 												</div>
@@ -2441,7 +2441,7 @@
 											<div class="filters__item">
 												<div class="filters__name">Прозрачность фона</div>
 												<div class="filters-input">
-													<input type="text" value="60">
+													<input type="number" min="0" max="100" value="0">
 												</div>
 												<div class="filters__description">Параметр а процентах, где 0=прозрачный</div>
 											</div><!--/filters__item-->
@@ -2462,7 +2462,7 @@
 											<div class="filters__item">
 												<div class="filters__name">Поворот текста внутри текстового блока:</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="-360" max="360" step="0.1" value="0">
 												</div>
 												<div class="filters__description">от -360.00° до 360.00°</div>
 											</div><!--/filters__item-->
@@ -2500,7 +2500,7 @@
 											<div class="filters__item">
 												<div class="filters__name">Размер текста</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="3200" step="0.1" value="0">
 												</div>
 												<div class="filters__description">от 0 до 3200.0, 0 = "автоматический, под размер текстового блока"</div>
 											</div><!--/filters__item-->
@@ -2549,7 +2549,7 @@
 											<div class="filters__item">
 												<div class="filters__name">Прозрачность текста</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="100" value="0">
 												</div>
 												<div class="filters__description">Параметр а процентах, где 0=прозрачный</div>
 											</div><!--/filters__item-->
@@ -2572,7 +2572,7 @@
 											<div class="filters__item">
 												<div class="filters__name">Сглаживание текста</div>
 												<div class="filters-input">
-													<input type="text" value="4">
+													<input type="number" min="0" max="10" value="4">
 												</div>
 												<div class="filters__description">от 0 до 10, для мелкого текста можно уменьшить в 2 раза</div>
 											</div><!--/filters__item-->
@@ -2583,7 +2583,7 @@
 												<div class="filters__name">Толщина текстовой окантовки</div>
 												<div class="filters__description">0 = "отключить добавление окантовки"</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="300" value="0">
 												</div>
 												<div class="filters-subsetting">
 													<div class="filters-select">
@@ -2639,7 +2639,7 @@
 											<div class="filters__item">
 												<div class="filters__name">Прозрачность  окантовки</div>
 												<div class="filters-input">
-													<input type="text" value="60">
+													<input type="number" min="0" max="100" value="0">
 												</div>
 												<div class="filters__description">Параметр а процентах, где 0=прозрачный</div>
 											</div><!--/filters__item-->
@@ -2692,7 +2692,7 @@
 											<div class="filters__item">
 												<div class="filters__name">Прозрачность фона для каждого символа</div>
 												<div class="filters-input">
-													<input type="text" value="60">
+													<input type="number" min="0" max="100" value="0">
 												</div>
 												<div class="filters__description">Параметр а процентах, где 0=прозрачный</div>
 											</div><!--/filters__item-->
@@ -2702,21 +2702,21 @@
 											<div class="filters__item">
 												<div class="filters__name">Расстояние между буквами, px</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="-10" max="300" step="0.1" value="0">
 												</div>
 												<div class="filters__description">значение  от -10.0 до 300.0 px</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Расстояние между словами</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="-10" max="300" step="0.1" value="0">
 												</div>
 												<div class="filters__description">значение  от -10.0 до 300.0 px</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Расстояние между строками</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="-10" max="300" step="0.1" value="0">
 												</div>
 												<div class="filters__description">значение  от -10.0 до 300.0 px</div>
 											</div><!--/filters__item-->
@@ -2769,7 +2769,7 @@
 											<div class="filters__item">
 												<div class="filters__name">Прозрачность тени</div>
 												<div class="filters-input">
-													<input type="text" value="60">
+													<input type="number" min="0" max="100" value="0">
 												</div>
 												<div class="filters__description">Параметр а процентах, где 0=прозрачный</div>
 											</div><!--/filters__item-->
@@ -2779,12 +2779,12 @@
 												<div class="filters__row filters__row-inputs arguments">
 													<div class="filters-input__box">
 														<div class="filters-input">
-															<input type="text" value="0">
+															<input type="number" min="-300" max="300"  value="2">
 														</div>
 													</div>
 													<div class="filters-input__box">
 														<div class="filters-input">
-															<input type="text" value="0">
+															<input type="number" min="-300" max="300"  value="2">
 														</div>
 													</div>
 												</div>
@@ -2792,7 +2792,7 @@
 											<div class="filters__item">
 												<div class="filters__name">Размытие тени</div>
 												<div class="filters-input">
-													<input type="text" value="10">
+													<input type="number" min="0" max="100"  value="10">
 												</div>
 												<div class="filters__description">от 0 до 100</div>
 											</div><!--/filters__item-->
@@ -2810,7 +2810,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -2825,7 +2825,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -2906,25 +2906,25 @@
 											<div class="filters__item">
 												<div class="filters__name">Сверху</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Слева</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Справа</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Снизу</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 										</div><!--/filters-block-->
@@ -2941,7 +2941,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -2956,7 +2956,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -3064,25 +3064,25 @@
 											<div class="filters__item">
 												<div class="filters__name">Сверху</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Слева</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Справа</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Снизу</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
@@ -3113,25 +3113,25 @@
 											<div class="filters__item">
 												<div class="filters__name">Сверху</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Слева</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Справа</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Снизу</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
@@ -3171,7 +3171,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -3186,7 +3186,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -3310,7 +3310,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -3325,7 +3325,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -3381,12 +3381,12 @@
 												<div class="filters__row filters__row-inputs multiply">
 													<div class="filters-input__box">
 														<div class="filters-input">
-															<input type="text" value="2">
+															<input type="number" min="1" max="10" value="2">
 														</div>
 													</div>
 													<div class="filters-input__box">
 														<div class="filters-input">
-															<input type="text" value="2">
+															<input type="number" min="1" max="10" value="2">
 														</div>
 													</div>
 												</div>
@@ -3394,14 +3394,14 @@
 											<div class="filters__item">
 												<div class="filters__name">Сдвиг влево</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="100" value="0">
 												</div>
 												<div class="filters__description">0% – 100%</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Сдвиг вверх</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="100" value="0">
 												</div>
 												<div class="filters__description">0% – 100%</div>
 											</div><!--/filters__item-->
@@ -3449,7 +3449,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -3464,7 +3464,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -3517,14 +3517,14 @@
 											<div class="filters__item">
 												<div class="filters__name">Частей по ширине, шт</div>
 												<div class="filters-input">
-													<input type="text" value="2">
+													<input type="number" min="1" max="30" value="2">
 												</div>
 												<div class="filters__description">1-30</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Частей по высоте</div>
 												<div class="filters-input">
-													<input type="text" value="1">
+													<input type="number" min="1" max="30" value="1">
 												</div>
 												<div class="filters__description">1-30</div>
 											</div><!--/filters__item-->
@@ -3555,7 +3555,7 @@
 												<div class="filters__name">Обрезать или добавить пикселей слева и справа</div>
 												<div class="filters__description">Обрезать <0, добавить >0</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="-1000" max="1000" value="0">
 												</div>
 												<div class="filters__description">от -1000 до 1000</div>
 											</div><!--/filters__item-->
@@ -3563,7 +3563,7 @@
 												<div class="filters__name">Обрезать или добавить пикселей сверху и снизу</div>
 												<div class="filters__description">Обрезать <0, добавить >0</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="-1000" max="1000" value="0">
 												</div>
 												<div class="filters__description">от -1000 до 1000</div>
 											</div><!--/filters__item-->
@@ -3581,7 +3581,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -3596,7 +3596,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -3678,7 +3678,7 @@
 											<div class="filters__item">
 												<div class="filters__name">Предварительный поворот</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="-360" max="360" step="0.1" value="0">
 												</div>
 												<div class="filters__description">от -360.0° до 360.0°</div>
 											</div><!--/filters__item-->
@@ -3695,25 +3695,25 @@
 											<div class="filters__item">
 												<div class="filters__name">Обрезка слева</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Обрезка справа</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Обрезка сверху</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 											<div class="filters__item">
 												<div class="filters__name">Обрезка снизу</div>
 												<div class="filters-input">
-													<input type="text" value="0">
+													<input type="number" min="0" max="50000" value="0">
 												</div>
 											</div><!--/filters__item-->
 										</div><!--/filters-block-->
@@ -4035,7 +4035,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
@@ -4050,7 +4050,7 @@
 														<div class="filters__name">С качеством:</div>
 														<div class="filters__description">Укажите значение от 1 до 100</div>
 														<div class="filters-input">
-															<input type="text" value="92">
+															<input type="number" value="92" min="1" max="100">
 														</div>
 														<div class="filters__description">Основной параметр, чем меньше качество, тем меньше будет размер JPEG файла</div>
 													</div><!--/filters-subitem-->
